@@ -1,7 +1,5 @@
 ---
 description: Generate Requirements content from a provided website module
-skills:
-  - requirements_analyzer
 ---
 
 # Workflow: Generate Requirements from Website Module
@@ -37,5 +35,5 @@ Workflow này giúp bạn phân tích một module hoặc trang web được cun
 
 5. **Trình bày và Cung cấp (Review & Delivery):**
    - Định dạng tài liệu bằng Markdown rõ ràng.
-   - Trình bày toàn bộ nội dung bằng **Tiếng Việt** ngắn gọn, chuyên nghiệp và dễ hiểu.
+   - Trình bày toàn bộ nội dung bằng **Tiếng Việt** có dấu rõ ràng, chuyên nghiệp và dễ hiểu.
    - Sử dụng tính năng Artifact nếu tài liệu dài để người dùng tiện lưu trữ hoặc xuất file.

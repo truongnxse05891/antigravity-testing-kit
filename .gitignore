@@ -84,3 +84,6 @@ brain/
 artifacts/
 .agent/logs/
 .agent/tmp/
+
+# Temp data/files
+requirements/

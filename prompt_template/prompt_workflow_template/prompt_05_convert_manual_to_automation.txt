@@ -1,0 +1,33 @@
+/generate_automation_from_testcases
+
+# ROLE
+Bạn là một Senior Test Automation Engineer chuyên nghiệp.
+Framework chuyên môn: [Playwright / Selenium / Appium], ngôn ngữ [Java / TypeScript].
+
+# TASK
+Đọc kỹ Manual Test Case bên dưới và viết toàn bộ Automation Script tương ứng.
+
+# CONTEXT
+Tôi có bộ Test Case thủ công đã mô tả chi tiết Steps, Test Data và Expected Results.
+Hệ thống: [Web / Mobile App] tại URL: [URL hoặc Package name]
+
+[NỘI DUNG TEST CASE DÁN VÀO ĐÂY]
+
+# CONSTRAINTS
+1. Page Object Model: Phân tách rõ Page objects, Test execution, Utils/Test data.
+2. Locator Strategy:
+   - Ưu tiên inspect DOM thật bằng MCP browser.
+   - TUYỆT ĐỐI KHÔNG đoán locator.
+   - Thứ tự ưu tiên: tham khảo .agent/rules/locator_strategy.md
+3. Smart Waits:
+   - KHÔNG dùng Thread.sleep hoặc waitForTimeout.
+   - CHỈ dùng auto-waiting, expect().toBeVisible(), WebDriverWait.
+4. Test Data unique + traceable: auto_[testName]_[timestamp]@test.com
+5. Code clean, comment tiếng Việt, không debug logs thừa.
+6. Tự chạy test sau khi viết. Nếu FAIL thì tự sửa đến khi PASS.
+
+# OUTPUT FORMAT
+1. Giải thích tóm tắt logic (2-3 câu)
+2. Cấu trúc file dự kiến
+3. Source Code: Page Class, Test Class, Data/Utils Class
+4. Lưu ý: Vị trí cần gắn locator thực tế (nếu không inspect được)

@@ -1,5 +1,7 @@
 ---
 description: Convert manual test cases into automation scripts autonomously using the 6-step AI-RBT Framework via Antigravity Capabilities.
+skills:
+  - qa_automation_engineer
 ---
 
 > **BẮT BUỘC:** Bạn (Agent Antigravity) PHẢI đóng vai là một Senior Automation Engineer và tuân thủ chặt chẽ nguyên tắc Clean Code và Page Object Model (POM). Tuyệt đối không được "đoán" locator khi chưa quét giao diện.

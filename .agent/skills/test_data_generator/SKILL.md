@@ -1,6 +1,22 @@
+---
+name: Test Data Generator
+description: Skill sinh test data có cấu trúc, unique, traceable cho automation tests, bao gồm positive, negative, boundary và edge cases.
+---
+
 # Test Data Generator
 
 Purpose: Generate reliable test data for automation tests.
+
+---
+
+## When to Use
+
+Use this skill when:
+
+- Creating test data for new test cases
+- Generating boundary and edge case data
+- Setting up data-driven tests
+- Creating API request payloads
 
 ---
 
@@ -8,20 +24,22 @@ Purpose: Generate reliable test data for automation tests.
 
 Generate test data for:
 
-- registration
-- login
-- form submission
+- Registration forms
+- Login credentials
+- Form submissions
 - API payloads
+- Search queries
+- File uploads
 
 ---
 
 ## Data Rules
 
-Data must be:
+All generated data must be:
 
-- unique
-- deterministic
-- traceable
+- **Unique** — No duplication within test suite
+- **Deterministic** — Same seed produces same data (when needed)
+- **Traceable** — Can identify which test generated it
 
 ---
 
@@ -29,27 +47,73 @@ Data must be:
 
 Recommended format:
 
-<testName>_<timestamp>
+```
+<prefix>_<testName>_<timestamp>
+```
 
-Example:
+Examples:
 
-register_user_20260311
+```
+auto_register_20260402133000
+test_login_1712024100
+```
 
 ---
 
 ## Common Data Types
 
-Email
+### Email
+```
+auto_<testName>_<timestamp>@test.com
+```
+Example: `auto_register_20260402@test.com`
 
-user_<timestamp>@test.com
+### Username
+```
+user_<testName>_<timestamp>
+```
+Example: `user_login_20260402133000`
 
-Username
+### Phone
+```
+Random 10-digit number starting with valid prefix
+```
+Example: `0912345678`
 
-user_<timestamp>
+### Password
+```
+Mix of uppercase, lowercase, digits, special chars
+```
+Example: `Test@12345`
 
-Phone
+---
 
-random 10-digit number
+## Data Categories
+
+### Positive Data (Happy Path)
+- Valid format, within constraints
+- All required fields filled
+- Standard business values
+
+### Negative Data
+- Missing required fields
+- Invalid format (wrong email, short password)
+- Invalid characters
+- Already existing values (duplicate check)
+
+### Boundary Values
+- Minimum length (e.g., 1 character)
+- Maximum length (e.g., 255 characters)
+- Min + 1, Max - 1
+- Empty string vs null
+- Zero, negative numbers
+
+### Edge Cases
+- Unicode / special characters
+- Very long strings
+- SQL injection patterns (for security testing)
+- HTML tags in text fields
+- Leading/trailing whitespace
 
 ---
 
@@ -57,6 +121,34 @@ random 10-digit number
 
 Test data must:
 
-- respect field validation
-- match input format
-- avoid duplication
+- Respect field validation rules (from DOM inspection)
+- Match input format (date format, phone format)
+- Avoid duplication across test runs
+- Not contain real PII (personal data)
+
+---
+
+## Output Format
+
+Provide data in structured format:
+
+```json
+{
+  "positive": [
+    { "email": "auto_tc01_20260402@test.com", "password": "Test@12345" }
+  ],
+  "negative": [
+    { "email": "", "password": "Test@12345", "expectedError": "Email is required" },
+    { "email": "invalid-email", "password": "Test@12345", "expectedError": "Invalid email format" }
+  ],
+  "boundary": [
+    { "email": "a@b.co", "password": "12345678", "note": "Min length" }
+  ]
+}
+```
+
+---
+
+## Rules References
+
+- `.agent/rules/automation_rules.md` — Test data generation rules (Section 2)

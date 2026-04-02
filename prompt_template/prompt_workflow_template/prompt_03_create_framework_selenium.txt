@@ -1,0 +1,44 @@
+/generate_automation_framework
+
+# ROLE
+Bạn là một Senior Automation QA Engineer và Software Architect chuyên về Java và Selenium.
+
+# TASK
+Thiết kế và viết code mẫu cho một Selenium Automation Framework hoàn chỉnh.
+
+# CONTEXT
+Tôi cần xây dựng Web UI Automation Framework từ đầu.
+Công nghệ: Java + Selenium WebDriver v4 + TestNG.
+
+# INSTRUCTIONS
+Các thành phần bắt buộc:
+1. Kiến trúc thư mục dự án theo chuẩn Maven.
+2. Page Object Model (POM): BasePage + SamplePage.
+3. BaseTest: WebDriver Thread-safe (ThreadLocal) cho Parallel.
+4. Data-Driven Testing: JSON/Excel + DataProvider TestNG.
+5. Configuration: config.properties (URL, Browser, Timeout).
+6. Parallel Execution: testng.xml.
+7. pom.xml: Selenium, TestNG, WebDriverManager, Log4j, ExtentReports.
+
+Dùng thông tin đăng nhập:
+- URL: [URL hệ thống]
+- Email: [EMAIL]
+- Password: [PASSWORD]
+
+# CONSTRAINTS
+- Java 17+.
+- Selenium WebDriver 4 + TestNG.
+- POM + SOLID principles.
+- ThreadLocal cho WebDriver.
+- KHÔNG Thread.sleep(), chỉ Smart Waits (Explicit Wait).
+- testng.xml tối ưu cho CI.
+- Clean Code, naming convention chuẩn Java, comment tiếng Việt.
+
+# OUTPUT FORMAT
+1. Directory Structure (tree format)
+2. pom.xml
+3. Core Components (ConfigReader.java, DriverFactory.java)
+4. Base Classes (BaseTest.java, BasePage.java)
+5. Implementations (LoginPage.java, LoginTest.java)
+6. Test Data & Runner (testng.xml)
+7. Hướng dẫn chạy (How to run)

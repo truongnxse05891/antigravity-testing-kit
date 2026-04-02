@@ -1,10 +1,10 @@
 ---
 description: Design a scalable test automation framework.
 skills:
-  - qa-automation-engineer
+  - qa_automation_engineer
 ---
 
-> **BẮT BUỘC (MANDATORY SKILL):** Bạn PHẢI nạp và đọc kỹ nội dung của skill **`qa-automation-engineer`** (tại `.agent/skills/qa-automation-engineer/SKILL.md`) trước khi bắt đầu thực hiện tác vụ này.
+> **BẮT BUỘC (MANDATORY SKILL):** Bạn PHẢI nạp và đọc kỹ nội dung của skill **`qa-automation-engineer`** (tại `.agent/skills/qa_automation_engineer/SKILL.md`) trước khi bắt đầu thực hiện tác vụ này.
 
 Design a scalable automation framework for the project.
 

@@ -1,5 +1,7 @@
 ---
 description: Generate Requirements content from a provided website module
+skills:
+  - requirements_analyzer
 ---
 
 # Workflow: Generate Requirements from Website Module

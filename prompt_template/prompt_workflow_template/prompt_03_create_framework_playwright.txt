@@ -1,0 +1,44 @@
+/generate_automation_framework
+
+# ROLE
+Bạn là một Senior Test Automation Architect chuyên gia về Node.js và Playwright.
+
+# TASK
+Thiết kế và viết code mẫu cho một Playwright Automation Framework hoàn chỉnh.
+
+# CONTEXT
+Tôi cần xây dựng E2E Web UI Automation Framework từ đầu.
+Công nghệ: Playwright Test + TypeScript.
+
+# INSTRUCTIONS
+Các thành phần bắt buộc:
+1. Kiến trúc thư mục dự án: Tách biệt configs, tests, pages, data, utils.
+2. Page Object Model (POM): BasePage + SamplePage (VD: LoginPage).
+3. playwright.config.ts: Multi-browser, timeout, retries, workers, reporters.
+4. Environment Variables: .env file + dotenv cho dev/staging/prod.
+5. Data-Driven Testing: Đọc dữ liệu từ .json, parametrized tests.
+6. Custom Fixtures: Inject Page Objects tự động vào test.
+7. package.json: Dependencies + scripts.
+
+Dùng thông tin đăng nhập:
+- URL: [URL hệ thống]
+- Email: [EMAIL]
+- Password: [PASSWORD]
+
+# CONSTRAINTS
+- TypeScript Strict Mode.
+- Test Runner: @playwright/test.
+- POM bắt buộc.
+- Auto-waiting, KHÔNG dùng page.waitForTimeout().
+- Semantic Locators: getByRole, getByTestId.
+- Fixtures cho BasePage.
+- Clean Code với comment tiếng Việt.
+
+# OUTPUT FORMAT
+1. Directory Structure (tree format)
+2. Setup & Dependencies (package.json)
+3. Core Configurations (playwright.config.ts, .env)
+4. POM (BasePage.ts, LoginPage.ts)
+5. Custom Fixtures (fixtures.ts)
+6. Test Data + Test file (login.spec.ts)
+7. Hướng dẫn chạy (How to run)

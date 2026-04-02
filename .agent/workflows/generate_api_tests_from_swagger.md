@@ -1,10 +1,10 @@
 ---
 description: Generate API tests from Swagger specification.
 skills:
-  - qa-automation-engineer
+  - qa_automation_engineer
 ---
 
-> **BẮT BUỘC (MANDATORY SKILL):** Bạn PHẢI nạp và đọc kỹ nội dung của skill **`qa-automation-engineer`** (tại `.agent/skills/qa-automation-engineer/SKILL.md`) trước khi bắt đầu thực hiện tác vụ này.
+> **BẮT BUỘC (MANDATORY SKILL):** Bạn PHẢI nạp và đọc kỹ nội dung của skill **`qa-automation-engineer`** (tại `.agent/skills/qa_automation_engineer/SKILL.md`) trước khi bắt đầu thực hiện tác vụ này.
 
 Generate API test cases and automation tests from Swagger.
 

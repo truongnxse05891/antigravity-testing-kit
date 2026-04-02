@@ -11,7 +11,7 @@ Thực hiện tạo tài liệu Requirements từ website hoặc module được
 - Thông tin đăng nhập: [EMAIL] và [PASSWORD]
 
 # INSTRUCTIONS
-- Nạp và đọc kỹ năng rquirement_analyzer để nắm định dạng.
+- Nạp và đọc kỹ năng requirements_analyzer để nắm định dạng.
 - TUYỆT ĐỐI KHÔNG sử dụng định dạng in đậm (không dùng dấu **) trong toàn bộ nội dung tạo ra.
 - Trình bày toàn bộ kết quả bằng Tiếng Việt có dấu đầy đủ.
 - Bắt buộc quan sát UI thực tế, inspect DOM/HTML để liệt kê chính xác các trường dữ liệu, nút bấm, thông báo lỗi. Không được đoán.

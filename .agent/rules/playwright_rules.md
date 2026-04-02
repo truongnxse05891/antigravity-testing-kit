@@ -1,33 +1,81 @@
-# Playwright Specific Rules
+# Quy Tắc Dành Riêng Cho Playwright
 
-> Các Rule dành riêng cho việc thiết lập và chạy Automation với Playwright Tools.
+> Áp dụng khi thiết lập và chạy automation với Playwright (TypeScript hoặc Java).
 
-## 1. Thuộc tính & Thiết Lập Browser (MANDATORY)
-* **UI Debugging Viewport:** Mọi quá trình debug UI bắt buộc chạy với viewport của màn hình máy tính desktop (ví dụ tiêu chuẩn: `1920x1080`).
-* **Headed Mode Base:** Bắt buộc mở browser có hiển thị (headed mode) trong quá trình thiết lập và debug test.
-* **Headless Mode Deployment:** Chế độ `headless mode` chỉ được phép sử dụng khi test đã debug PASS 100% trên real UI, hoặc khi CI/CD build pipelines setup mặc định.
+## 1. Thiết Lập Browser (BẮT BUỘC)
 
-## 2. Workflow Phát Triển & Tìm Element (Recon & UI)
-* Ưu tiên dùng tối đa công cụ **Playwright MCP** để chạy browser và tương tác với trang đích.
-* **Inspect DOM Thực Tế:** Verify và capture trực tiếp các selector từ browser DOM.
-* **TUYỆT ĐỐI KHÔNG SUY ĐOÁN** hoặc copy locator mù quáng từ cấu trúc mã cũ, hoặc dựa trên URL mà không verify sự tồn tại.
+- **Viewport debug:** Mọi quá trình debug UI bắt buộc chạy với viewport desktop (tiêu chuẩn: `1920x1080`).
+- **Headed mode:** Bắt buộc mở browser có hiển thị (headed) trong quá trình thiết lập và debug test.
+- **Headless mode:** Chỉ được phép sử dụng khi:
+  - Test đã debug PASS 100% trên headed mode
+  - Hoặc trong CI/CD pipeline mặc định
 
-## 3. Playwright Locator Selection
-Playwright defines a highly optimized list of User-facing semantic locators. Rely heavily on these instead of structural identifiers.
+## 2. Workflow Phát Triển & Tìm Element
 
-**Tiêu Chuẩn Ưu Tiên Locators (Priority Order):**
-1. `get_by_role()`
-2. `get_by_label()`
-3. `get_by_placeholder()`
-4. `get_by_text()`
-5. `get_by_test_id()`
-6. `locator("css")` – fallback when required.
+- Ưu tiên sử dụng **Playwright MCP** để mở browser và tương tác với trang đích.
+- **Inspect DOM thực tế:** Verify và capture selector trực tiếp từ browser DOM.
+- **TUYỆT ĐỐI KHÔNG:**
+  - Suy đoán locator
+  - Copy locator mù quáng từ code cũ mà không verify
+  - Dựa trên URL / tài liệu mà không xác nhận sự tồn tại trên UI thật
 
-*For example:* Use `page.get_by_role("button", new Page.GetByRoleOptions().setName("Submit"))` instead of XPath parsing. Avoid basic CSS / XPaths wherever roles/labels are clear.
+## 3. Thứ Tự Ưu Tiên Locator Playwright
 
-## 4. Syncing & Waiting Strategy (Anti-patterns)
-* **CẤM** sử dụng hard-coded timeout (`waitForTimeout`, `sleep`, cố định thời gian trễ).
-* Tối ưu khả năng auto-waiting của Playwright thông qua Web-First Assertions:
-  * `expect(locator).toBeVisible()`
-  * `expect(locator).toBeEnabled()`
-* Tối giản việc gọi các manual waits (`waitForSelector()`) tự xây dựng nếu Playwright `expect` đã bao phủ được sự kiện render.
+Playwright cung cấp bộ locator semantic hướng người dùng. Ưu tiên sử dụng thay vì CSS/XPath:
+
+1. `getByRole()` — Tốt nhất cho semantic elements (button, link, heading...)
+2. `getByLabel()` — Tốt nhất cho form fields có label
+3. `getByPlaceholder()` — Tốt nhất cho inputs có placeholder text
+4. `getByText()` — Tốt nhất cho text content
+5. `getByTestId()` — Tốt nhất khi element có `data-testid`
+6. `locator("css")` — Fallback khi không có lựa chọn tốt hơn
+
+Ví dụ:
+```typescript
+// Đúng — Semantic locator
+page.getByRole('button', { name: 'Đăng nhập' })
+page.getByLabel('Email')
+page.getByPlaceholder('Nhập mật khẩu')
+
+// Sai — XPath/CSS thô khi có semantic thay thế
+page.locator('//button[@class="btn-login"]')
+page.locator('.form-input:nth-child(2)')
+```
+
+## 4. Chiến Lược Chờ Đợi (Wait Strategy)
+
+**NGHIÊM CẤM:**
+- `page.waitForTimeout()` — hard sleep
+- `await new Promise(r => setTimeout(r, N))` — tự tạo delay
+- Bất kỳ cách nào cố định thời gian chờ
+
+**SỬ DỤNG:**
+- Tận dụng auto-waiting mặc định của Playwright
+- Web-First Assertions:
+  ```typescript
+  await expect(locator).toBeVisible();
+  await expect(locator).toBeEnabled();
+  await expect(locator).toHaveText('Thành công');
+  await expect(page).toHaveURL(/dashboard/);
+  ```
+- Chỉ dùng `waitForSelector()` khi `expect()` không đáp ứng được yêu cầu đặc biệt
+
+## 5. Cấu Trúc Test
+
+```typescript
+test.describe('Tên Module', () => {
+  test.beforeEach(async ({ page }) => {
+    // Setup: navigate, login...
+  });
+
+  test('mô tả hành vi cần test', async ({ page }) => {
+    // Arrange: khởi tạo page objects, data
+    // Act: thực hiện hành động
+    // Assert: kiểm tra kết quả
+  });
+});
+```
+
+- Mỗi test block phải có **assertion rõ ràng**
+- Sử dụng `test.describe` để nhóm test theo module
+- Sử dụng `beforeEach` / `afterEach` để setup / teardown

@@ -1,0 +1,38 @@
+/generate_api_tests_from_swagger
+
+# ROLE
+Bạn là Senior API Test Engineer chuyên về REST API testing.
+
+# TASK
+Viết automation test cho API endpoints từ Swagger/OpenAPI hoặc mô tả API.
+
+# CONTEXT
+- Framework: [REST Assured (Java) / Playwright API (TypeScript) / Supertest (TypeScript)]
+- Base URL: [Ví dụ: https://api.anhtester.com/v1]
+- Authentication: [Bearer Token / Basic Auth / API Key]
+- Swagger URL (nếu có): [URL Swagger]
+
+API cần test:
+[DÁN MÔ TẢ API VÀO ĐÂY. Ví dụ:
+
+POST /api/customers
+- Request: { name, email, phone }
+- Response 201: { id, name, email, phone, createdAt }
+- Response 400: { error: "Validation failed" }
+
+GET /api/customers/{id}
+- Response 200: { id, name, email, phone }
+- Response 404: { error: "Not found" }
+]
+
+# INSTRUCTIONS
+1. Cover đủ HTTP status codes: 200/201, 400, 401, 403, 404, 500
+2. Mỗi test kiểm tra: status code, response body, response time, headers
+3. Test data: Positive, Negative (thiếu field, sai format), Security (SQL injection, XSS)
+4. Mỗi test độc lập, cleanup data sau test, không hardcode token
+
+# OUTPUT FORMAT
+1. API Client/Helper: Base URL, auth headers
+2. Test Class: Test methods theo CRUD
+3. Test Data: Request bodies
+4. Hướng dẫn chạy

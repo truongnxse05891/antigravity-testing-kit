@@ -19,11 +19,61 @@ Thông qua bộ công cụ này, việc triển khai Test Automation với sự 
 
 ## 📂 Cấu Trúc Thư Mục Chính
 
-Repo này tập trung vào thư mục `.agent`, bao gồm các thành phần quan trọng để định hình hành vi của AI:
+```
+antigravity-testing-kit/
+├── .agent/
+│   ├── rules/           # Quy tắc bắt buộc AI phải tuân theo
+│   ├── skills/          # Kỹ năng chuyên biệt cho AI
+│   └── workflows/       # Kịch bản thực thi step-by-step (slash commands)
+├── plan/
+│   ├── manual/          # Quy trình 6 bước sinh Manual Test Cases (AI-RBT)
+│   └── automation/      # Quy trình 6 bước sinh Automation Scripts
+├── prompt_template/     # Prompt mẫu dùng nhanh (copy → paste → gửi)
+├── requirements/        # Lưu trữ requirements đã sinh
+├── GEMINI.md            # Rule chung cho AI Agent
+└── TIPS_QUOTA.md        # Cẩm nang tối ưu quota token
+```
 
-- **📄 `rules/`**: Chứa các file quy tắc bắt buộc AI phải tuân theo (ví dụ: `GEMINI.md`, `automation_rules.md`, `playwright_rules.md`...).
-- **🛠️ `skills/`**: Chứa các kỹ năng chuyên biệt mà AI có thể sử dụng giải quyết các bài toán tester khó (như phân tích flaky test).
-- **🔄 `workflows/`**: Chứa các kịch bản thực thi từng bước (step-by-step), giúp AI thực hiện các công việc phức tạp như: Sinh testcase từ requirements, tạo test suite tự động, v.v.
+### `.agent/` — Bộ não của AI Agent
+
+| Thư mục | Vai trò |
+|---------|--------|
+| `rules/` | Quy tắc bắt buộc: POM, locator strategy, smart waits, Playwright/Selenium/Appium rules |
+| `skills/` | 8 kỹ năng chuyên biệt: automation engineer, manual testing, UI debug, locator healer, test data generator... |
+| `workflows/` | 13 slash commands: `/generate_automation_from_testcases`, `/generate_manual_testcases_rbt`, `/analyze_flaky_tests`... |
+
+---
+
+### `plan/` — Quy Trình 6 Bước Chuyên Sâu
+
+Dành cho các tác vụ phức tạp, cần thực hiện **tuần tự trong cùng 1 conversation**.
+
+| Plan | Mô tả | Bắt đầu nhanh |
+|------|-------|---------------|
+| `plan/manual/` | Sinh Manual Test Cases theo quy trình **AI-RBT 6 bước** (Risk-Based Testing) | Xem `plan/manual/QUICK_START.md` |
+| `plan/automation/` | Sinh Automation Scripts theo **6 bước** từ context → review | Xem `plan/automation/QUICK_START.md` |
+
+**Cách dùng:** Mở `QUICK_START.md` → Làm theo từng bước → Gửi prompt mỗi bước vào Antigravity.
+
+### `prompt_template/` — Prompt Mẫu Dùng Nhanh
+
+Dành cho tác vụ **đơn lẻ**, chỉ cần copy → thay `[...]` bằng dữ liệu thực → paste → gửi.
+
+| # | Prompt | Mục đích |
+|---|--------|----------|
+| 01 | `prompt_01_generate_requirements.txt` | Phân tích website sinh Requirements |
+| 02 | `prompt_02_create_test_cases.txt` | Sinh test cases từ requirements |
+| 03 | `prompt_03_create_framework_playwright.txt` | Dựng framework Playwright TS |
+| 03 | `prompt_03_create_framework_selenium.txt` | Dựng framework Selenium Java |
+| 04 | `prompt_04_create_script_playwright.txt` | Viết test script Playwright TS |
+| 04 | `prompt_04_create_script_selenium.txt` | Viết test script Selenium Java |
+| 05 | `prompt_05_convert_manual_to_automation.txt` | Chuyển manual TC sang automation |
+| 06 | `prompt_06_review_automation_code.txt` | Review code automation |
+| 07 | `prompt_07_generate_test_data.txt` | Sinh test data có cấu trúc |
+| 08 | `prompt_08_analyze_flaky_tests.txt` | Phân tích test không ổn định |
+| 09 | `prompt_09_create_api_tests.txt` | Viết test API từ Swagger |
+
+> 💡 Thư mục `prompt_template/prompt_workflow_template/` chứa phiên bản prompt ngắn gọn hơn, tối ưu cho workflow.
 
 ---
 
@@ -37,6 +87,10 @@ Repo này tập trung vào thư mục `.agent`, bao gồm các thành phần qua
 
 3. **Bắt đầu trò chuyện với AI trên Antigravity:**
    Khi mở dự án lên Antigravity, AI tự động nhận diện thư mục `.agent` và sẽ áp dụng ngay các Rule, Skill, Workflow của **Anh Tester** đã thiết lập sẵn.
+
+4. **(Tùy chọn) Sử dụng Plan hoặc Prompt Template:**
+   - Tác vụ phức tạp → Mở `plan/manual/QUICK_START.md` hoặc `plan/automation/QUICK_START.md`
+   - Tác vụ nhanh → Copy prompt từ `prompt_template/` → paste vào chat
 
 ---
 

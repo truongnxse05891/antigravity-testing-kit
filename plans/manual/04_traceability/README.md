@@ -1,7 +1,5 @@
 # Bước 4: Đảm bảo độ bao phủ (Traceability & Gap Analysis)
 
-**Workflow:** `/generate_manual_testcases_rbt` (tiếp tục)
-**Skill:** `rbt_manual_testing`
 
 ---
 

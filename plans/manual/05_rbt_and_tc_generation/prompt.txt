@@ -1,8 +1,7 @@
 # ============================================================
 # BƯỚC 5: SINH TEST CASE CHI TIẾT (RBT & TC Generation)
 # ============================================================
-# Workflow: /generate_manual_testcases_rbt (tiếp tục)
-# Skill:    rbt_manual_testing
+# Đây là prompt độc lập — copy & paste vào bất kỳ AI nào
 # ============================================================
 # CÁCH DÙNG:
 # 1. Gửi prompt này SAU KHI đã review và xác nhận scenarios ở Bước 4

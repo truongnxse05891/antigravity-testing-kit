@@ -1,19 +1,17 @@
 # ============================================================
 # BƯỚC 1: KHỞI TẠO NGỮ CẢNH (Context & Role-play)
 # ============================================================
-# Workflow: /generate_manual_testcases_rbt
-# Skill:    rbt_manual_testing
+# Đây là prompt độc lập — copy & paste vào bất kỳ AI nào
+# (ChatGPT, Claude, Gemini, Antigravity...)
 # ============================================================
 # CÁCH DÙNG:
 # 1. Copy nội dung bên dưới dòng "---START---"
 # 2. Thay thế các phần trong [...] bằng dữ liệu thực tế
-# 3. Paste vào Antigravity chat và gửi
+# 3. Paste vào AI chat và gửi
 # 4. Chờ AI xác nhận hiểu bối cảnh rồi mới sang Bước 2
 # ============================================================
 
 ---START---
-
-/generate_manual_testcases_rbt
 
 Hãy đóng vai là một **Senior QA Engineer** với 10 năm kinh nghiệm trong lĩnh vực kiểm thử phần mềm.
 

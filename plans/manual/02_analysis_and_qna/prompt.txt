@@ -1,8 +1,7 @@
 # ============================================================
 # BƯỚC 2: PHÂN TÍCH YÊU CẦU VÀ Q&A (Analysis & QnA)
 # ============================================================
-# Workflow: /generate_manual_testcases_rbt (tiếp tục)
-# Skill:    rbt_manual_testing
+# Đây là prompt độc lập — copy & paste vào bất kỳ AI nào
 # ============================================================
 # CÁCH DÙNG:
 # 1. Gửi prompt này SAU KHI AI đã xác nhận hiểu bối cảnh ở Bước 1

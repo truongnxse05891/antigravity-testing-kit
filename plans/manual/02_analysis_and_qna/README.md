@@ -1,8 +1,5 @@
 # Bước 2: Phân tích yêu cầu và Q&A (Requirement Analysis)
 
-**Workflow:** `/generate_manual_testcases_rbt` (tiếp tục)
-**Skill:** `rbt_manual_testing`
-
 ---
 
 ## Mục đích
@@ -11,7 +8,7 @@ Yêu cầu AI phân tích tài liệu từ Bước 1 để tìm ra các điểm 
 
 ## Cách sử dụng
 
-1. Gửi nội dung file `prompt.txt` ngay sau khi AI đã xác nhận ở Bước 1.
+1. Copy nội dung `prompt.txt` và gửi ngay sau khi AI đã xác nhận ở Bước 1.
 2. AI sẽ trả về:
    - Danh sách **luồng** (Happy / Alternate / Exception Paths)
    - Danh sách **Ambiguities** (điểm mờ phát hiện)
@@ -24,3 +21,4 @@ Yêu cầu AI phân tích tài liệu từ Bước 1 để tìm ra các điểm 
 - **Đây là bước quan trọng nhất** trong quy trình. Nếu bỏ qua, AI sẽ tự đoán logic → test case sai nghiêm trọng.
 - Trả lời **càng cụ thể càng tốt**. Nếu chưa biết, nói rõ "Chưa xác định, giả định là..." để AI ghi nhận.
 - Có thể bổ sung thêm gợi ý vào phần `[...]` trong prompt.txt để AI tập trung vào mảng bạn quan tâm.
+

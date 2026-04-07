@@ -1,8 +1,7 @@
 # ============================================================
 # BƯỚC 4: ĐẢM BẢO ĐỘ BAO PHỦ (Traceability & Gap Analysis)
 # ============================================================
-# Workflow: /generate_manual_testcases_rbt (tiếp tục)
-# Skill:    rbt_manual_testing
+# Đây là prompt độc lập — copy & paste vào bất kỳ AI nào
 # ============================================================
 # CÁCH DÙNG:
 # 1. Gửi prompt này SAU KHI đã review kết quả phân rã ở Bước 3

@@ -11,6 +11,10 @@ skills:
 
 Workflow này sử dụng **Mode FULL RBT** của skill `rbt_manual_testing` — quy trình **AI-RBT (AI-Driven Risk-Based Testing)** gồm 6 bước tuần tự để sinh manual test cases từ tài liệu yêu cầu.
 
+> [!NOTE]
+> **Luồng này dành cho Antigravity (slash command).** Agent thực hiện theo hướng dẫn trong skill, KHÔNG cần đọc file prompt.txt.
+> Nếu QA team muốn dùng prompt chi tiết hơn (ChatGPT/Claude), hãy copy-paste từng bước từ `plans/manual/01-06/prompt.txt`.
+
 ## ⚠️ Nguyên tắc thực thi
 
 - **Mode:** FULL RBT (6 bước tuần tự)
@@ -21,43 +25,40 @@ Workflow này sử dụng **Mode FULL RBT** của skill `rbt_manual_testing` —
 
 ## Các bước thực hiện
 
+Thực hiện theo hướng dẫn chi tiết trong skill `rbt_manual_testing` → phần **Mode 2: FULL RBT**.
+
 ### Bước 1: Khởi tạo ngữ cảnh (Context & Role-play)
-1. Đọc prompt template: `plans/manual/01_context_and_roleplay/prompt.txt`
-2. Yêu cầu user cung cấp: tên dự án, mô tả hệ thống, mục tiêu MVP, tài liệu yêu cầu
-3. Đọc kỹ tài liệu, xác nhận hiểu bối cảnh
-4. **Chờ user xác nhận** → sang Bước 2
+1. Yêu cầu user cung cấp: tên dự án, mô tả hệ thống, mục tiêu MVP, tài liệu yêu cầu
+2. Đọc kỹ tài liệu, xác nhận hiểu bối cảnh
+3. **Chờ user xác nhận** → sang Bước 2
 
 ### Bước 2: Phân tích yêu cầu (Analysis & QnA)
-1. Đọc prompt template: `plans/manual/02_analysis_and_qna/prompt.txt`
-2. Xác định Happy Path, Alternate Paths, Exception Paths
-3. Phát hiện Ambiguities (thiếu sót, mâu thuẫn, chưa rõ ràng)
-4. Đặt câu hỏi Q&A có đánh số cho user/PO/BA
-5. **DỪNG LẠI — Chờ user trả lời câu hỏi** → sang Bước 3
+1. Xác định Happy Path, Alternate Paths, Exception Paths
+2. Phát hiện Ambiguities (thiếu sót, mâu thuẫn, chưa rõ ràng)
+3. Đặt câu hỏi Q&A có đánh số (Q1, Q2...) cho user/PO/BA, kèm ngữ cảnh + assumption
+4. **DỪNG LẠI — Chờ user trả lời câu hỏi** → sang Bước 3
 
 ### Bước 3: Phân rã hệ thống (Decomposition)
-1. Đọc prompt template: `plans/manual/03_decomposition/prompt.txt`
-2. Chia tính năng thành Modules / Sub-modules
-3. Mô tả chức năng từng Module + Dependencies giữa chúng
+1. Chia tính năng thành Modules / Sub-modules
+2. Mô tả chức năng từng Module + Dependencies giữa chúng
 
 ### Bước 4: Đảm bảo độ bao phủ (Traceability)
-1. Đọc prompt template: `plans/manual/04_traceability/prompt.txt`
-2. Map Module → mã Yêu cầu (REQ-01, REQ-02...)
-3. Cross-check thiếu sót, liệt kê High-Level Scenarios
-4. **Chờ user review** scenarios → sang Bước 5
+1. Map Module → mã Yêu cầu (REQ-01, REQ-02...)
+2. Cross-check thiếu sót (Gap Analysis), liệt kê High-Level Scenarios
+3. **Chờ user review** scenarios → sang Bước 5
 
 ### Bước 5: Sinh Test Case chi tiết (RBT & TC Generation)
-1. Đọc prompt template: `plans/manual/05_rbt_and_tc_generation/prompt.txt`
-2. Đánh giá Risk Level (High/Medium/Low) cho mỗi Module
-3. Sinh test cases đầy đủ: Title, Pre-condition, Steps, Expected, Test Data, Priority
+1. Đánh giá Risk Level (High/Medium/Low) cho mỗi Module
+2. Sinh test cases đầy đủ: Title, Pre-condition, Steps, Expected, Test Data, Priority
+3. Áp dụng kỹ thuật: EP, BVA, Decision Table, State Transition
 4. Test Data phải cụ thể (không placeholder chung)
 5. Nếu quá nhiều → sinh từng Module, hỏi user để tiếp tục
 
 ### Bước 6: Chuẩn hóa Format (Template Mapping)
-1. Đọc prompt template: `plans/manual/06_template_mapping/prompt.txt`
-2. Đóng gói toàn bộ test cases vào bảng Markdown chuẩn:
+1. Đóng gói toàn bộ test cases vào bảng Markdown chuẩn:
    `| TC ID | Module | Risk Level | Test Title | Pre-Condition | Test Steps | Expected Result | Priority | Test Data |`
-3. Không được bỏ sót test case nào
-4. Xuất dưới dạng Artifact nếu dài
+2. Không được bỏ sót test case nào
+3. Xuất dưới dạng Artifact nếu dài
 
 ## Output
 

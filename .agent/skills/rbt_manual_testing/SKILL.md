@@ -140,18 +140,23 @@ Quy trình bài bản, tuần tự cho module phức tạp. Bao gồm phân tíc
 
 > ⚠️ **QUAN TRỌNG:** Quy trình này **BẮT BUỘC chạy tuần tự** từng bước. KHÔNG được gộp nhiều bước chạy 1 lần. Mỗi bước phải hoàn thành và được user xác nhận trước khi sang bước tiếp.
 
+> [!NOTE]
+> **2 luồng sử dụng riêng biệt:**
+> - **Luồng Antigravity (slash command):** Agent thực hiện theo hướng dẫn tổng quát bên dưới. Agent KHÔNG cần đọc file prompt.txt.
+> - **Luồng Copy-Paste (ChatGPT/Claude):** QA team copy nội dung prompt chi tiết từ `plans/manual/01-06/prompt.txt` vào chat AI, từng bước một.
+
 ### Bước 1: Context & Role-play (Khởi tạo ngữ cảnh)
 
 **Mục đích:** Thiết lập vai trò Senior QA Engineer và nạp bối cảnh dự án.
 
 **Agent phải:**
-1. Đọc prompt template tại `plans/manual/01_context_and_roleplay/prompt.txt`
-2. Yêu cầu user cung cấp:
+1. Yêu cầu user cung cấp:
    - Tên dự án / tính năng
    - Mô tả hệ thống hiện tại
    - Mục tiêu kiểm thử MVP
    - Tài liệu yêu cầu (Requirements, User Stories, Figma link, PDF...)
-3. Đọc kỹ tài liệu và xác nhận đã hiểu bối cảnh
+2. Đọc kỹ tài liệu và xác nhận đã hiểu bối cảnh
+3. Tóm tắt scope kiểm thử
 4. **Chờ user xác nhận** trước khi sang Bước 2
 
 **Output:** Xác nhận hiểu bối cảnh + tóm tắt scope kiểm thử.
@@ -163,17 +168,16 @@ Quy trình bài bản, tuần tự cho module phức tạp. Bao gồm phân tíc
 **Mục đích:** Phân tích tài liệu để phát hiện điểm mờ, thiếu sót, mâu thuẫn.
 
 **Agent phải:**
-1. Đọc prompt template tại `plans/manual/02_analysis_and_qna/prompt.txt`
-2. Xác định các luồng:
+1. Xác định các luồng:
    - Happy Path (luồng chính)
    - Alternate Paths (luồng rẽ nhánh)
    - Exception Paths (luồng ngoại lệ)
-3. Phát hiện Ambiguities:
-   - Yêu cầu thiếu sót (không quy định độ dài textbox, timeout...)
+2. Phát hiện Ambiguities:
+   - Yêu cầu thiếu sót (không quy định độ dài textbox, timeout, hành vi mất kết nối...)
    - Yêu cầu mâu thuẫn
    - Yêu cầu chưa rõ ràng
-4. Đặt câu hỏi Q&A có đánh số thứ tự cho user/PO/BA giải đáp
-5. **DỪNG LẠI — Chờ user trả lời** các câu hỏi trước khi tiếp tục
+3. Đặt câu hỏi Q&A có đánh số thứ tự (Q1, Q2...) cho user/PO/BA giải đáp, mỗi câu kèm ngữ cảnh và assumption nếu không được trả lời
+4. **DỪNG LẠI — Chờ user trả lời** các câu hỏi trước khi tiếp tục
 
 **Output:** Danh sách luồng + Ambiguities + Câu hỏi Q&A.
 
@@ -187,12 +191,11 @@ Quy trình bài bản, tuần tự cho module phức tạp. Bao gồm phân tíc
 **Mục đích:** Chia tính năng phức tạp thành các Module / Sub-module nhỏ, dễ quản lý.
 
 **Agent phải:**
-1. Đọc prompt template tại `plans/manual/03_decomposition/prompt.txt`
-2. Phân rã theo 1 trong 2 cách:
+1. Phân rã theo 1 trong 2 cách:
    - **Theo UI:** Header, Data Table, Form popup, Sidebar...
    - **Theo luồng:** Flow tạo mới, Flow chỉnh sửa, Flow xóa...
-3. Mô tả ngắn gọn chức năng từng Module
-4. Chỉ ra Dependencies giữa các Module
+2. Mô tả ngắn gọn chức năng từng Module
+3. Chỉ ra Dependencies giữa các Module
 
 **Output:** Danh sách Modules/Sub-modules + Dependencies.
 
@@ -203,14 +206,15 @@ Quy trình bài bản, tuần tự cho module phức tạp. Bao gồm phân tíc
 **Mục đích:** Thiết lập ma trận truy vết để đảm bảo 100% requirements được phủ test scenarios.
 
 **Agent phải:**
-1. Đọc prompt template tại `plans/manual/04_traceability/prompt.txt`
-2. Map mỗi Module/Rule với mã Yêu cầu (REQ-01, REQ-02...)
-3. Cross-check xem có yêu cầu nào bị thiếu trong danh sách phân rã
-4. Liệt kê High-Level Test Scenarios cho từng Module, tập trung:
+1. Map mỗi Module/Rule với mã Yêu cầu (REQ-01, REQ-02...)
+2. Cross-check xem có yêu cầu nào bị thiếu trong danh sách phân rã (Gap Analysis)
+3. Liệt kê High-Level Test Scenarios cho từng Module, tập trung:
    - Security / phân quyền
    - UI Validation
    - Business Logic
-5. **Chờ user review** danh sách scenarios trước khi sinh test case chi tiết
+   - Data Integrity
+   - Error Handling
+4. **Chờ user review** danh sách scenarios trước khi sinh test case chi tiết
 
 **Output:** Traceability Matrix + High-Level Test Scenarios.
 
@@ -224,12 +228,11 @@ Quy trình bài bản, tuần tự cho module phức tạp. Bao gồm phân tíc
 **Mục đích:** Sinh test cases chi tiết theo chiến lược Risk-Based Testing.
 
 **Agent phải:**
-1. Đọc prompt template tại `plans/manual/05_rbt_and_tc_generation/prompt.txt`
-2. Đánh giá Risk Level cho mỗi Module:
+1. Đánh giá Risk Level cho mỗi Module:
    - **High Risk:** Test kỹ, nhiều cases (nghiệp vụ quan trọng, liên quan tiền, bảo mật)
    - **Medium Risk:** Test vừa phải
    - **Low Risk:** Test cơ bản, happy path
-3. Sinh test case với đầy đủ fields:
+2. Sinh test case với đầy đủ fields:
    - Module / Sub-module
    - Test Case Title
    - Pre-conditions
@@ -237,16 +240,16 @@ Quy trình bài bản, tuần tự cho module phức tạp. Bao gồm phân tíc
    - Expected Results (đánh số tương ứng)
    - Test Data (**phải cụ thể**, không dùng placeholder chung chung)
    - Priority
-4. Bao phủ đa dạng:
+3. Bao phủ đa dạng:
    - Happy Path
    - Negative Path (giá trị biên, vượt ký tự)
    - Edge Cases (timeout, mất kết nối...)
-5. Áp dụng **kỹ thuật thiết kế test case** phù hợp:
+4. Áp dụng **kỹ thuật thiết kế test case** phù hợp:
    - **Equivalence Partitioning:** Chia input thành nhóm tương đương, test đại diện mỗi nhóm
    - **Boundary Value Analysis (BVA):** Test giá trị tại ranh giới (min, min+1, max-1, max)
    - **Decision Table:** Liệt kê tổ hợp điều kiện → kết quả (cho logic nhiều điều kiện)
    - **State Transition:** Test chuyển đổi trạng thái hợp lệ + không hợp lệ (cho workflow)
-6. Nếu scenarios quá nhiều → sinh từng Module một, hỏi user để tiếp tục
+5. Nếu scenarios quá nhiều → sinh từng Module một, hỏi user để tiếp tục
 
 **Output:** Danh sách Test Cases chi tiết có Risk Level.
 
@@ -257,19 +260,18 @@ Quy trình bài bản, tuần tự cho module phức tạp. Bao gồm phân tíc
 **Mục đích:** Đóng gói test cases thành bảng Markdown chuẩn, sẵn sàng copy sang Excel/Jira.
 
 **Agent phải:**
-1. Đọc prompt template tại `plans/manual/06_template_mapping/prompt.txt`
-2. Chuẩn hóa toàn bộ test cases vào bảng Markdown:
+1. Chuẩn hóa toàn bộ test cases vào bảng Markdown:
 
 ```
 | TC ID | Module | Risk Level | Test Title | Pre-Condition | Test Steps | Expected Result | Priority | Test Data |
 ```
 
-3. Quy tắc bảng:
+2. Quy tắc bảng:
    - TC ID theo format thống nhất (ví dụ: `CRM_CUST_TC_001`)
    - Test Steps và Expected Result đánh số, dùng `<br>` xuống dòng trong cell
    - **TUYỆT ĐỐI không được bỏ sót** bất kỳ test case nào đã sinh ở Bước 5
    - Nếu quá dài → chia thành Part 1, Part 2... và hỏi user để tiếp tục
-4. Xuất output dưới dạng Artifact (`test_cases_<module>.md`)
+3. Xuất output dưới dạng Artifact (`test_cases_<module>.md`)
 
 **Output:** Bảng Test Cases Markdown hoàn chỉnh.
 

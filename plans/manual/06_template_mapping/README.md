@@ -1,7 +1,5 @@
 # Bước 6: Chuẩn hóa Format (Template Mapping)
 
-**Workflow:** `/generate_manual_testcases_rbt` (tiếp tục)
-**Skill:** `rbt_manual_testing`
 
 ---
 

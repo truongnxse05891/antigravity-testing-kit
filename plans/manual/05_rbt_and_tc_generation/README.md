@@ -1,7 +1,5 @@
 # Bước 5: Sinh Test Case chi tiết (RBT & Test Case Generation)
 
-**Workflow:** `/generate_manual_testcases_rbt` (tiếp tục)
-**Skill:** `rbt_manual_testing`
 
 ---
 

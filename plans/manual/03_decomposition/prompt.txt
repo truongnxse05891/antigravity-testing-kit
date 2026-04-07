@@ -1,8 +1,7 @@
 # ============================================================
 # BƯỚC 3: PHÂN RÃ HỆ THỐNG (Decomposition)
 # ============================================================
-# Workflow: /generate_manual_testcases_rbt (tiếp tục)
-# Skill:    rbt_manual_testing
+# Đây là prompt độc lập — copy & paste vào bất kỳ AI nào
 # ============================================================
 # CÁCH DÙNG:
 # 1. Gửi prompt này SAU KHI đã trả lời hết câu hỏi Q&A ở Bước 2

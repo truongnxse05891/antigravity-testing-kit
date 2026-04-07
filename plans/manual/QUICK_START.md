@@ -1,40 +1,35 @@
 # 📋 Hướng Dẫn Nhanh: Sử Dụng AI-RBT 6 Bước
 
-## Workflow & Prompt cho từng bước
+## 🔀 Chọn Luồng Sử Dụng
 
-| Bước | Tên | Prompt gửi Antigravity | Chờ User? |
-|------|-----|------------------------|-----------|
-| **1** | Context & Role-play | Copy `plan/manual/01.../prompt.txt` + điền `[...]` | ✅ Chờ xác nhận |
-| **2** | Analysis & QnA | Copy `plan/manual/02.../prompt.txt` | ✅ **Chờ trả lời Q&A** |
-| **3** | Decomposition | Copy `plan/manual/03.../prompt.txt` | Review nhanh |
-| **4** | Traceability | Copy `plan/manual/04.../prompt.txt` | ✅ **Chờ review scenarios** |
-| **5** | RBT & TC Generation | Copy `plan/manual/05.../prompt.txt` | Review kết quả |
-| **6** | Template Mapping | Copy `plan/manual/06.../prompt.txt` | Copy bảng → Excel |
+Có **2 luồng** riêng biệt, tuỳ tool AI bạn đang dùng:
+
+### Luồng 1: Antigravity (Slash Command) — Tự động
+
+```
+Gõ: /generate_manual_testcases_rbt + dán requirements
+→ AI tự chạy 6 bước theo skill, dừng ở checkpoint chờ bạn
+→ KHÔNG cần copy-paste prompt templates
+```
+
+**Ưu điểm:** Nhanh, tự động, agent nhớ context xuyên suốt.
+**Nhược điểm:** Hướng dẫn ở mức tổng quát (không chi tiết bằng prompt templates).
+
+### Luồng 2: Copy-Paste Prompt — Thủ công (ChatGPT / Claude / AI bất kỳ)
+
+```
+Copy prompt Bước 1 → paste vào chat → AI xử lý
+→ Copy prompt Bước 2 → paste → AI xử lý
+→ ... lặp lại đến Bước 6
+```
+
+**Ưu điểm:** Prompt chi tiết hơn, có ví dụ cụ thể, gợi ý sâu hơn.
+**Nhược điểm:** Phải copy-paste thủ công 6 lần.
 
 ---
 
-## Cách Sử Dụng
+## Luồng 1: Antigravity — Prompt nhanh
 
-### Luồng thực hiện:
-
-```
-[Bước 1] Gửi prompt + tài liệu requirements
-    ↓  AI xác nhận hiểu → User xác nhận OK
-[Bước 2] Gửi prompt phân tích
-    ↓  AI đặt câu hỏi → ⏸️ User trả lời từng câu
-[Bước 3] Gửi prompt phân rã
-    ↓  AI sinh Module list → User review nhanh
-[Bước 4] Gửi prompt traceability
-    ↓  AI sinh scenarios → ⏸️ User review + bổ sung
-[Bước 5] Gửi prompt sinh TC
-    ↓  AI sinh test cases chi tiết → User review
-[Bước 6] Gửi prompt chuẩn hóa
-    ↓  AI sinh bảng Markdown → Copy vào Excel/Jira ✅
-```
-
-### Prompt nhanh cho mỗi bước:
-
-**Bước 1 (bắt đầu):**
 ```
 /generate_manual_testcases_rbt
 
@@ -45,10 +40,39 @@ Mục tiêu: [Mô tả ngắn]
 [Dán requirements/user stories vào đây]
 ```
 
-**Bước 2 → 6 (tiếp tục):**
+Khi AI dừng ở checkpoint, chỉ cần trả lời câu hỏi hoặc gõ:
 ```
-Tiếp tục sang Bước [X]: [Tên bước]
-[Hoặc copy nội dung prompt.txt tương ứng]
+Tiếp tục sang Bước [X]
+```
+
+---
+
+## Luồng 2: Copy-Paste — Hướng dẫn từng bước
+
+| Bước | Tên | Prompt file | Chờ User? |
+|------|-----|-------------|-----------|
+| **1** | Context & Role-play | Copy `plans/manual/01_context_and_roleplay/prompt.txt` + điền `[...]` | ✅ Chờ xác nhận |
+| **2** | Analysis & QnA | Copy `plans/manual/02_analysis_and_qna/prompt.txt` | ✅ **Chờ trả lời Q&A** |
+| **3** | Decomposition | Copy `plans/manual/03_decomposition/prompt.txt` | Review nhanh |
+| **4** | Traceability | Copy `plans/manual/04_traceability/prompt.txt` | ✅ **Chờ review scenarios** |
+| **5** | RBT & TC Generation | Copy `plans/manual/05_rbt_and_tc_generation/prompt.txt` | Review kết quả |
+| **6** | Template Mapping | Copy `plans/manual/06_template_mapping/prompt.txt` | Copy bảng → Excel |
+
+### Sơ đồ luồng:
+
+```
+[Bước 1] Copy prompt + dán tài liệu requirements
+    ↓  AI xác nhận hiểu → User xác nhận OK
+[Bước 2] Copy prompt phân tích
+    ↓  AI đặt câu hỏi → ⏸️ User trả lời từng câu
+[Bước 3] Copy prompt phân rã
+    ↓  AI sinh Module list → User review nhanh
+[Bước 4] Copy prompt traceability
+    ↓  AI sinh scenarios → ⏸️ User review + bổ sung
+[Bước 5] Copy prompt sinh TC
+    ↓  AI sinh test cases chi tiết → User review
+[Bước 6] Copy prompt chuẩn hóa
+    ↓  AI sinh bảng Markdown → Copy vào Excel/Jira ✅
 ```
 
 ---
@@ -59,3 +83,4 @@ Tiếp tục sang Bước [X]: [Tên bước]
 2. **Chia module khi nhiều** — Ở Bước 5, nếu có >5 modules, yêu cầu AI sinh từng module
 3. **Review trước khi format** — Ở Bước 5, review test cases trước khi sang Bước 6
 4. **Dùng cùng conversation** — Chạy tất cả 6 bước trong **cùng 1 conversation** để AI giữ context
+5. **Luồng Copy-Paste chi tiết hơn** — Nếu cần chất lượng cao nhất, dùng Luồng 2 (kể cả khi đang dùng Antigravity)

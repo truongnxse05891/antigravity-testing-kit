@@ -1,7 +1,5 @@
 # Bước 3: Phân rã hệ thống (Decomposition Strategy)
 
-**Workflow:** `/generate_manual_testcases_rbt` (tiếp tục)
-**Skill:** `rbt_manual_testing`
 
 ---
 

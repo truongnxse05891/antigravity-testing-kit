@@ -1,13 +1,18 @@
 ---
 name: RBT Manual Testing
-description: Skill hướng dẫn agent thực hiện quy trình AI-RBT (AI-Driven Risk-Based Testing) 6 bước để sinh manual test cases chất lượng cao từ requirements.
+description: Skill sinh manual test cases với 2 modes — QUICK (sinh nhanh từ requirements) và FULL RBT (quy trình AI-RBT 6 bước có đánh giá rủi ro). Master skill cho mọi tác vụ manual test case.
 ---
 
 # RBT Manual Testing
 
 ## Description
 
-Skill này cung cấp framework **AI-RBT (AI-Driven Risk-Based Testing)** — quy trình 6 bước tuần tự để agent chuyển đổi tài liệu yêu cầu (Requirements, User Stories, Figma) thành bộ Manual Test Cases chất lượng cao, có đánh giá rủi ro, sẵn sàng import vào Jira/TestRail/Excel.
+Đây là **Master Skill** cho mọi tác vụ sinh manual test cases. Skill cung cấp **2 chế độ hoạt động** (modes) để phù hợp với mọi quy mô yêu cầu:
+
+| Mode | Khi nào dùng | Thời gian |
+|------|-------------|-----------|
+| **QUICK** | Module đơn giản, cần TC nhanh, requirements rõ ràng | 1 lượt (không chờ user) |
+| **FULL RBT** | Module phức tạp, cần phân tích rủi ro, hệ thống lớn | 6 bước tuần tự (có checkpoint) |
 
 **Nguyên tắc cốt lõi:**
 - **Human Strategy:** Con người xác định chiến lược, mức độ rủi ro và tiêu chuẩn
@@ -26,6 +31,7 @@ Sử dụng skill này khi:
 - Xây dựng traceability matrix
 - Áp dụng Risk-Based Testing (đánh giá rủi ro cho test cases)
 - Chuẩn hóa test cases sang bảng Markdown (Jira/Excel format)
+- Sinh test cases nhanh từ requirements đơn giản
 
 **KHÔNG** sử dụng skill này khi:
 
@@ -35,7 +41,102 @@ Sử dụng skill này khi:
 
 ---
 
-## Quy Trình AI-RBT: 6 Bước Tuần Tự
+## Mode Routing — Cách chọn mode
+
+Agent tự động chọn mode dựa trên **trigger keywords** và **ngữ cảnh**:
+
+### → Mode QUICK
+
+Kích hoạt khi:
+- User dùng workflow `/generate_testcases_from_requirements`
+- User nói: "sinh test cases nhanh", "tạo TC từ requirement này", "viết test cases cho form..."
+- Requirements đã rõ ràng, scope nhỏ (1 module / 1 tính năng)
+- User không yêu cầu phân tích rủi ro hay quy trình bài bản
+
+### → Mode FULL RBT
+
+Kích hoạt khi:
+- User dùng workflow `/generate_manual_testcases_rbt`
+- User nói: "quy trình 6 bước", "phân tích RBT", "sinh test cases đầy đủ", "sinh bộ TC bài bản"
+- Scope lớn (nhiều modules, hệ thống phức tạp)
+- User yêu cầu Traceability Matrix hoặc đánh giá Risk Level
+- Requirements chưa rõ ràng, cần phân tích Ambiguity
+
+### → Khi không rõ
+
+Nếu không xác định được mode, agent **hỏi user**:
+```
+Bạn muốn sinh test cases theo chế độ nào?
+1. QUICK — Sinh nhanh từ requirements (không qua bước phân tích)
+2. FULL RBT — Quy trình 6 bước đầy đủ (phân tích → phân rã → RBT → sinh TC)
+```
+
+---
+
+# Mode 1: QUICK — Sinh Test Cases Nhanh
+
+## Mục đích
+
+Sinh test cases **nhanh, đủ chất lượng** từ requirements/user stories đã rõ ràng, phù hợp cho module đơn giản hoặc khi cần kết quả ngay.
+
+## Quy trình (1 lượt duy nhất)
+
+**Agent phải:**
+
+1. **Đọc và hiểu requirements** được cung cấp
+2. **Xác định các luồng chính:**
+   - Happy Path (luồng chính)
+   - Negative Path (dữ liệu sai, thiếu)
+   - Boundary Cases (giá trị biên)
+3. **Áp dụng kỹ thuật thiết kế test case** tự động:
+   - **Equivalence Partitioning (EP):** Chia input thành nhóm tương đương
+   - **Boundary Value Analysis (BVA):** Test giá trị tại ranh giới
+   - **Decision Table:** Liệt kê tổ hợp điều kiện (nếu có nhiều rules)
+   - **State Transition:** Test chuyển đổi trạng thái (nếu có workflow)
+4. **Sinh test cases** với đầy đủ fields:
+   - TC ID (format: `[DỰ_ÁN]_[MODULE]_TC_[SỐ]`)
+   - Module
+   - Test Case Title / Test Scenario
+   - Pre-conditions
+   - Test Steps (đánh số)
+   - Expected Results (đánh số tương ứng)
+   - Test Data (**phải cụ thể**, không placeholder)
+   - Priority (Critical / High / Medium / Low)
+5. **Xuất ra bảng Markdown** chuẩn, sẵn sàng copy sang Excel/Jira
+
+## Bảng Output
+
+```
+| TC ID | Module | Test Scenario | Pre-Condition | Test Steps | Test Data | Expected Result | Priority |
+```
+
+## Quy tắc Test Data (áp dụng cho cả 2 modes)
+
+```
+❌ Sai: "Nhập mã số hợp lệ"
+✅ Đúng: "Nhập mã: KH-2026-0012"
+
+❌ Sai: "Nhập email hợp lệ"
+✅ Đúng: "Nhập email: test_khachhang_01@domain.com"
+
+❌ Sai: "Nhập giá trị vượt giới hạn"
+✅ Đúng: "Nhập 256 ký tự vào trường Name (max: 255)"
+```
+
+## Anti-Patterns (Mode QUICK)
+
+- ❌ Sinh test data chung chung / placeholder
+- ❌ Chỉ có Happy Path, thiếu Negative/Boundary
+- ❌ Bỏ qua validation rules trong requirements
+- ❌ Test Steps mơ hồ ("nhập dữ liệu" → phải ghi rõ nhập gì, ở đâu)
+
+---
+
+# Mode 2: FULL RBT — Quy Trình AI-RBT 6 Bước
+
+## Mục đích
+
+Quy trình bài bản, tuần tự cho module phức tạp. Bao gồm phân tích Ambiguity, phân rã hệ thống, Traceability Matrix, đánh giá Risk Level, và sinh test cases chi tiết.
 
 > ⚠️ **QUAN TRỌNG:** Quy trình này **BẮT BUỘC chạy tuần tự** từng bước. KHÔNG được gộp nhiều bước chạy 1 lần. Mỗi bước phải hoàn thành và được user xác nhận trước khi sang bước tiếp.
 
@@ -44,7 +145,7 @@ Sử dụng skill này khi:
 **Mục đích:** Thiết lập vai trò Senior QA Engineer và nạp bối cảnh dự án.
 
 **Agent phải:**
-1. Đọc prompt template tại `plan/manual/01_context_and_roleplay/prompt.txt`
+1. Đọc prompt template tại `plans/manual/01_context_and_roleplay/prompt.txt`
 2. Yêu cầu user cung cấp:
    - Tên dự án / tính năng
    - Mô tả hệ thống hiện tại
@@ -62,7 +163,7 @@ Sử dụng skill này khi:
 **Mục đích:** Phân tích tài liệu để phát hiện điểm mờ, thiếu sót, mâu thuẫn.
 
 **Agent phải:**
-1. Đọc prompt template tại `plan/manual/02_analysis_and_qna/prompt.txt`
+1. Đọc prompt template tại `plans/manual/02_analysis_and_qna/prompt.txt`
 2. Xác định các luồng:
    - Happy Path (luồng chính)
    - Alternate Paths (luồng rẽ nhánh)
@@ -86,7 +187,7 @@ Sử dụng skill này khi:
 **Mục đích:** Chia tính năng phức tạp thành các Module / Sub-module nhỏ, dễ quản lý.
 
 **Agent phải:**
-1. Đọc prompt template tại `plan/manual/03_decomposition/prompt.txt`
+1. Đọc prompt template tại `plans/manual/03_decomposition/prompt.txt`
 2. Phân rã theo 1 trong 2 cách:
    - **Theo UI:** Header, Data Table, Form popup, Sidebar...
    - **Theo luồng:** Flow tạo mới, Flow chỉnh sửa, Flow xóa...
@@ -102,7 +203,7 @@ Sử dụng skill này khi:
 **Mục đích:** Thiết lập ma trận truy vết để đảm bảo 100% requirements được phủ test scenarios.
 
 **Agent phải:**
-1. Đọc prompt template tại `plan/manual/04_traceability/prompt.txt`
+1. Đọc prompt template tại `plans/manual/04_traceability/prompt.txt`
 2. Map mỗi Module/Rule với mã Yêu cầu (REQ-01, REQ-02...)
 3. Cross-check xem có yêu cầu nào bị thiếu trong danh sách phân rã
 4. Liệt kê High-Level Test Scenarios cho từng Module, tập trung:
@@ -123,7 +224,7 @@ Sử dụng skill này khi:
 **Mục đích:** Sinh test cases chi tiết theo chiến lược Risk-Based Testing.
 
 **Agent phải:**
-1. Đọc prompt template tại `plan/manual/05_rbt_and_tc_generation/prompt.txt`
+1. Đọc prompt template tại `plans/manual/05_rbt_and_tc_generation/prompt.txt`
 2. Đánh giá Risk Level cho mỗi Module:
    - **High Risk:** Test kỹ, nhiều cases (nghiệp vụ quan trọng, liên quan tiền, bảo mật)
    - **Medium Risk:** Test vừa phải
@@ -147,15 +248,6 @@ Sử dụng skill này khi:
    - **State Transition:** Test chuyển đổi trạng thái hợp lệ + không hợp lệ (cho workflow)
 6. Nếu scenarios quá nhiều → sinh từng Module một, hỏi user để tiếp tục
 
-**Test Data phải cụ thể:**
-```
-❌ Sai: "Nhập mã số hợp lệ"
-✅ Đúng: "Nhập mã: KH-2026-0012"
-
-❌ Sai: "Nhập email hợp lệ"
-✅ Đúng: "Nhập email: test_khachhang_01@domain.com"
-```
-
 **Output:** Danh sách Test Cases chi tiết có Risk Level.
 
 ---
@@ -165,7 +257,7 @@ Sử dụng skill này khi:
 **Mục đích:** Đóng gói test cases thành bảng Markdown chuẩn, sẵn sàng copy sang Excel/Jira.
 
 **Agent phải:**
-1. Đọc prompt template tại `plan/manual/06_template_mapping/prompt.txt`
+1. Đọc prompt template tại `plans/manual/06_template_mapping/prompt.txt`
 2. Chuẩn hóa toàn bộ test cases vào bảng Markdown:
 
 ```
@@ -183,23 +275,25 @@ Sử dụng skill này khi:
 
 ---
 
-## Anti-Patterns (NGHIÊM CẤM)
+## Anti-Patterns (NGHIÊM CẤM — áp dụng cho cả 2 modes)
 
-- ❌ Gộp nhiều bước chạy 1 lần (PHẢI tuần tự)
-- ❌ Tự đoán business logic khi chưa hỏi user (Bước 2)
-- ❌ Bỏ qua bước phân tích Ambiguity
+- ❌ Gộp nhiều bước chạy 1 lần trong FULL RBT (PHẢI tuần tự)
+- ❌ Tự đoán business logic khi chưa hỏi user (Bước 2 - FULL RBT)
+- ❌ Bỏ qua bước phân tích Ambiguity (FULL RBT)
 - ❌ Sinh test data chung chung / placeholder
 - ❌ Rút gọn hoặc bỏ sót test case khi mapping sang bảng
 - ❌ Sinh tất cả test cases 1 lần cho hệ thống lớn (phải chia module)
+- ❌ Chỉ có Happy Path, thiếu Negative/Boundary cases (QUICK)
+- ❌ Test Steps mơ hồ, không ghi rõ dữ liệu nhập
 
 ---
 
 ## Prompt Templates
 
-Các prompt template mẫu cho từng bước nằm tại:
+Các prompt template mẫu cho quy trình FULL RBT nằm tại:
 
 ```
-plan/manual/
+plans/manual/
 ├── 01_context_and_roleplay/prompt.txt
 ├── 02_analysis_and_qna/prompt.txt
 ├── 03_decomposition/prompt.txt
@@ -208,13 +302,21 @@ plan/manual/
 └── 06_template_mapping/prompt.txt
 ```
 
-Agent cần đọc prompt template tương ứng **trước khi** thực hiện mỗi bước.
+Agent cần đọc prompt template tương ứng **trước khi** thực hiện mỗi bước (FULL RBT mode).
+
+Mode QUICK không yêu cầu đọc prompt templates — agent áp dụng trực tiếp các kỹ thuật EP/BVA/Decision Table.
 
 ---
 
 ## Output Format
 
-Tùy theo bước, agent xuất ra:
+### Mode QUICK
+
+| Output | Mô tả |
+|--------|--------|
+| Bảng TC Markdown | Test Cases đầy đủ, sẵn sàng copy sang Excel/Jira |
+
+### Mode FULL RBT
 
 | Bước | Output |
 |------|--------|

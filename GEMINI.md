@@ -124,7 +124,7 @@ Agent sử dụng skills trong `.agent/skills/` tùy theo nhiệm vụ:
 | Skill | Vai trò |
 |-------|---------|
 | `qa_automation_engineer` | Master skill cho automation — điều phối toàn bộ quy trình |
-| `rbt_manual_testing` | Master skill cho manual testing — quy trình AI-RBT 6 bước |
+| `rbt_manual_testing` | Master skill cho manual testing — 2 modes: QUICK (sinh TC nhanh) và FULL RBT (6 bước) |
 | `requirements_analyzer` | Phân tích requirements từ website/tài liệu |
 | `ui_debug_agent` | Inspect UI/DOM, thu thập locators |
 | `smart_locator_agent` | Sinh locator mới ổn định |
@@ -135,15 +135,16 @@ Agent sử dụng skills trong `.agent/skills/` tùy theo nhiệm vụ:
 
 ## 6. Kế Hoạch Kiểm Thử (Plan Templates)
 
-Các bộ prompt template sẵn dùng trong `plan/`:
+Các bộ prompt template sẵn dùng trong `plans/`:
 
-- **`plan/manual/`** — Quy trình 6 bước sinh Manual Test Cases (AI-RBT)
-  - Xem `plan/manual/QUICK_START.md` để bắt đầu nhanh
-  - Workflow: `/generate_manual_testcases_rbt`
+- **`plans/manual/`** — Quy trình sinh Manual Test Cases (2 modes: QUICK + FULL RBT)
+  - Xem `plans/manual/QUICK_START.md` để bắt đầu nhanh
+  - Workflow QUICK: `/generate_testcases_from_requirements`
+  - Workflow FULL RBT: `/generate_manual_testcases_rbt`
 
-- **`plan/automation/`** — Quy trình 6 bước sinh Automation Scripts
-  - Xem `plan/automation/QUICK_START.md` để bắt đầu nhanh
-  - One-click: Copy `plan/automation/prompt_automation.txt`
+- **`plans/automation/`** — Quy trình 6 bước sinh Automation Scripts
+  - Xem `plans/automation/QUICK_START.md` để bắt đầu nhanh
+  - One-click: Copy `plans/automation/prompt_automation.txt`
   - Workflow: `/generate_automation_from_testcases`
 
 ## 7. Test Data
@@ -193,8 +194,8 @@ Agent sử dụng workflows trong `.agent/workflows/` qua slash commands:
 | Workflow | Mô tả |
 |----------|-------|
 | `/generate_requirements_from_website` | Sinh requirements từ website/module |
-| `/generate_manual_testcases_rbt` | Sinh manual test cases theo AI-RBT 6 bước |
-| `/generate_testcases_from_requirements` | Sinh test cases từ requirements document |
+| `/generate_manual_testcases_rbt` | Sinh manual test cases theo AI-RBT 6 bước (FULL RBT mode) |
+| `/generate_testcases_from_requirements` | Sinh test cases nhanh từ requirements (QUICK mode) |
 | `/generate_automation_from_testcases` | Chuyển manual test cases → automation scripts |
 | `/generate_automation_from_ui_flow` | Sinh automation từ UI flow trực tiếp |
 | `/generate_full_automation_suite` | Khám phá app và sinh full automation suite |

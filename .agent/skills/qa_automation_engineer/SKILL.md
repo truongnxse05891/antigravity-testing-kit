@@ -61,13 +61,16 @@ When the user request matches a specific task, select the appropriate workflow f
 
 ### Generate test cases from requirements
 
-Use workflow: `generate_testcases_from_requirements`
+> **Delegate:** Tác vụ này thuộc skill **`rbt_manual_testing`** — không phải `qa_automation_engineer`.
+
+Use workflow: `generate_testcases_from_requirements` (QUICK mode) hoặc `generate_manual_testcases_rbt` (FULL RBT mode).
 
 Triggers when user asks:
 
-- generate test cases
-- write manual test cases
-- test scenarios from requirement
+- generate test cases → **delegate to `rbt_manual_testing` (QUICK mode)**
+- write manual test cases → **delegate to `rbt_manual_testing` (QUICK mode)**
+- test scenarios from requirement → **delegate to `rbt_manual_testing` (QUICK mode)**
+- sinh test cases đầy đủ / quy trình 6 bước → **delegate to `rbt_manual_testing` (FULL RBT mode)**
 
 ---
 

@@ -1,23 +1,14 @@
 /generate_automation_framework
 
-# ROLE
-Bạn là một Senior Automation QA Engineer và Software Architect chuyên về Java và Selenium.
-
-# TASK
-Thiết kế và viết code mẫu cho một Selenium Automation Framework hoàn chỉnh.
-
 # CONTEXT
 Tôi cần xây dựng Web UI Automation Framework từ đầu.
-Công nghệ: Java + Selenium WebDriver v4 + TestNG.
+- Công nghệ: Java 17+ + Selenium WebDriver v4 + TestNG
+- Build tool: Maven
 
 Dùng thông tin đăng nhập:
 - URL: [URL hệ thống]
 - Email: [EMAIL]
 - Password: [PASSWORD]
-
-# CONSTRAINTS
-- Java 17+.
-- Selenium WebDriver 4 + TestNG.
 
 # OUTPUT FORMAT
 1. Directory Structure (tree format)

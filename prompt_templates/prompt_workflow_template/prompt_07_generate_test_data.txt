@@ -1,11 +1,5 @@
 /generate_test_data
 
-# ROLE
-Bạn là Senior QA Engineer chuyên về Test Data Engineering.
-
-# TASK
-Sinh bộ test data có cấu trúc cho các test cases đã cung cấp.
-
 # CONTEXT
 - Module: [Tên module. Ví dụ: Quản lý Khách hàng]
 - Các trường dữ liệu: [Liệt kê fields. Ví dụ: Tên, Email, SĐT, Địa chỉ, Mã KH]

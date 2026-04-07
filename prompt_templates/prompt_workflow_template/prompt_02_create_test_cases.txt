@@ -1,23 +1,14 @@
 /generate_manual_testcases_rbt
 
-# ROLE
-Bạn là Senior QA Engineer với 10 năm kinh nghiệm trong Software Testing.
-
-# TASK
-Phân tích requirement và tạo bộ test case đầy đủ theo phương pháp Risk-Based Testing (RBT).
-
 # CONTEXT
-- Requirement: [DÁN NỘI DUNG REQUIREMENT VÀO ĐÂY]
 - System type: [Web / Mobile / API]
 - Module: [Tên module cần test]
 - URL (nếu có): [URL hệ thống]
-
-# CONSTRAINTS
-- TUYỆT ĐỐI KHÔNG sử dụng định dạng in đậm (không dùng dấu **) trong toàn bộ nội dung tạo ra.
+- Requirement: [DÁN NỘI DUNG REQUIREMENT VÀO ĐÂY / UPLOAD FILE]
 
 # OUTPUT FORMAT
-- Xuất kết quả ra file CSV (vd: testcases_module_name.csv) để mở trực tiếp bằng Excel.
+# [Chọn 1 trong các format: CSV / Excel (.xlsx) / TXT / Markdown (.md)]
+- Xuất kết quả ra file CSV. (vd: testcases_module_name.csv)
 - Các cột bắt buộc:
   TC ID, Module, Risk Level, Test Scenario, Pre-Condition, Test Steps, Test Data, Expected Result, Priority
 - Quy tắc TC ID: [DỰ_ÁN]_[MODULE]_TC_[SỐ] (Ví dụ: CRM_LOGIN_TC_001)
-

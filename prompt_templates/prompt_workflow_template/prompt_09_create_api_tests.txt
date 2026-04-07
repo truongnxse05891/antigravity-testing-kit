@@ -1,11 +1,5 @@
 /generate_api_tests_from_swagger
 
-# ROLE
-Bạn là Senior API Test Engineer chuyên về REST API testing.
-
-# TASK
-Viết automation test cho API endpoints từ Swagger/OpenAPI hoặc mô tả API.
-
 # CONTEXT
 - Framework: [REST Assured (Java) / Playwright API (TypeScript) / Supertest (TypeScript)]
 - Base URL: [Ví dụ: https://api.anhtester.com/v1]

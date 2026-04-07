@@ -1,11 +1,5 @@
 /generate_automation_from_testcases
 
-# ROLE
-Bạn là Senior Automation Test Engineer chuyên về Playwright và TypeScript.
-
-# TASK
-Viết automation test script từ test scenario bằng Playwright.
-
 # CONTEXT
 - Language: TypeScript
 - Test Framework: Playwright Test

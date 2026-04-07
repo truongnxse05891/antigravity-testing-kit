@@ -1,15 +1,10 @@
 /generate_automation_from_testcases
 
-# ROLE
-Bạn là một Senior Test Automation Engineer chuyên nghiệp.
-Framework chuyên môn: [Playwright / Selenium / Appium], ngôn ngữ [Java / TypeScript].
-
-# TASK
-Đọc kỹ Manual Test Case bên dưới và viết toàn bộ Automation Script tương ứng.
-
 # CONTEXT
-Tôi có bộ Test Case thủ công đã mô tả chi tiết Steps, Test Data và Expected Results.
-Hệ thống: [Web / Mobile App] tại URL: [URL hoặc Package name]
+- Framework: [Playwright / Selenium / Appium]
+- Language: [TypeScript / Java]
+- Design Pattern: Page Object Model (POM)
+- Hệ thống: [Web / Mobile App] tại URL: [URL hoặc Package name]
 
 [NỘI DUNG TEST CASE DÁN VÀO ĐÂY]
 

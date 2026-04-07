@@ -1,19 +1,11 @@
 /generate_requirements_from_website
 
-# ROLE
-Bạn là một Business Analyst và QA Engineer chuyên nghiệp.
-
-# TASK
-Thực hiện tạo tài liệu Requirements từ website hoặc module được cung cấp.
-
 # CONTEXT
 - Mô tả hệ thống: [Mô tả ngắn gọn về hệ thống hiện tại, module hiện tại]
 - Website URL: [URL_TRANG_WEB]
 - Module Name: [TEN_MODULE]
 - Thông tin đăng nhập: [EMAIL] và [PASSWORD]
 
-# CONSTRAINTS
-- TUYỆT ĐỐI KHÔNG sử dụng định dạng in đậm (không dùng dấu **) trong toàn bộ nội dung tạo ra.
-
 # OUTPUT FORMAT
-- Xuất tài liệu kết quả cuối cùng ra file Markdown (vd: requirements_module_name.md).
+# [Chọn 1 trong các format: TXT / Markdown (.md)]
+- Xuất tài liệu kết quả cuối cùng ra file Markdown. (vd: requirements_module_name.md)

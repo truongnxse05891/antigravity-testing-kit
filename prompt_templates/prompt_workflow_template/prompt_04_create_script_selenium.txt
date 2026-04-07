@@ -1,11 +1,5 @@
 /generate_automation_from_testcases
 
-# ROLE
-Bạn là Senior Automation Test Engineer chuyên về Selenium WebDriver và Java.
-
-# TASK
-Viết automation test script từ test scenario bằng Selenium Java.
-
 # CONTEXT
 - Language: Java
 - Test Framework: TestNG

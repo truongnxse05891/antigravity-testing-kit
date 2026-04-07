@@ -1,23 +1,14 @@
 /generate_automation_framework
 
-# ROLE
-Bạn là một Senior Test Automation Architect chuyên gia về Node.js và Playwright.
-
-# TASK
-Thiết kế và viết code mẫu cho một Playwright Automation Framework hoàn chỉnh.
-
 # CONTEXT
 Tôi cần xây dựng E2E Web UI Automation Framework từ đầu.
-Công nghệ: Playwright Test + TypeScript.
+- Công nghệ: Playwright Test + TypeScript (Strict Mode)
+- Test Runner: @playwright/test
 
 Dùng thông tin đăng nhập:
 - URL: [URL hệ thống]
 - Email: [EMAIL]
 - Password: [PASSWORD]
-
-# CONSTRAINTS
-- TypeScript Strict Mode.
-- Test Runner: @playwright/test.
 
 # OUTPUT FORMAT
 1. Directory Structure (tree format)

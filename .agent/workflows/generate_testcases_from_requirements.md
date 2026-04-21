@@ -16,6 +16,7 @@ Workflow này sử dụng **Mode QUICK** của skill `rbt_manual_testing` để 
 - Phù hợp cho module đơn giản, requirements đã rõ ràng
 - Nếu phát hiện requirements quá phức tạp hoặc mơ hồ → **tự động chuyển sang FULL RBT** và thông báo user
 - Tất cả output bằng **Tiếng Việt**
+- **BẮT BUỘC:** Tất cả các file test case sinh ra **PHẢI** được lưu vào thư mục `test_cases/`.
 
 ## Các bước thực hiện
 

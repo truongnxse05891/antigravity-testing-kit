@@ -22,6 +22,7 @@ antigravity-testing-kit/
 │   └── automation/      # Quy trình sinh Automation Scripts
 ├── prompt_templates/    # Thư viện Prompt mẫu tối ưu
 ├── scripts/             # Công cụ bổ trợ và tích hợp
+├── test_cases/          # Nơi lưu trữ tập trung các file Test Case (.md, .csv)
 ├── GEMINI.md            # Nguyên tắc hoạt động cốt lõi của AI Agent
 └── TIPS_QUOTA.md        # Bí kíp tối ưu hóa sử dụng token
 ```

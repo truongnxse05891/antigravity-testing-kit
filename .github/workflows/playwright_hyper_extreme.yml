@@ -1,0 +1,43 @@
+name: Hyper Extreme Mode CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch: # Cho phép trigger thủ công bằng tay trên GitHub
+
+jobs:
+  test:
+    name: Run Hyper Extreme Tests
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18
+
+    - name: Install dependencies
+      working-directory: ./automation-suite
+      run: npm ci || npm install
+
+    - name: Install Playwright & Browsers
+      working-directory: ./automation-suite
+      run: npx playwright install --with-deps chromium
+
+    - name: Run Playwright Tests (Hyper Extreme Mode)
+      working-directory: ./automation-suite
+      # Điều này sẽ chạy kịch bản automation được sinh ra từ prompt_11
+      run: npx playwright test tests/hybrid_turbo.spec.ts --project=chromium
+
+    - name: Upload execution report
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: playwright-report
+        path: automation-suite/playwright-report/
+        retention-days: 7

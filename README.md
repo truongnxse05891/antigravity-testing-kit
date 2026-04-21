@@ -32,7 +32,7 @@ antigravity-testing-kit/
 |---------|--------|
 | `rules/` | Quy tắc bắt buộc: POM, locator strategy, smart waits, Playwright/Selenium/Appium rules |
 | `skills/` | 7+ kỹ năng chuyên biệt: automation engineer, manual testing, UI debug, test data generator... |
-| `workflows/` | 13+ slash commands: `/generate_automation_from_testcases`, `/generate_manual_testcases_rbt`... |
+| `workflows/` | 14+ slash commands: `/generate_automation_from_testcases`, `/generate_turbo_automation_ci`... |
 
 ### 🚀 `automation-suite/` — Playwright Automation
 

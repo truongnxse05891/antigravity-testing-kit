@@ -67,6 +67,7 @@ Sao chép và tùy chỉnh dữ liệu trong `[...]` để sử dụng ngay.
 | 09 | `prompt_09_create_api_tests.txt` | Viết test API từ Swagger |
 | 10 | `prompt_10_turbo_mode.txt` | Tối ưu script chạy tốc độ cao (Turbo) |
 | 11 | `prompt_11_hyper_extreme_mode.txt` | Script siêu tốc độ, bỏ qua các bước chờ |
+| 12 | `prompt_12_convert_rbt_to_technical_script.txt` | Chuyển đổi bảng RBT sang danh sách các bước |
 
 ---
 

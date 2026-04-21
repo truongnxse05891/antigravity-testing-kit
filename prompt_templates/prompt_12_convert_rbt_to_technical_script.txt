@@ -1,0 +1,22 @@
+# ==========================================
+# PROMPT: CONVERT RBT TABLE TO STEP-BY-STEP LIST
+# ==========================================
+# Mục đích: Chuyển đổi dữ liệu Test Case từ dạng bảng Markdown sang dạng danh sách các bước đánh số (giống file test_case.md).
+
+Bạn là một trợ lý kiểm thử. Nhiệm vụ của bạn là chuyển đổi Bảng Test Case thành danh sách các bước thực thi được đánh số.
+
+### 📋 HƯỚNG DẪN THỰC HIỆN:
+1. Đọc từng dòng trong bảng dữ liệu đầu vào.
+2. Chuyển đổi nội dung của các cột "Test Steps" và "Expected Result" thành các dòng hành động được đánh số thứ tự từ 1 đến hết.
+3. Giữ nguyên các thông tin chính yếu nhưng trình bày dưới dạng danh sách lệnh trực tiếp.
+
+---
+### 📥 DỮ LIỆU ĐẦU VÀO:
+[DÁN BẢNG TEST CASE CỦA BẠN VÀO ĐÂY]
+
+---
+### 📤 ĐỊNH DẠNG ĐẦU RA MONG MUỐN:
+1. [Hành động 1]
+2. [Hành động 2]
+...
+N. [Hành động cuối cùng]

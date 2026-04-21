@@ -30,7 +30,7 @@ Sử dụng skill này khi:
 - Phân rã hệ thống thành modules / features
 - Xây dựng traceability matrix
 - Áp dụng Risk-Based Testing (đánh giá rủi ro cho test cases)
-- Chuẩn hóa test cases sang bảng Markdown (Jira/Excel format)
+- Chuẩn hóa test cases sang bảng Markdown (Excel/TestRail format)
 - Sinh test cases nhanh từ requirements đơn giản
 
 **KHÔNG** sử dụng skill này khi:
@@ -102,7 +102,7 @@ Sinh test cases **nhanh, đủ chất lượng** từ requirements/user stories 
    - Expected Results (đánh số tương ứng)
    - Test Data (**phải cụ thể**, không placeholder)
    - Priority (Critical / High / Medium / Low)
-5. **Xuất ra bảng Markdown** chuẩn, sẵn sàng copy sang Excel/Jira
+5. **Xuất ra bảng Markdown** chuẩn, sẵn sàng copy sang Excel/TestRail
 
 ## Bảng Output
 
@@ -257,7 +257,7 @@ Quy trình bài bản, tuần tự cho module phức tạp. Bao gồm phân tíc
 
 ### Bước 6: Template Mapping (Chuẩn hóa Format)
 
-**Mục đích:** Đóng gói test cases thành bảng Markdown chuẩn, sẵn sàng copy sang Excel/Jira.
+**Mục đích:** Đóng gói test cases thành bảng Markdown chuẩn, sẵn sàng copy sang Excel/TestRail.
 
 **Agent phải:**
 1. Chuẩn hóa toàn bộ test cases vào bảng Markdown:
@@ -316,7 +316,7 @@ Mode QUICK không yêu cầu đọc prompt templates — agent áp dụng trực
 
 | Output | Mô tả |
 |--------|--------|
-| Bảng TC Markdown | Test Cases đầy đủ, sẵn sàng copy sang Excel/Jira |
+| Bảng TC Markdown | Test Cases đầy đủ, sẵn sàng copy sang Excel/TestRail |
 
 ### Mode FULL RBT
 
@@ -327,6 +327,6 @@ Mode QUICK không yêu cầu đọc prompt templates — agent áp dụng trực
 | 3 | Module Decomposition + Dependencies |
 | 4 | Traceability Matrix + High-Level Scenarios |
 | 5 | Test Cases chi tiết (Risk Level + Test Data) |
-| 6 | Bảng Markdown chuẩn (Jira/Excel ready) |
+| 6 | Bảng Markdown chuẩn (Excel/TestRail ready) |
 
 Tất cả output phải bằng **Tiếng Việt**, format **Markdown**, sử dụng **Artifact** nếu nội dung dài.

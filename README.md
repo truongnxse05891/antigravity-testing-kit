@@ -35,7 +35,6 @@ antigravity-testing-kit/
 ├── prompt_template/     # Prompt mẫu dùng nhanh (copy → paste → gửi)
 ├── scripts/
 │   └── integrations/    # Tích hợp công cụ bên ngoài
-│       └── jira/        # Jira & Xray integration (self-contained)
 ├── requirements/        # Lưu trữ requirements đã sinh
 ├── GEMINI.md            # Rule chung cho AI Agent
 └── TIPS_QUOTA.md        # Cẩm nang tối ưu quota token
@@ -49,21 +48,6 @@ antigravity-testing-kit/
 | `skills/` | 8 kỹ năng chuyên biệt: automation engineer, manual testing, UI debug, locator healer, test data generator... |
 | `workflows/` | 13 slash commands: `/generate_automation_from_testcases`, `/generate_manual_testcases_rbt`, `/analyze_flaky_tests`... |
 ---
-
-### `scripts/integrations/` — Tích Hợp Công Cụ Bên Ngoài
-
-Mỗi integration là **thư mục self-contained** (tự quản dependencies, config, README riêng).
-
-| Integration | Chức năng | Docs |
-|-------------|-----------|------|
-| `jira/` | Lấy Requirements từ Jira, xác thực Xray, đẩy kết quả test lên Xray | [README](scripts/integrations/jira/README.md) |
-
-```bash
-# Cài đặt nhanh (ví dụ Jira)
-cd scripts/integrations/jira
-npm install
-cp .env.example .env    # Điền credentials
-```
 
 ---
 

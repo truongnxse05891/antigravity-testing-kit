@@ -131,7 +131,6 @@ Agent sử dụng skills trong `.agent/skills/` tùy theo nhiệm vụ:
 | `locator_healer_agent` | Sửa locator hỏng |
 | `test_data_generator` | Sinh test data unique, traceable |
 | `flaky_test_analyzer` | Phân tích và khắc phục flaky tests |
-| `jira_integration` | Tích hợp Jira/Xray — lấy requirements, đẩy test results |
 
 ## 6. Kế Hoạch Kiểm Thử (Plan Templates)
 
@@ -206,5 +205,3 @@ Agent sử dụng workflows trong `.agent/workflows/` qua slash commands:
 | `/generate_regression_suite` | Sinh regression test suite |
 | `/generate_application_test_plan` | Sinh test plan cho application |
 | `/analyze_flaky_tests` | Phân tích và khắc phục flaky tests |
-| `/fetch_jira_requirements` | Lấy requirements/user stories từ Jira |
-| `/import_test_results_xray` | Đẩy kết quả test lên Xray |

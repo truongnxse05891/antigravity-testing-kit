@@ -6,9 +6,9 @@ Thực hiện tạo tài liệu Requirements từ website hoặc module được
 
 # CONTEXT
 - [Mô tả ngắn gọn về hệ thống hiện tại, module hiện tại]
-- Website URL: [URL_TRANG_WEB]
-- Module Name: [TEN_MODULE]
-- Thông tin đăng nhập: [EMAIL] và [PASSWORD]
+- Website URL: https://cc-dev.mixc.co/shopbase/products/?
+- Module Name: quản lý product
+- Thông tin đăng nhập: username: admin@gmail.com, password: admin123456
 
 # CONSTRAINTS
 - Nạp và đọc kỹ năng requirements_analyzer để nắm định dạng.

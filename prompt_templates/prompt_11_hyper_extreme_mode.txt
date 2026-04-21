@@ -1,0 +1,32 @@
+# ==========================================
+# PROMPT TEMPLATE: HYPER EXTREME MODE cho BROWSER AGENT
+# ==========================================
+# Mục đích: Đẩy tốc độ Antigravity Browser Agent lên cực hạn (Mục tiêu dưới 1 phút / Scenario)
+# Hoàn cảnh tối ưu: Phù hợp việc chạy lại luồng regression nhiều lần, lợi dụng cache trình duyệt.
+# Cách dùng: Gửi Prompt bên dưới kèm theo các Step Test Case của bạn.
+
+**🚨 LỆNH ĐIỀU SOÁT AGENT (HYPER EXTREME MODE):**
+Nhiệm vụ của bạn là hoàn thành luồng Test Case này ở tốc độ HYPER SPEED. Để rút gọn thao tác và ép thời gian chạy xuống sát mức 1 phút, bạn KIÊN QUYẾT tuân thủ 5 nguyên tắc sau:
+
+1. **BROWSER CACHE EXPLOITATION (Khai Thác Cache - Bỏ qua Form Vận chuyển):** 
+   - GIẢ ĐỊNH tất cả thông tin Shipping Address (Email, Name, Address, City, Zip, Phone) **đã được trình duyệt auto-fill mượt mà**. 
+   - TUYỆT ĐỐI KHÔNG CHẠM VÀO: không click, không điền, không verify bất kỳ field nào ở phần Shipping.
+   - Hành động ngay: Ngay tại trang Checkout, cuộn chuột thẳng xuống phần Payment (Thanh toán).
+
+2. **DIRECT PIXEL TARGETING (Tối Ưu Click Tọa Độ):** 
+   - Chủ động dùng công cụ click bằng tọa độ điểm ảnh (Pixel click) thay vì tìm kiếm DOM Locator mất thời gian.
+   - Nhắm thẳng điểm ảnh của những nút chủ chốt: "Add to cart", "Checkout", "Place your order", nút "No thanks" / "Add order".
+
+3. **GHOST PAYMENT (Điền Thẻ Vô Ảo):** 
+   - BỎ hoàn toàn khái niệm double-check. 
+   - Nhắm click thẳng (bằng tọa độ hoặc DOM nhanh nhất) vào Card Number, gõ, xài phím `Tab` để sang nhanh Expiry và CVV (hoặc pixel click liên tục). Gõ 1 lần trúng đích, kệ lỗi auto-format.
+
+4. **FAST ESCAPE (Né Tránh Hệ Thống):** 
+   - Ngay khoảnh khắc bấm nút Order/Thanh toán, hãy spam ngay nút `Escape` (ESC) trên bàn phím ít nhất 2 lần để tắt đứt các đề xuất 'Lưu thẻ' phiền toái từ Chrome, ngăn ngừa treo browser.
+
+5. **PRE-EMPTIVE UPSELL ACTION (Xử Lí Upsell Trực Chờ):** 
+   - Khi load xong Payment, chuẩn bị sẵn tâm thế trang đợi. Nhắm chừng xuất hiện Popup Upsell, click ngay bằng Pixel Click vào vị trí dự kiến của nút "No thanks, I'll pass" hoặc "Add to order" tuỳ kịch bản, không tốn tài nguyên load ảnh UI!
+
+---
+**📍 BƯỚC TEST CASE CẦN THỰC THI (HYPER EXTREME):**
+[DÁN TEST CASE CỦA BẠN VÀO ĐÂY, VÍ DỤ: "Chạy file test_case.md kịch bản SKIP_PPC"]

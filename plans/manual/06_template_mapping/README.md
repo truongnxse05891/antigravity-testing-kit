@@ -5,7 +5,7 @@
 
 ## Mục đích
 
-Đóng gói toàn bộ Test Cases đã sinh ở Bước 5 sang bảng Markdown chuẩn, sẵn sàng copy sang **Excel**, **Google Sheets**, hoặc import thẳng lên **Jira/TestRail/Xray/Zephyr**.
+Đóng gói toàn bộ Test Cases đã sinh ở Bước 5 sang bảng Markdown chuẩn, sẵn sàng copy sang **Excel**, **Google Sheets**, hoặc import thẳng lên **TestRail**.
 
 ## Cách sử dụng
 

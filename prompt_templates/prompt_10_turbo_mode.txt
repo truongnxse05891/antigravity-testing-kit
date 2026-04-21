@@ -1,0 +1,26 @@
+# ==========================================
+# PROMPT TEMPLATE: ULTRA TURBO MODE cho BROWSER AGENT
+# ==========================================
+# Mục đích: Ép Antigravity Browser Agent chạy Test Case nhanh nhất có thể (Giảm 40-50% thời gian)
+# Cách dùng: Gửi Prompt bên dưới kèm theo các Step Test Case của bạn.
+
+**🚨 LỆNH ĐIỀU SOÁT AGENT (ULTRA TURBO MODE):**
+Nhiệm vụ của bạn là hoàn thành Test Case này với thời gian TỐI THIỂU (mục tiêu: dưới 2 phút). Để đạt tốc độ giới hạn, BẮT BUỘC tuân thủ 4 quy tắc sau:
+
+1. **NO VERIFICATION (Tuyệt đối Không Xác Minh Lại):** 
+   - BỎ QUA hoàn toàn các bước ghi trong bộ test "Critical Verification", "Clear-and-retype" hay đọc và check dữ liệu.
+   - Kể cả khi field bị trình duyệt auto-fill sai, NẾU KHÔNG BLOCK TRỰC TIẾP luồng Checkout thì hãy phớt lờ. Điền thông tin 1 lần và tin tưởng tuyệt đối.
+
+2. **BLIND TAB NAVIGATION (Sử Dụng Bàn Phím Thay Chuột):** 
+   - DỪNG VIỆC GỌI lệnh `get_dom` hay `pixel_click` liên tục cho từng ô text box. GỌN GÀNG!
+   - Khi đứng trước Form (Shipping hoặc Payment): Chỉ click 1 lần vào ô đầu tiên (VD: Email, hoặc Card Number). Sau đó gõ nội dung --> sử dụng phím `Tab` để nhảy qua ô tiếp theo --> Gõ tiếp (Last Name -> Tab -> Address -> Tab...). Lặp lại cho tất cả các field.
+
+3. **FAST ESCAPE (Thoát Popup Nhanh Bằng Bàn Phím):** 
+   - Bất cứ khi nào click "Place order" (hoặc Submit), lập tức bấm phím `Escape` trên bàn phím (1-2 lần) để tắt đi các Popup khuyên lưu thẻ nhảm nhí của hệ điều hành/Chrome. KHÔNG chờ xem đó là popup gì.
+
+4. **MINIMAL DOM LOADS (Không Chờ Tải Trang 100%):** 
+   - Ở các màn hình như Upsell (PPC), ngay khi nhìn thấy nút "No thanks" hoặc "Add order", lập tức tương tác ngay. Không cần rà soát lại thông tin giỏ hàng.
+
+---
+**📍 BƯỚC TEST CASE CẦN THỰC THI TURBO:**
+[DÁN TEST CASE HOẶC LINK FILE TEST CASE CỦA BẠN VÀO ĐÂY VÀ YÊU CẦU AGENT CHẠY CHIẾU THEO CÁC RULE TRÊN]

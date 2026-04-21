@@ -6,12 +6,12 @@
 # CÁCH DÙNG:
 # 1. Gửi prompt này SAU KHI đã review Test Cases ở Bước 5
 # 2. Tùy chỉnh quy tắc TC ID nếu cần
-# 3. Copy bảng output → paste vào Excel/Jira/TestRail
+# 3. Copy bảng output → paste vào Excel/TestRail
 # ============================================================
 
 ---START---
 
-Đây là bước cuối cùng. Hãy **chuẩn hóa format** toàn bộ các Test Cases đã sinh ở Bước 5 vào bảng Markdown chuẩn, phù hợp để copy/paste sang Excel hoặc import vào Jira/Zephyr/Xray/TestRail.
+Đây là bước cuối cùng. Hãy **chuẩn hóa format** toàn bộ các Test Cases đã sinh ở Bước 5 vào bảng Markdown chuẩn, phù hợp để copy/paste sang Excel hoặc import vào TestRail.
 
 ## Bảng chuẩn cần có các cột sau:
 
@@ -46,6 +46,6 @@ Ví dụ: `TC_LOGIN_001`, `TC_REG_001`...]
 
 Xuất kết quả dưới dạng **Artifact** (file `.md`) để tôi có thể:
 - Copy trực tiếp bảng vào Excel/Google Sheets
-- Import vào Jira/TestRail/Xray
+- Import vào TestRail
 
 Nếu tổng số Test Cases > 30, hãy chia artifact thành nhiều phần và hỏi tôi "Tiếp tục Part X?" trước khi sinh tiếp.

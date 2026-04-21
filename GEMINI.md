@@ -21,8 +21,8 @@ navigate → resize(1920×1080) → wait_for(page_load) → snapshot → interac
 * **LUÔN** verify page đã load xong trước khi lấy snapshot hoặc tương tác
 
 ### 📸 Screenshot & Snapshot
-* Dùng **`snapshot`** để phân tích DOM và xác định locator
-* Dùng **`screenshot`** để lưu bằng chứng khi test fail hoặc để báo cáo
+* **Chỉ lấy `snapshot` (DOM) khi không thực hiện được action tiếp theo** (ví dụ: cần tìm lại locator mới). Không lấy snapshot liên tục không cần thiết.
+* Dùng **`screenshot`** (ảnh) để lưu bằng chứng khi test fail hoặc để báo cáo
 * Chụp **screenshot ngay khi assertion fail** để hỗ trợ truy vết lỗi
 * **KHÔNG** chụp screenshot tràn lan — chỉ khi cần thiết (fail / milestone quan trọng)
 
@@ -80,6 +80,7 @@ Test chỉ được coi là **hoàn thành** khi đáp ứng **toàn bộ** các
 - [ ] Tóm tắt kết quả: số test PASS / FAIL / SKIP
 - [ ] Nêu rõ các TC đã implement và TC nào bị skip (kèm lý do)
 - [ ] Ghi chú các known issues hoặc limitation nếu có
+- [ ] Khi thực thi UI Test Automation qua Agent/Browser Subagent, **BẮT BUỘC** xuất báo cáo ra định dạng file `.toml`. Tên file phải luôn kèm theo timestamp hoặc ID duy nhất (ví dụ: `test_reports/execution_report_<timestamp>.toml`) để phân biệt các lần chạy khác nhau.
 
 ---
 

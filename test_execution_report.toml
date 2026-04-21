@@ -1,0 +1,18 @@
+[test_execution]
+timestamp = "2026-04-21T15:16:10+07:00"
+test_source = "test_cases/test_case.md"
+summary = "Executed 2 checkout test scenarios via Browser Subagent"
+
+[[test_cases]]
+name = "SKIP_PPC"
+status = "PASS"
+order_id = "#plb10677209_1153"
+video_evidence = "/home/ocg/.gemini/antigravity/brain/8afccb76-87c6-4c56-8df1-9717800f8636/checkout_skip_ppc_1776748663039.webp"
+description = "Checkout flow successfully rejecting the post-purchase upsell offer"
+
+[[test_cases]]
+name = "ADD_PPC"
+status = "PASS"
+order_id = "#plb10677209_1154"
+video_evidence = "/home/ocg/.gemini/antigravity/brain/8afccb76-87c6-4c56-8df1-9717800f8636/checkout_add_ppc_1776748897885.webp"
+description = "Checkout flow successfully accepting the first post-purchase upsell offer (Shower Drain Hair Catcher Mesh Stickers)"

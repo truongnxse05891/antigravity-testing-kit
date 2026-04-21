@@ -21,6 +21,7 @@ antigravity-testing-kit/
 │   ├── manual/          # Quy trình sinh Manual Test Cases (AI-RBT)
 │   └── automation/      # Quy trình sinh Automation Scripts
 ├── prompt_templates/    # Thư viện Prompt mẫu tối ưu
+├── requirements/        # Nơi lưu trữ tập trung các tài liệu Yêu cầu (.md)
 ├── scripts/             # Công cụ bổ trợ và tích hợp
 ├── test_cases/          # Nơi lưu trữ tập trung các file Test Case (.md, .csv)
 ├── GEMINI.md            # Nguyên tắc hoạt động cốt lõi của AI Agent

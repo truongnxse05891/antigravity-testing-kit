@@ -31,11 +31,12 @@ Workflow này giúp bạn phân tích một module hoặc trang web được cun
    - Dựa trên dữ liệu thu thập được, tạo một tài liệu mô tả bao gồm:
      * **Tổng quan (Overview):** Mục đích của module/trang.
      * **Yêu cầu chức năng (Functional Requirements):** Danh sách các tính năng người dùng có thể thực hiện (vd: Đăng nhập, Thêm mới, Xóa...).
-     * **Quy tắc trường dữ liệu (Field Specifications):** Bảng chi tiết về từng thành phần UI (Tên trường, Loại, Bắt buộc/Không, Ràng buộc dữ liệu).
+     * **Quy tắc trường dữ liệu (Field Specifications):** Bảng chi tiết về từng thành phần UI (Tên trường, Loại, Bắt buộc/Không, Ràng buộc dữ liệu).
      * **Luồng xử lý (Business/User Flows):** Các bước để hoàn thành một chức năng chính.
      * **Yêu cầu phi chức năng (Non-functional Requirements - Nếu có thể quan sát):** Tính tương thích, hiệu năng tĩnh.
 
 5. **Trình bày và Cung cấp (Review & Delivery):**
    - Định dạng tài liệu bằng Markdown rõ ràng.
    - Trình bày toàn bộ nội dung bằng **Tiếng Việt** có dấu rõ ràng, chuyên nghiệp và dễ hiểu.
+   - **BẮT BUỘC:** Lưu file tài liệu Requirement (.md) vào thư mục `requirements/`.
    - Sử dụng tính năng Artifact nếu tài liệu dài để người dùng tiện lưu trữ hoặc xuất file.

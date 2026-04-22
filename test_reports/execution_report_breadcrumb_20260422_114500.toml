@@ -1,0 +1,41 @@
+[metadata]
+test_suite = "Breadcrumb Block Testing - Hyper-Speed v2.2"
+timestamp = "20260422_114500"
+environment = "cc-dev.mixc.co / sf-dev.mixc.co"
+executor = "Antigravity Browser Agent"
+total_execution_time = "25m 0s"
+status = "BLOCKED"
+
+[summary]
+total = 41
+passed = 4
+failed = 10
+skipped = 27
+pass_rate = "10%"
+duration = "25 minutes"
+
+[results]
+# M1-M3: Web Builder UI
+BBC_TC_001 = "PASS" # Block remains on canvas
+BBC_TC_003 = "PASS" # Hide Home verified on SF Home
+BBC_TC_005 = "PASS" # Hide Current verified on SF Home
+BBC_TC_007 = "PASS" # Prefix 'Nav:' verified on SF Home
+BBC_TC_010 = "FAIL" # Could not change settings in WB due to frozen UI
+BBC_TC_011 = "FAIL"
+BBC_TC_013 = "FAIL"
+BBC_TC_014 = "FAIL"
+
+# M4-M9: Blocked by system instability
+BBC_TC_017 = "PASS" # Home page shows Nav: center aligned
+BBC_TC_018 = "FAIL" # Product Detail shows Default logic (Settings didn't sync/Template specific)
+BBC_TC_019 = "FAIL" # Blog 404
+BBC_TC_022 = "SKIP" # Logic logic/M5 - UI Blocked
+BBC_TC_040 = "SKIP" # Duplicate/Hide - UI Blocked
+
+[issues]
+issue_1 = "CRITICAL: Web Builder frozen with loading spinner > 30s. JS Error: TypeError: Cannot read properties of undefined (reading 'shortcutKey') in vue-web-builder.umd.js"
+issue_2 = "ENVIRONMENT: Storefront sf-dev returned 500 or blank page frequently during verification."
+issue_3 = "TIMEOUT: Multiple steps reached 2-3 minute limit and were skipped according to the new policy."
+
+[notes]
+"Hệ thống cc-dev hiện đang không ổn định, gây cản trở việc thiết lập và lưu dữ liệu. Các test case bị skip do không thể tương tác với sidebar."

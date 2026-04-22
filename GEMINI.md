@@ -21,10 +21,16 @@ navigate → resize(1920×1080) → wait_for(page_load) → snapshot → interac
 * **LUÔN** verify page đã load xong trước khi lấy snapshot hoặc tương tác
 
 ### 📸 Screenshot & Snapshot
-* **Chỉ lấy `snapshot` (DOM) khi không thực hiện được action tiếp theo** (ví dụ: cần tìm lại locator mới). Không lấy snapshot liên tục không cần thiết.
+* **Chỉ lấy `snapshot` (DOM) khi không thực hiện được action tiếp theo**: Trước khi lấy snapshot, hãy kiểm tra HTML để tìm các thông báo lỗi (error message). Nếu phát hiện lỗi trên UI, hãy ưu tiên xử lý/thao tác lại tại element gây lỗi trước. Chỉ lấy snapshot khi cần tìm lại locator mới hoặc không thể tự phục hồi. Không lấy snapshot liên tục không cần thiết.
 * Dùng **`screenshot`** (ảnh) để lưu bằng chứng khi test fail hoặc để báo cáo
 * Chụp **screenshot ngay khi assertion fail** để hỗ trợ truy vết lỗi
 * **KHÔNG** chụp screenshot tràn lan — chỉ khi cần thiết (fail / milestone quan trọng)
+
+### ⏳ Timeout & Skip Policy
+* Nếu một **step** trong một test case thực thi quá lâu (**từ 2-3 phút trở lên**) mà không có tiến triển:
+    * **BẮT BUỘC** dừng (skip) test case hiện tại.
+    * **Ghi nhận lí do skip** rõ ràng vào báo cáo (ví dụ: "Timeout: Web Builder loading quá lâu > 3p").
+    * Chuyển sang test case tiếp theo hoặc thử phục hồi (refresh page) trước khi tiếp tục.
 
 ---
 
@@ -80,7 +86,7 @@ Test chỉ được coi là **hoàn thành** khi đáp ứng **toàn bộ** các
 - [ ] Tóm tắt kết quả: số test PASS / FAIL / SKIP
 - [ ] Nêu rõ các TC đã implement và TC nào bị skip (kèm lý do)
 - [ ] Ghi chú các known issues hoặc limitation nếu có
-- [ ] Khi thực thi UI Test Automation qua Agent/Browser Subagent, **BẮT BUỘC** xuất báo cáo ra định dạng file `.toml`. Tên file phải luôn kèm theo timestamp hoặc ID duy nhất (ví dụ: `test_reports/execution_report_<timestamp>.toml`) để phân biệt các lần chạy khác nhau.
+- [ ] Khi thực thi UI Test Automation qua Agent/Browser Subagent, **BẮT BUỘC** xuất báo cáo ra định dạng file `.toml`. Tên file phải luôn kèm theo tên block/scope và timestamp hoặc ID duy nhất (ví dụ: `test_reports/execution_report_<block_name>_<timestamp>.toml`) để phân biệt các lần chạy khác nhau.
 
 ---
 

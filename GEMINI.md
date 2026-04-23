@@ -19,6 +19,7 @@ navigate → resize(1920×1080) → wait_for(page_load) → snapshot → interac
 * **KHÔNG** gọi `browser_navigate` lại nếu đã đang ở đúng trang — tránh reload ngoài ý muốn
 * **LUÔN** gọi `browser_resize(width=1920, height=1080)` ngay sau `browser_navigate`
 * **LUÔN** verify page đã load xong trước khi lấy snapshot hoặc tương tác
+* **BẮT BUỘC** đóng tab hoặc trình duyệt sau khi hoàn thành việc thực thi/debug test để tránh việc mở quá nhiều tab gây tốn tài nguyên.
 
 ### 📸 Screenshot & Snapshot
 * **Chỉ lấy `snapshot` (DOM) khi không thực hiện được action tiếp theo**: Trước khi lấy snapshot, hãy kiểm tra HTML để tìm các thông báo lỗi (error message). Nếu phát hiện lỗi trên UI, hãy ưu tiên xử lý/thao tác lại tại element gây lỗi trước. Chỉ lấy snapshot khi cần tìm lại locator mới hoặc không thể tự phục hồi. Không lấy snapshot liên tục không cần thiết.

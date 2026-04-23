@@ -11,6 +11,7 @@
   1. browser_navigate(url) → mở trang
   2. browser_resize(width=1920, height=1080) → set viewport
   3. browser_snapshot() hoặc browser_take_screenshot() → bắt đầu inspect
+  4. browser_close() hoặc tab_close() → đóng tab sau khi hoàn thành (BẮT BUỘC)
   ```
 - **Headed mode:** Bắt buộc mở browser có hiển thị (headed) trong quá trình thiết lập và debug test.
 - **Headless mode:** Chỉ được phép sử dụng khi:

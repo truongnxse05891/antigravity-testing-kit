@@ -78,3 +78,8 @@
 - Mỗi test case phải **độc lập** — không phụ thuộc kết quả test khác.
 - Setup/teardown rõ ràng (`@BeforeMethod/@AfterMethod` hoặc `beforeEach/afterEach`).
 - Không chia sẻ state giữa các test methods.
+
+## 8. Quản Lý Tài Nguyên Browser
+
+- **BẮT BUỘC** đóng tab hoặc đóng browser sau khi hoàn thành việc thực thi/debug test để tránh việc mở quá nhiều tab gây tốn tài nguyên hệ thống.
+- Ưu tiên sử dụng `browser_close()` hoặc `tab_close()` khi sử dụng browser subagent.

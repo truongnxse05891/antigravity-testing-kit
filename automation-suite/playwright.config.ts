@@ -10,7 +10,7 @@ export default defineConfig({
     navigationTimeout: 60000,
     trace: 'on-first-retry',
     viewport: { width: 1920, height: 1080 },
-    headless: false,
+    headless: true,
   },
   fullyParallel: false,
   forbidOnly: !!process.env.CI,

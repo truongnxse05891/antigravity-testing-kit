@@ -1,0 +1,832 @@
+{
+  "config": {
+    "configFile": "/home/ocg/antigravity-testing-kit/automation-suite/playwright.config.ts",
+    "rootDir": "/home/ocg/antigravity-testing-kit/automation-suite/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/ocg/antigravity-testing-kit/automation-suite/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/home/ocg/antigravity-testing-kit/automation-suite/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.59.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "breadcrumb_actions.spec.ts",
+      "file": "breadcrumb_actions.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "M9: Block Actions",
+          "file": "breadcrumb_actions.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "BBC_TC_039: Verify Duplicate Action",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 34580,
+                      "error": {
+                        "message": "TimeoutError: locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder(/Email/)\u001b[22m\n",
+                        "stack": "TimeoutError: locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder(/Email/)\u001b[22m\n\n    at LoginPage.login (/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts:16:49)\n    at /home/ocg/antigravity-testing-kit/automation-suite/tests/breadcrumb_actions.spec.ts:13:21",
+                        "location": {
+                          "file": "/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts",
+                          "column": 49,
+                          "line": 16
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../pages/LoginPage.ts:16\n\n  14 |   async login(email = 'admin@gmail.com', password = 'admin123456') {\n  15 |     if (this.page.url().includes('sign-in') || this.page.url().includes('login')) {\n> 16 |       await this.page.getByPlaceholder(/Email/).fill(email);\n     |                                                 ^\n  17 |       await this.page.getByPlaceholder(/Password/).fill(password);\n  18 |       await this.page.getByRole('button', { name: /Sign in|Login/i }).click();\n  19 |       await this.page.waitForLoadState('networkidle');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts",
+                            "column": 49,
+                            "line": 16
+                          },
+                          "message": "TimeoutError: locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder(/Email/)\u001b[22m\n\n\n   at ../pages/LoginPage.ts:16\n\n  14 |   async login(email = 'admin@gmail.com', password = 'admin123456') {\n  15 |     if (this.page.url().includes('sign-in') || this.page.url().includes('login')) {\n> 16 |       await this.page.getByPlaceholder(/Email/).fill(email);\n     |                                                 ^\n  17 |       await this.page.getByPlaceholder(/Password/).fill(password);\n  18 |       await this.page.getByRole('button', { name: /Sign in|Login/i }).click();\n  19 |       await this.page.waitForLoadState('networkidle');\n    at LoginPage.login (/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts:16:49)\n    at /home/ocg/antigravity-testing-kit/automation-suite/tests/breadcrumb_actions.spec.ts:13:21"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-23T04:52:50.319Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/ocg/antigravity-testing-kit/automation-suite/test-results/breadcrumb_actions-M9-Bloc-0fd15-039-Verify-Duplicate-Action-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts",
+                        "column": 49,
+                        "line": 16
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "7676fe56adaea83536a4-f70c85f6b3eaae65e415",
+              "file": "breadcrumb_actions.spec.ts",
+              "line": 20,
+              "column": 7
+            },
+            {
+              "title": "BBC_TC_040: Verify Hide/Show Action",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 34519,
+                      "error": {
+                        "message": "TimeoutError: locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder(/Email/)\u001b[22m\n",
+                        "stack": "TimeoutError: locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder(/Email/)\u001b[22m\n\n    at LoginPage.login (/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts:16:49)\n    at /home/ocg/antigravity-testing-kit/automation-suite/tests/breadcrumb_actions.spec.ts:13:21",
+                        "location": {
+                          "file": "/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts",
+                          "column": 49,
+                          "line": 16
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../pages/LoginPage.ts:16\n\n  14 |   async login(email = 'admin@gmail.com', password = 'admin123456') {\n  15 |     if (this.page.url().includes('sign-in') || this.page.url().includes('login')) {\n> 16 |       await this.page.getByPlaceholder(/Email/).fill(email);\n     |                                                 ^\n  17 |       await this.page.getByPlaceholder(/Password/).fill(password);\n  18 |       await this.page.getByRole('button', { name: /Sign in|Login/i }).click();\n  19 |       await this.page.waitForLoadState('networkidle');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts",
+                            "column": 49,
+                            "line": 16
+                          },
+                          "message": "TimeoutError: locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder(/Email/)\u001b[22m\n\n\n   at ../pages/LoginPage.ts:16\n\n  14 |   async login(email = 'admin@gmail.com', password = 'admin123456') {\n  15 |     if (this.page.url().includes('sign-in') || this.page.url().includes('login')) {\n> 16 |       await this.page.getByPlaceholder(/Email/).fill(email);\n     |                                                 ^\n  17 |       await this.page.getByPlaceholder(/Password/).fill(password);\n  18 |       await this.page.getByRole('button', { name: /Sign in|Login/i }).click();\n  19 |       await this.page.waitForLoadState('networkidle');\n    at LoginPage.login (/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts:16:49)\n    at /home/ocg/antigravity-testing-kit/automation-suite/tests/breadcrumb_actions.spec.ts:13:21"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-23T04:53:25.899Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/ocg/antigravity-testing-kit/automation-suite/test-results/breadcrumb_actions-M9-Bloc-71057-040-Verify-Hide-Show-Action-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts",
+                        "column": 49,
+                        "line": 16
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "7676fe56adaea83536a4-723fba6c1ab98d34fff6",
+              "file": "breadcrumb_actions.spec.ts",
+              "line": 28,
+              "column": 7
+            },
+            {
+              "title": "BBC_TC_041: Verify Delete Action",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 36979,
+                      "error": {
+                        "message": "TimeoutError: locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder(/Email/)\u001b[22m\n",
+                        "stack": "TimeoutError: locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder(/Email/)\u001b[22m\n\n    at LoginPage.login (/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts:16:49)\n    at /home/ocg/antigravity-testing-kit/automation-suite/tests/breadcrumb_actions.spec.ts:13:21",
+                        "location": {
+                          "file": "/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts",
+                          "column": 49,
+                          "line": 16
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../pages/LoginPage.ts:16\n\n  14 |   async login(email = 'admin@gmail.com', password = 'admin123456') {\n  15 |     if (this.page.url().includes('sign-in') || this.page.url().includes('login')) {\n> 16 |       await this.page.getByPlaceholder(/Email/).fill(email);\n     |                                                 ^\n  17 |       await this.page.getByPlaceholder(/Password/).fill(password);\n  18 |       await this.page.getByRole('button', { name: /Sign in|Login/i }).click();\n  19 |       await this.page.waitForLoadState('networkidle');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts",
+                            "column": 49,
+                            "line": 16
+                          },
+                          "message": "TimeoutError: locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder(/Email/)\u001b[22m\n\n\n   at ../pages/LoginPage.ts:16\n\n  14 |   async login(email = 'admin@gmail.com', password = 'admin123456') {\n  15 |     if (this.page.url().includes('sign-in') || this.page.url().includes('login')) {\n> 16 |       await this.page.getByPlaceholder(/Email/).fill(email);\n     |                                                 ^\n  17 |       await this.page.getByPlaceholder(/Password/).fill(password);\n  18 |       await this.page.getByRole('button', { name: /Sign in|Login/i }).click();\n  19 |       await this.page.waitForLoadState('networkidle');\n    at LoginPage.login (/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts:16:49)\n    at /home/ocg/antigravity-testing-kit/automation-suite/tests/breadcrumb_actions.spec.ts:13:21"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-23T04:54:01.679Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/ocg/antigravity-testing-kit/automation-suite/test-results/breadcrumb_actions-M9-Bloc-c0c80-TC-041-Verify-Delete-Action-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts",
+                        "column": 49,
+                        "line": 16
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "7676fe56adaea83536a4-458b119c8d2aa534cd96",
+              "file": "breadcrumb_actions.spec.ts",
+              "line": 37,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "breadcrumb_content.spec.ts",
+      "file": "breadcrumb_content.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "M1 & M2: Breadcrumb Content Settings",
+          "file": "breadcrumb_content.spec.ts",
+          "line": 10,
+          "column": 6,
+          "specs": [
+            {
+              "title": "BBC_TC_002: Verify default settings",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 36883,
+                      "error": {
+                        "message": "TimeoutError: locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder(/Email/)\u001b[22m\n",
+                        "stack": "TimeoutError: locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder(/Email/)\u001b[22m\n\n    at LoginPage.login (/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts:16:49)\n    at /home/ocg/antigravity-testing-kit/automation-suite/tests/breadcrumb_content.spec.ts:17:21",
+                        "location": {
+                          "file": "/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts",
+                          "column": 49,
+                          "line": 16
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../pages/LoginPage.ts:16\n\n  14 |   async login(email = 'admin@gmail.com', password = 'admin123456') {\n  15 |     if (this.page.url().includes('sign-in') || this.page.url().includes('login')) {\n> 16 |       await this.page.getByPlaceholder(/Email/).fill(email);\n     |                                                 ^\n  17 |       await this.page.getByPlaceholder(/Password/).fill(password);\n  18 |       await this.page.getByRole('button', { name: /Sign in|Login/i }).click();\n  19 |       await this.page.waitForLoadState('networkidle');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts",
+                            "column": 49,
+                            "line": 16
+                          },
+                          "message": "TimeoutError: locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder(/Email/)\u001b[22m\n\n\n   at ../pages/LoginPage.ts:16\n\n  14 |   async login(email = 'admin@gmail.com', password = 'admin123456') {\n  15 |     if (this.page.url().includes('sign-in') || this.page.url().includes('login')) {\n> 16 |       await this.page.getByPlaceholder(/Email/).fill(email);\n     |                                                 ^\n  17 |       await this.page.getByPlaceholder(/Password/).fill(password);\n  18 |       await this.page.getByRole('button', { name: /Sign in|Login/i }).click();\n  19 |       await this.page.waitForLoadState('networkidle');\n    at LoginPage.login (/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts:16:49)\n    at /home/ocg/antigravity-testing-kit/automation-suite/tests/breadcrumb_content.spec.ts:17:21"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-23T04:54:39.831Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/ocg/antigravity-testing-kit/automation-suite/test-results/breadcrumb_content-M1-M2-B-3d387-002-Verify-default-settings-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts",
+                        "column": 49,
+                        "line": 16
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "76f90b402f26dd4fd49c-c1033c16e2bb3c0b6aa0",
+              "file": "breadcrumb_content.spec.ts",
+              "line": 25,
+              "column": 7
+            },
+            {
+              "title": "BBC_TC_003 & 004 & 005: Verify Hide Homepage & Hide Current page",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 36669,
+                      "error": {
+                        "message": "TimeoutError: locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder(/Email/)\u001b[22m\n",
+                        "stack": "TimeoutError: locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder(/Email/)\u001b[22m\n\n    at LoginPage.login (/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts:16:49)\n    at /home/ocg/antigravity-testing-kit/automation-suite/tests/breadcrumb_content.spec.ts:17:21",
+                        "location": {
+                          "file": "/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts",
+                          "column": 49,
+                          "line": 16
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../pages/LoginPage.ts:16\n\n  14 |   async login(email = 'admin@gmail.com', password = 'admin123456') {\n  15 |     if (this.page.url().includes('sign-in') || this.page.url().includes('login')) {\n> 16 |       await this.page.getByPlaceholder(/Email/).fill(email);\n     |                                                 ^\n  17 |       await this.page.getByPlaceholder(/Password/).fill(password);\n  18 |       await this.page.getByRole('button', { name: /Sign in|Login/i }).click();\n  19 |       await this.page.waitForLoadState('networkidle');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts",
+                            "column": 49,
+                            "line": 16
+                          },
+                          "message": "TimeoutError: locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder(/Email/)\u001b[22m\n\n\n   at ../pages/LoginPage.ts:16\n\n  14 |   async login(email = 'admin@gmail.com', password = 'admin123456') {\n  15 |     if (this.page.url().includes('sign-in') || this.page.url().includes('login')) {\n> 16 |       await this.page.getByPlaceholder(/Email/).fill(email);\n     |                                                 ^\n  17 |       await this.page.getByPlaceholder(/Password/).fill(password);\n  18 |       await this.page.getByRole('button', { name: /Sign in|Login/i }).click();\n  19 |       await this.page.waitForLoadState('networkidle');\n    at LoginPage.login (/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts:16:49)\n    at /home/ocg/antigravity-testing-kit/automation-suite/tests/breadcrumb_content.spec.ts:17:21"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-23T04:55:17.744Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/ocg/antigravity-testing-kit/automation-suite/test-results/breadcrumb_content-M1-M2-B-254e0--Homepage-Hide-Current-page-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts",
+                        "column": 49,
+                        "line": 16
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "76f90b402f26dd4fd49c-be18f51e4484939bbb5b",
+              "file": "breadcrumb_content.spec.ts",
+              "line": 34,
+              "column": 7
+            },
+            {
+              "title": "BBC_TC_006, 007 & 008: Prefix text rules",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 35229,
+                      "error": {
+                        "message": "TimeoutError: locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder(/Email/)\u001b[22m\n",
+                        "stack": "TimeoutError: locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder(/Email/)\u001b[22m\n\n    at LoginPage.login (/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts:16:49)\n    at /home/ocg/antigravity-testing-kit/automation-suite/tests/breadcrumb_content.spec.ts:17:21",
+                        "location": {
+                          "file": "/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts",
+                          "column": 49,
+                          "line": 16
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../pages/LoginPage.ts:16\n\n  14 |   async login(email = 'admin@gmail.com', password = 'admin123456') {\n  15 |     if (this.page.url().includes('sign-in') || this.page.url().includes('login')) {\n> 16 |       await this.page.getByPlaceholder(/Email/).fill(email);\n     |                                                 ^\n  17 |       await this.page.getByPlaceholder(/Password/).fill(password);\n  18 |       await this.page.getByRole('button', { name: /Sign in|Login/i }).click();\n  19 |       await this.page.waitForLoadState('networkidle');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts",
+                            "column": 49,
+                            "line": 16
+                          },
+                          "message": "TimeoutError: locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder(/Email/)\u001b[22m\n\n\n   at ../pages/LoginPage.ts:16\n\n  14 |   async login(email = 'admin@gmail.com', password = 'admin123456') {\n  15 |     if (this.page.url().includes('sign-in') || this.page.url().includes('login')) {\n> 16 |       await this.page.getByPlaceholder(/Email/).fill(email);\n     |                                                 ^\n  17 |       await this.page.getByPlaceholder(/Password/).fill(password);\n  18 |       await this.page.getByRole('button', { name: /Sign in|Login/i }).click();\n  19 |       await this.page.waitForLoadState('networkidle');\n    at LoginPage.login (/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts:16:49)\n    at /home/ocg/antigravity-testing-kit/automation-suite/tests/breadcrumb_content.spec.ts:17:21"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-23T04:55:55.554Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/ocg/antigravity-testing-kit/automation-suite/test-results/breadcrumb_content-M1-M2-B-f77ef-6-007-008-Prefix-text-rules-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts",
+                        "column": 49,
+                        "line": 16
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "76f90b402f26dd4fd49c-d16d75a5ed475ac141e9",
+              "file": "breadcrumb_content.spec.ts",
+              "line": 48,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "breadcrumb_design.spec.ts",
+      "file": "breadcrumb_design.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "M3: Design Settings",
+          "file": "breadcrumb_design.spec.ts",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "BBC_TC_010 & 011: Verify Type toggle Text <-> Button",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 38680,
+                      "error": {
+                        "message": "TimeoutError: locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder(/Email/)\u001b[22m\n",
+                        "stack": "TimeoutError: locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder(/Email/)\u001b[22m\n\n    at LoginPage.login (/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts:16:49)\n    at /home/ocg/antigravity-testing-kit/automation-suite/tests/breadcrumb_design.spec.ts:15:21",
+                        "location": {
+                          "file": "/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts",
+                          "column": 49,
+                          "line": 16
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../pages/LoginPage.ts:16\n\n  14 |   async login(email = 'admin@gmail.com', password = 'admin123456') {\n  15 |     if (this.page.url().includes('sign-in') || this.page.url().includes('login')) {\n> 16 |       await this.page.getByPlaceholder(/Email/).fill(email);\n     |                                                 ^\n  17 |       await this.page.getByPlaceholder(/Password/).fill(password);\n  18 |       await this.page.getByRole('button', { name: /Sign in|Login/i }).click();\n  19 |       await this.page.waitForLoadState('networkidle');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts",
+                            "column": 49,
+                            "line": 16
+                          },
+                          "message": "TimeoutError: locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder(/Email/)\u001b[22m\n\n\n   at ../pages/LoginPage.ts:16\n\n  14 |   async login(email = 'admin@gmail.com', password = 'admin123456') {\n  15 |     if (this.page.url().includes('sign-in') || this.page.url().includes('login')) {\n> 16 |       await this.page.getByPlaceholder(/Email/).fill(email);\n     |                                                 ^\n  17 |       await this.page.getByPlaceholder(/Password/).fill(password);\n  18 |       await this.page.getByRole('button', { name: /Sign in|Login/i }).click();\n  19 |       await this.page.waitForLoadState('networkidle');\n    at LoginPage.login (/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts:16:49)\n    at /home/ocg/antigravity-testing-kit/automation-suite/tests/breadcrumb_design.spec.ts:15:21"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-23T04:56:31.833Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/ocg/antigravity-testing-kit/automation-suite/test-results/breadcrumb_design-M3-Desig-a7225-y-Type-toggle-Text---Button-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts",
+                        "column": 49,
+                        "line": 16
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "4c6a91695b7575b3b2ae-54d4277048d4c7663f65",
+              "file": "breadcrumb_design.spec.ts",
+              "line": 22,
+              "column": 7
+            },
+            {
+              "title": "BBC_TC_012: Change Separators",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 37550,
+                      "error": {
+                        "message": "TimeoutError: locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder(/Email/)\u001b[22m\n",
+                        "stack": "TimeoutError: locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder(/Email/)\u001b[22m\n\n    at LoginPage.login (/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts:16:49)\n    at /home/ocg/antigravity-testing-kit/automation-suite/tests/breadcrumb_design.spec.ts:15:21",
+                        "location": {
+                          "file": "/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts",
+                          "column": 49,
+                          "line": 16
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../pages/LoginPage.ts:16\n\n  14 |   async login(email = 'admin@gmail.com', password = 'admin123456') {\n  15 |     if (this.page.url().includes('sign-in') || this.page.url().includes('login')) {\n> 16 |       await this.page.getByPlaceholder(/Email/).fill(email);\n     |                                                 ^\n  17 |       await this.page.getByPlaceholder(/Password/).fill(password);\n  18 |       await this.page.getByRole('button', { name: /Sign in|Login/i }).click();\n  19 |       await this.page.waitForLoadState('networkidle');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts",
+                            "column": 49,
+                            "line": 16
+                          },
+                          "message": "TimeoutError: locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder(/Email/)\u001b[22m\n\n\n   at ../pages/LoginPage.ts:16\n\n  14 |   async login(email = 'admin@gmail.com', password = 'admin123456') {\n  15 |     if (this.page.url().includes('sign-in') || this.page.url().includes('login')) {\n> 16 |       await this.page.getByPlaceholder(/Email/).fill(email);\n     |                                                 ^\n  17 |       await this.page.getByPlaceholder(/Password/).fill(password);\n  18 |       await this.page.getByRole('button', { name: /Sign in|Login/i }).click();\n  19 |       await this.page.waitForLoadState('networkidle');\n    at LoginPage.login (/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts:16:49)\n    at /home/ocg/antigravity-testing-kit/automation-suite/tests/breadcrumb_design.spec.ts:15:21"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-23T04:57:11.589Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/ocg/antigravity-testing-kit/automation-suite/test-results/breadcrumb_design-M3-Desig-f33b6-BC-TC-012-Change-Separators-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts",
+                        "column": 49,
+                        "line": 16
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "4c6a91695b7575b3b2ae-028d9cb00b6cff73f234",
+              "file": "breadcrumb_design.spec.ts",
+              "line": 32,
+              "column": 7
+            },
+            {
+              "title": "BBC_TC_014, 015 & 016: Common Settings (Align, Padding, Margin, Opacity)",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 34682,
+                      "error": {
+                        "message": "TimeoutError: locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder(/Email/)\u001b[22m\n",
+                        "stack": "TimeoutError: locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder(/Email/)\u001b[22m\n\n    at LoginPage.login (/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts:16:49)\n    at /home/ocg/antigravity-testing-kit/automation-suite/tests/breadcrumb_design.spec.ts:15:21",
+                        "location": {
+                          "file": "/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts",
+                          "column": 49,
+                          "line": 16
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../pages/LoginPage.ts:16\n\n  14 |   async login(email = 'admin@gmail.com', password = 'admin123456') {\n  15 |     if (this.page.url().includes('sign-in') || this.page.url().includes('login')) {\n> 16 |       await this.page.getByPlaceholder(/Email/).fill(email);\n     |                                                 ^\n  17 |       await this.page.getByPlaceholder(/Password/).fill(password);\n  18 |       await this.page.getByRole('button', { name: /Sign in|Login/i }).click();\n  19 |       await this.page.waitForLoadState('networkidle');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts",
+                            "column": 49,
+                            "line": 16
+                          },
+                          "message": "TimeoutError: locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByPlaceholder(/Email/)\u001b[22m\n\n\n   at ../pages/LoginPage.ts:16\n\n  14 |   async login(email = 'admin@gmail.com', password = 'admin123456') {\n  15 |     if (this.page.url().includes('sign-in') || this.page.url().includes('login')) {\n> 16 |       await this.page.getByPlaceholder(/Email/).fill(email);\n     |                                                 ^\n  17 |       await this.page.getByPlaceholder(/Password/).fill(password);\n  18 |       await this.page.getByRole('button', { name: /Sign in|Login/i }).click();\n  19 |       await this.page.waitForLoadState('networkidle');\n    at LoginPage.login (/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts:16:49)\n    at /home/ocg/antigravity-testing-kit/automation-suite/tests/breadcrumb_design.spec.ts:15:21"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-23T04:57:50.216Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/ocg/antigravity-testing-kit/automation-suite/test-results/breadcrumb_design-M3-Desig-df416-ign-Padding-Margin-Opacity--chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/ocg/antigravity-testing-kit/automation-suite/pages/LoginPage.ts",
+                        "column": 49,
+                        "line": 16
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "4c6a91695b7575b3b2ae-3ad3c35ec54334fd6ad3",
+              "file": "breadcrumb_design.spec.ts",
+              "line": 48,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "breadcrumb_rules.spec.ts",
+      "file": "breadcrumb_rules.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "M4, M6, M8: Routing, Interaction & Responsive",
+          "file": "breadcrumb_rules.spec.ts",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "BBC_TC_017: Verify Home Page rule",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 0,
+                      "status": "interrupted",
+                      "duration": 53080,
+                      "error": {
+                        "message": "Error: page.waitForLoadState: Test ended.",
+                        "stack": "Error: page.waitForLoadState: Test ended.\n    at StorefrontPage.visit (/home/ocg/antigravity-testing-kit/automation-suite/pages/StorefrontPage.ts:16:21)\n    at /home/ocg/antigravity-testing-kit/automation-suite/tests/breadcrumb_rules.spec.ts:13:5",
+                        "location": {
+                          "file": "/home/ocg/antigravity-testing-kit/automation-suite/pages/StorefrontPage.ts",
+                          "column": 21,
+                          "line": 16
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../pages/StorefrontPage.ts:16\n\n  14 |   async visit(url: string) {\n  15 |     await this.page.goto(url);\n> 16 |     await this.page.waitForLoadState('networkidle');\n     |                     ^\n  17 |   }\n  18 |\n  19 |   async verifyBreadcrumbVisible() {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/ocg/antigravity-testing-kit/automation-suite/pages/StorefrontPage.ts",
+                            "column": 21,
+                            "line": 16
+                          },
+                          "message": "Error: page.waitForLoadState: Test ended.\n\n   at ../pages/StorefrontPage.ts:16\n\n  14 |   async visit(url: string) {\n  15 |     await this.page.goto(url);\n> 16 |     await this.page.waitForLoadState('networkidle');\n     |                     ^\n  17 |   }\n  18 |\n  19 |   async verifyBreadcrumbVisible() {\n    at StorefrontPage.visit (/home/ocg/antigravity-testing-kit/automation-suite/pages/StorefrontPage.ts:16:21)\n    at /home/ocg/antigravity-testing-kit/automation-suite/tests/breadcrumb_rules.spec.ts:13:5"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-23T04:58:25.992Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/ocg/antigravity-testing-kit/automation-suite/test-results/breadcrumb_rules-M4-M6-M8--498f9-C-017-Verify-Home-Page-rule-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/ocg/antigravity-testing-kit/automation-suite/pages/StorefrontPage.ts",
+                        "column": 21,
+                        "line": 16
+                      }
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "06a22d80a58f9a98808c-f116647c91ede4a22e03",
+              "file": "breadcrumb_rules.spec.ts",
+              "line": 11,
+              "column": 7
+            },
+            {
+              "title": "BBC_TC_018 & 020: Verify Product routing path and Collection paths",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "06a22d80a58f9a98808c-c0dde2a3f46471b0319b",
+              "file": "breadcrumb_rules.spec.ts",
+              "line": 22,
+              "column": 7
+            },
+            {
+              "title": "BBC_TC_029, 030, 031: Webfront Hover and Navigation Logic",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "06a22d80a58f9a98808c-1b8f8ea36319d7801d9f",
+              "file": "breadcrumb_rules.spec.ts",
+              "line": 35,
+              "column": 7
+            },
+            {
+              "title": "BBC_TC_038: Mobile Responsive rendering",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "06a22d80a58f9a98808c-a6371ae67f1b70abf38a",
+              "file": "breadcrumb_rules.spec.ts",
+              "line": 60,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-04-23T04:52:48.708Z",
+    "duration": 390756.212,
+    "expected": 0,
+    "skipped": 4,
+    "unexpected": 9,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,40 @@
+[metadata]
+task_name = "Verify Breadcrumb Settings"
+timestamp = "2026-04-23T11:28:00Z"
+tester = "Antigravity Browser Subagent (Hyper-Speed v3)"
+
+[results]
+total_tests = 5
+passed = 4
+failed = 1
+skipped = 0
+
+[[test_cases]]
+id = "BBC_TC_HIPERSPEED_01"
+name = "Verify Hide Homepage ON"
+status = "PASS"
+actual = "Breadcrumb is not visible on Home page as configured."
+
+[[test_cases]]
+id = "BBC_TC_HIPERSPEED_02"
+name = "Verify Type Button"
+status = "PASS"
+actual = "Breadcrumb item 'All Products' is rendered as a button."
+
+[[test_cases]]
+id = "BBC_TC_HIPERSPEED_03"
+name = "Verify Align Center"
+status = "PASS"
+actual = "Breadcrumb block is center-aligned on the product page."
+
+[[test_cases]]
+id = "BBC_TC_HIPERSPEED_04"
+name = "Verify Prefix Text"
+status = "FAIL"
+actual = "The prefix 'Nav:' is not visible before the breadcrumb items. Reason: Web Builder UI failed to retain prefix input during rapid automation."
+
+[[test_cases]]
+id = "BBC_TC_HIPERSPEED_05"
+name = "Verify Hover Pointer"
+status = "PASS"
+actual = "Cursor changes to pointer when hovering over breadcrumb buttons."

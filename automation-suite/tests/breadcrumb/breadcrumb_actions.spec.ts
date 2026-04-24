@@ -2,7 +2,9 @@ import { test, expect } from '@playwright/test';
 import { BreadcrumbBuilderPage } from '../../pages/BreadcrumbBuilderPage';
 import { LoginPage } from '../../pages/LoginPage';
 
-const BUILDER_URL = 'https://cc-dev.mixc.co/shopbase/storefronts/13/design/builder/site/13';
+import testData from './breadcrumb_actions.json';
+const env = process.env.TEST_ENV || 'dev';
+const conf = testData.env[env];
 
 test.describe('M9: Block Actions', () => {
   let builderPage: BreadcrumbBuilderPage;
@@ -13,7 +15,7 @@ test.describe('M9: Block Actions', () => {
     await loginPage.login();
     
     builderPage = new BreadcrumbBuilderPage(page);
-    await page.goto(BUILDER_URL);
+    await page.goto(conf.builder_url);
     await builderPage.addBreadcrumbBlock();
   });
 

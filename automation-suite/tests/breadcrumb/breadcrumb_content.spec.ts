@@ -4,8 +4,10 @@ import { StorefrontPage } from '../../pages/StorefrontPage';
 import { LoginPage } from '../../pages/LoginPage';
 // import { v4 as uuidv4 } from 'uuid';
 
-const BUILDER_URL = 'https://cc-dev.mixc.co/shopbase/storefronts/13/design/builder/site/13';
-const SF_PRODUCT_URL = 'https://sf-dev.mixc.co/products/modern-muse/';
+import testData from './breadcrumb_content.json';
+const env = process.env.TEST_ENV || 'dev';
+const conf = testData.env[env];
+
 
 test.describe('M1 & M2: Breadcrumb Content Settings', () => {
   let builderPage: BreadcrumbBuilderPage;
@@ -17,7 +19,7 @@ test.describe('M1 & M2: Breadcrumb Content Settings', () => {
     await loginPage.login();
     
     builderPage = new BreadcrumbBuilderPage(page);
-    await page.goto(BUILDER_URL);
+    await page.goto(conf.builder_url);
     // BBC_TC_001 (Partial): Assumes block is successfully added to Product or Home layout
     await builderPage.addBreadcrumbBlock();
   });
@@ -61,7 +63,7 @@ test.describe('M1 & M2: Breadcrumb Content Settings', () => {
 
     const sfTab = await page.context().newPage();
     const storefront = new StorefrontPage(sfTab);
-    await storefront.visit(SF_PRODUCT_URL);
+    await storefront.visit(conf.sf_product_url);
     await storefront.verifyBreadcrumbContent(specialPrefix);
   });
   

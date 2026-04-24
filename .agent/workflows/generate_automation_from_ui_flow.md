@@ -36,3 +36,4 @@ Output:
 
 - Page Object class
 - Test class (Lưu vào thư mục con của `tests/`)
+- Data JSON file (Lưu cùng tên, cùng thư mục với Test class, cấu trúc phân nhánh biến môi trường theo `env`)

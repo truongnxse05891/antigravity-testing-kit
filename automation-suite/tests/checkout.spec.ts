@@ -3,10 +3,9 @@ import { ProductPage } from '../pages/ProductPage';
 import { CheckoutPage } from '../pages/CheckoutPage';
 import { UpsellPage } from '../pages/UpsellPage';
 
-const PRODUCT_URL = 'https://plb-hyper-prod.onshopbase.com/products/30cm-cartoon-cute-snoopy-plush-toy-pillow-sofa-back-plush-doll-gifts-for-children';
-const CARD_NUMBER = '4500600000000061';
-const CARD_EXP = '12/30';
-const CARD_CVV = '123';
+import testData from './checkout.json';
+const env = process.env.TEST_ENV || 'dev';
+const conf = testData.env[env];
 
 test.describe('🛒 ShopBase Fast Checkout Suite (Playwright)', () => {
 
@@ -17,14 +16,14 @@ test.describe('🛒 ShopBase Fast Checkout Suite (Playwright)', () => {
     const upsellPage = new UpsellPage(page);
 
     await test.step('1. Mở sản phẩm & Add to Cart', async () => {
-      await productPage.goto(PRODUCT_URL);
+      await productPage.goto(conf.product_url);
       await productPage.addToCartAndCheckout();
     });
 
     await test.step('2. Điền Shipping & Payment', async () => {
       await checkoutPage.fillShippingInfoIfNeeded();
       await checkoutPage.selectCreditCardPaymentIfNeeded();
-      await checkoutPage.fillCreditCard(CARD_NUMBER, CARD_EXP, CARD_CVV);
+      await checkoutPage.fillCreditCard(conf.payment.card_number, conf.payment.card_exp, conf.payment.card_cvv);
     });
 
     await test.step('3. Đặt hàng', async () => {
@@ -47,14 +46,14 @@ test.describe('🛒 ShopBase Fast Checkout Suite (Playwright)', () => {
     const upsellPage = new UpsellPage(page);
 
     await test.step('1. Mở sản phẩm & Add to Cart', async () => {
-      await productPage.goto(PRODUCT_URL);
+      await productPage.goto(conf.product_url);
       await productPage.addToCartAndCheckout();
     });
 
     await test.step('2. Điền Shipping & Payment', async () => {
       await checkoutPage.fillShippingInfoIfNeeded();
       await checkoutPage.selectCreditCardPaymentIfNeeded();
-      await checkoutPage.fillCreditCard(CARD_NUMBER, CARD_EXP, CARD_CVV);
+      await checkoutPage.fillCreditCard(conf.payment.card_number, conf.payment.card_exp, conf.payment.card_cvv);
     });
 
     await test.step('3. Đặt hàng', async () => {

@@ -93,3 +93,14 @@ test.describe('Tên Module', () => {
 - **Test Files:** Phải nằm trong thư mục con tương ứng của `tests/`. Ví dụ: `tests/breadcrumb/breadcrumb_actions.spec.ts`.
 - **Import POM:** Khi test nằm trong subfolder, đường dẫn import POM thường là `../../pages/XxxPage`. Tuyệt đối kiểm chứng đường dẫn thực tế trước khi hoàn thiện.
 - **Root config:** Luôn đảm bảo `playwright.config.ts` trỏ đúng vào thư mục gốc `tests/` để có thể quét được toàn bộ subfolders.
+
+## 7. Quy chuẩn Gọi Data theo Environment (BẮT BUỘC)
+
+- **Mapping với `.json`:** Trong các spec, khai báo và nạp data trực tiếp từ file json cùng tên nằm đồng cấp bằng cách đọc biến môi trường `TEST_ENV`.
+- **Cú pháp chuẩn:**
+  ```typescript
+  import testData from './<filename>.json';
+  const env = process.env.TEST_ENV || 'dev';
+  const conf = testData.env[env];
+  // Sử dụng config: const cases = conf.cases['CASE_ID'];
+  ```

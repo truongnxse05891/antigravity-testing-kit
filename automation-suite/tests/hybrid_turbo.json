@@ -1,0 +1,21 @@
+{
+  "env": {
+    "dev": {
+      "product_url": "https://plb-hyper-prod.onshopbase.com/products/30cm-cartoon-cute-snoopy-plush-toy-pillow-sofa-back-plush-doll-gifts-for-children",
+      "customer": {
+        "email": "turbo_agent@maildrop.cc",
+        "first_name": "Turbo",
+        "last_name": "Agent"
+      },
+      "shipping": {
+        "address": "1600 W Loop S"
+      },
+      "payment": {
+        "card_number": "4500600000000061",
+        "card_exp": "12/30",
+        "card_cvv": "123"
+      }
+    },
+    "prod": {}
+  }
+}

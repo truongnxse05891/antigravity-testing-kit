@@ -1,0 +1,10 @@
+{
+  "env": {
+    "dev": {
+      "sf_home_url": "https://sf-dev.mixc.co/",
+      "sf_product_url": "https://sf-dev.mixc.co/products/modern-muse/",
+      "sf_collection_url": "https://sf-dev.mixc.co/collections/all"
+    },
+    "prod": {}
+  }
+}

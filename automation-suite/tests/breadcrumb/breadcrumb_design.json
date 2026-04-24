@@ -1,0 +1,9 @@
+{
+  "env": {
+    "dev": {
+      "builder_url": "https://cc-dev.mixc.co/shopbase/storefronts/13/design/builder/site/13",
+      "sf_product_url": "https://sf-dev.mixc.co/products/modern-muse/"
+    },
+    "prod": {}
+  }
+}

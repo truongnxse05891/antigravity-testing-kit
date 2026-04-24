@@ -3,8 +3,10 @@ import { BreadcrumbBuilderPage } from '../../pages/BreadcrumbBuilderPage';
 import { StorefrontPage } from '../../pages/StorefrontPage';
 import { LoginPage } from '../../pages/LoginPage';
 
-const BUILDER_URL = 'https://cc-dev.mixc.co/shopbase/storefronts/13/design/builder/site/13';
-const SF_PRODUCT_URL = 'https://sf-dev.mixc.co/products/modern-muse/';
+import testData from './breadcrumb_design.json';
+const env = process.env.TEST_ENV || 'dev';
+const conf = testData.env[env];
+
 
 test.describe('M3: Design Settings', () => {
   let builderPage: BreadcrumbBuilderPage;
@@ -15,7 +17,7 @@ test.describe('M3: Design Settings', () => {
     await loginPage.login();
     
     builderPage = new BreadcrumbBuilderPage(page);
-    await page.goto(BUILDER_URL);
+    await page.goto(conf.builder_url);
     await builderPage.addBreadcrumbBlock();
   });
 
@@ -40,7 +42,7 @@ test.describe('M3: Design Settings', () => {
     await builderPage.saveChanges();
     const sfTab = await page.context().newPage();
     const storefront = new StorefrontPage(sfTab);
-    await storefront.visit(SF_PRODUCT_URL);
+    await storefront.visit(conf.sf_product_url);
     await expect(storefront.breadcrumbBlock).toBeVisible(); 
     // Additional exact DOM assertions for svg / text separators could be placed here
   });
@@ -52,7 +54,7 @@ test.describe('M3: Design Settings', () => {
 
     const sfTab = await page.context().newPage();
     const storefront = new StorefrontPage(sfTab);
-    await storefront.visit(SF_PRODUCT_URL);
+    await storefront.visit(conf.sf_product_url);
     
     // Verify CSS 
     const sfBlock = storefront.breadcrumbBlock;

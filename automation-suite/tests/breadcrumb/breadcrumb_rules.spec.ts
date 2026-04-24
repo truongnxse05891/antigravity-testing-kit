@@ -2,15 +2,15 @@ import { test, expect } from '@playwright/test';
 import { StorefrontPage } from '../../pages/StorefrontPage';
 
 // For Storefront Routing & Interaction tests, we assume settings are default or previously configured
-const SF_HOME_URL = 'https://sf-dev.mixc.co/';
-const SF_PRODUCT_URL = 'https://sf-dev.mixc.co/products/modern-muse/';
-const SF_COLLECTION_URL = 'https://sf-dev.mixc.co/collections/all';
+import testData from './breadcrumb_rules.json';
+const env = process.env.TEST_ENV || 'dev';
+const conf = testData.env[env];
 
 test.describe('M4, M6, M8: Routing, Interaction & Responsive', () => {
 
   test('BBC_TC_017: Verify Home Page rule', async ({ page }) => {
     const storefront = new StorefrontPage(page);
-    await storefront.visit(SF_HOME_URL);
+    await storefront.visit(conf.sf_home_url);
     // Logic Home may hide breadcrumb block completely depend on config, asserting visibility or fallback.
     const count = await storefront.breadcrumbBlock.count();
     // Default config might show "Home" if block is present
@@ -21,11 +21,11 @@ test.describe('M4, M6, M8: Routing, Interaction & Responsive', () => {
 
   test('BBC_TC_018 & 020: Verify Product routing path and Collection paths', async ({ page }) => {
     const storefront = new StorefrontPage(page);
-    await storefront.visit(SF_PRODUCT_URL);
+    await storefront.visit(conf.sf_product_url);
     await storefront.verifyBreadcrumbVisible();
     
     // Visit collection then product (Simulating navigation state impact)
-    await storefront.visit(SF_COLLECTION_URL);
+    await storefront.visit(conf.sf_collection_url);
     await storefront.verifyBreadcrumbVisible();
     const collectionItems = await storefront.getItemsText();
     expect(collectionItems.join(' ')).toContain('All');
@@ -34,7 +34,7 @@ test.describe('M4, M6, M8: Routing, Interaction & Responsive', () => {
   // M6: Interaction
   test('BBC_TC_029, 030, 031: Webfront Hover and Navigation Logic', async ({ page }) => {
     const storefront = new StorefrontPage(page);
-    await storefront.visit(SF_PRODUCT_URL);
+    await storefront.visit(conf.sf_product_url);
     
     const links = storefront.breadcrumbItems.locator('a');
     const linkCount = await links.count();
@@ -53,14 +53,14 @@ test.describe('M4, M6, M8: Routing, Interaction & Responsive', () => {
         page.waitForNavigation(),
         links.first().click()
     ]);
-    expect(page.url()).toContain(SF_HOME_URL);
+    expect(page.url()).toContain(conf.sf_home_url);
   });
 
   // M8: Responsive
   test('BBC_TC_038: Mobile Responsive rendering', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 812 });
     const storefront = new StorefrontPage(page);
-    await storefront.visit(SF_PRODUCT_URL);
+    await storefront.visit(conf.sf_product_url);
     await storefront.verifyBreadcrumbVisible();
     
     // Verify no wrapping occurs (ellipsis logic)

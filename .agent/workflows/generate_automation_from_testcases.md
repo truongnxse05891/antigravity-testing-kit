@@ -25,7 +25,8 @@ Khởi chạy luồng nạp và sinh kịch bản tự động hóa từ file Ma
 - Gắn các Locator đã thu thập thực tế từ Bước 2 vào các biến. Khai báo các Methods tương tác rõ nghĩa theo Context.
 
 **4. Chuẩn bị Dữ liệu (Test Data Strategy):**
-- Viết file Utils định nghĩa các hàm sinh dữ liệu ngẫu nhiên (sử dụng thư viện Faker hoặc hàm Random tương ứng với framework).
+- BẮT BUỘC sinh ra một file `.json` chứa test data phân mảng theo `env` (ví dụ `{ "env": { "dev": {}, "prod": {} } }`). File JSON này phải được lưu cùng tên và cùng cấp thư mục với file `.spec.ts` mà bạn chuẩn bị tạo ở Bước 5.
+- Viết file Utils định nghĩa các hàm sinh dữ liệu ngẫu nhiên (sử dụng thư viện Faker hoặc hàm Random tương ứng với framework) nếu cần.
 - Mọi dữ liệu (đặc biệt là ID, Name, Email) truyền vào kịch bản bắt buộc phải unique và Traceable (VD: `Auto_1234@email.com`).
 
 **5. Sinh Script (Automation Scripting):**

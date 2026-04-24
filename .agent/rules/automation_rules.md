@@ -21,6 +21,8 @@
   Ví dụ:  auto_createCustomer_20260402_A3F2@test.com
   ```
 - Hỗ trợ chạy parallel: mỗi test method có data riêng biệt, không conflict.
+- **Quy chuẩn Data theo Environment:** Các dữ liệu cố định, cấu hình thay đổi theo môi trường (ví dụ `dev`, `prod`) BẮT BUỘC lưu trong một file `.json` đi kèm cùng cấp thư mục với file `.spec.ts` (VD: `test_name.spec.ts` đi kèm `test_name.json`). 
+- **Format chuẩn JSON:** Phải phân tách data vào mảng cấu trúc môi trường (Ví dụ: `{ "env": { "dev": { ... }, "prod": { ... } } }`). Test sẽ sử dụng `TEST_ENV` (cấu hình trong `.env`) để nạp nhánh data tương ứng.
 
 ## 3. Chất Lượng Code
 

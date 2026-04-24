@@ -2,7 +2,9 @@ import { test, expect } from '@playwright/test';
 import { ProductPage } from '../pages/ProductPage';
 import { CheckoutPage } from '../pages/CheckoutPage';
 
-const PRODUCT_URL = 'https://plb-hyper-prod.onshopbase.com/products/30cm-cartoon-cute-snoopy-plush-toy-pillow-sofa-back-plush-doll-gifts-for-children';
+import testData from './hybrid_turbo.json';
+const env = process.env.TEST_ENV || 'dev';
+const conf = testData.env[env];
 
 // Tùy chọn cấu hình Session Cache ở cấp độ Global
 test.use({ 
@@ -20,7 +22,7 @@ test.describe('🚀 HYBRID TURBO MODE SUITE', () => {
 
     await test.step('⚡ S1: Navigate Minitimized DOM', async () => {
       // Ép dừng tải DOM ngay khi các API nội bộ phản hồi xong (domcontentloaded thay vì networkidle)
-      await page.goto(PRODUCT_URL, { waitUntil: 'domcontentloaded' });
+      await page.goto(conf.product_url, { waitUntil: 'domcontentloaded' });
       await productPage.addToCartAndCheckout();
     });
 
@@ -35,15 +37,15 @@ test.describe('🚀 HYBRID TURBO MODE SUITE', () => {
         await page.getByPlaceholder(/Email/i).first().click();
         
         // Gõ liên thanh qua Keyboard thay vì set fill Value
-        await page.keyboard.type('turbo_agent@maildrop.cc', { delay: 0 });
+        await page.keyboard.type(conf.customer.email, { delay: 0 });
         await page.keyboard.press('Tab');
-        await page.keyboard.type('Turbo', { delay: 0 });
+        await page.keyboard.type(conf.customer.first_name, { delay: 0 });
         await page.keyboard.press('Tab');
-        await page.keyboard.type('Agent', { delay: 0 });
+        await page.keyboard.type(conf.customer.last_name, { delay: 0 });
         
         // Đoạn địa chỉ nếu để Automation nó search sẽ cực nhanh
         await page.keyboard.press('Tab');
-        await page.keyboard.type('1600 W Loop S', { delay: 0 });
+        await page.keyboard.type(conf.shipping.address, { delay: 0 });
         // Esc nếu address popup của google nhô lên
         await page.keyboard.press('Escape');
         
@@ -56,7 +58,7 @@ test.describe('🚀 HYBRID TURBO MODE SUITE', () => {
 
     await test.step('⚡ S3: Thẻ Payment & Fast Escape', async () => {
        await checkoutPage.selectCreditCardPaymentIfNeeded();
-       await checkoutPage.fillCreditCard('4500600000000061', '12/30', '123');
+       await checkoutPage.fillCreditCard(conf.payment.card_number, conf.payment.card_exp, conf.payment.card_cvv);
        
        // Click Place order cực nhanh
        await checkoutPage.placeOrderBtn.click();

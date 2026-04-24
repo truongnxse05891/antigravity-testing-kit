@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { StorefrontPage } from '../pages/StorefrontPage';
+import { StorefrontPage } from '../../pages/StorefrontPage';
 
 // For Storefront Routing & Interaction tests, we assume settings are default or previously configured
 const SF_HOME_URL = 'https://sf-dev.mixc.co/';

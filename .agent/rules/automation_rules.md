@@ -33,6 +33,8 @@
 
 ## 4. Quản Lý File & Thư Mục
 
+- Bắt buộc tổ chức kịch bản test vào các **thư mục con (subfolders)** bên trong thư mục `tests/` dựa trên tên module hoặc block (ví dụ: `tests/breadcrumb/`, `tests/checkout/`).
+- Các Page Object Model (POM) nên được đặt tập trung trong thư mục `pages/`.
 - KHÔNG tự động xóa file source khi chưa xác nhận với user.
 - Kiểm tra cấu trúc thư mục hiện có trước khi tạo file mới — tránh duplicate.
 - Đặt file đúng thư mục theo kiến trúc project (xem `plan/automation/0_project_architecture`).

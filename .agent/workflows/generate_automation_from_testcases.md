@@ -30,6 +30,7 @@ Khởi chạy luồng nạp và sinh kịch bản tự động hóa từ file Ma
 
 **5. Sinh Script (Automation Scripting):**
 - Viết file Script Test chính (Test class). Import các class POM và Utils ở trên.
+- **BẮT BUỘC:** Lưu file test vào thư mục con tương ứng bên trong `tests/` (ví dụ: `tests/breadcrumb/xxx.spec.ts`). Lưu ý cập nhật đường dẫn import POM chính xác.
 - Đảm bảo logic Test rõ ràng 3 phần: Setup (Arrange), Execution (Act), và **Verification (Assert)**.
 - Bắt buộc phải có code lệnh Assert để check DOM hiển thị trạng thái Thành công / Thất bại.
 

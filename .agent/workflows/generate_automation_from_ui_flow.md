@@ -35,4 +35,4 @@ Page Object Model
 Output:
 
 - Page Object class
-- Test class
+- Test class (Lưu vào thư mục con của `tests/`)

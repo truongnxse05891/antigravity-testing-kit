@@ -54,5 +54,5 @@ Output:
 Automation output should include:
 
 - Page Object classes
-- Test classes
+- Test classes (Lưu vào thư mục con của `tests/`)
 - Assertions validating expected behavior

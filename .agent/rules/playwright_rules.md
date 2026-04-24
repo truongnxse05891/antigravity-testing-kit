@@ -87,3 +87,9 @@ test.describe('Tên Module', () => {
 - Mỗi test block phải có **assertion rõ ràng**
 - Sử dụng `test.describe` để nhóm test theo module
 - Sử dụng `beforeEach` / `afterEach` để setup / teardown
+
+## 6. Cấu Trúc Thư Mục & Import (BẮT BUỘC)
+
+- **Test Files:** Phải nằm trong thư mục con tương ứng của `tests/`. Ví dụ: `tests/breadcrumb/breadcrumb_actions.spec.ts`.
+- **Import POM:** Khi test nằm trong subfolder, đường dẫn import POM thường là `../../pages/XxxPage`. Tuyệt đối kiểm chứng đường dẫn thực tế trước khi hoàn thiện.
+- **Root config:** Luôn đảm bảo `playwright.config.ts` trỏ đúng vào thư mục gốc `tests/` để có thể quét được toàn bộ subfolders.

@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-import { BreadcrumbBuilderPage } from '../pages/BreadcrumbBuilderPage';
-import { LoginPage } from '../pages/LoginPage';
+import { BreadcrumbBuilderPage } from '../../pages/BreadcrumbBuilderPage';
+import { LoginPage } from '../../pages/LoginPage';
 
 const BUILDER_URL = 'https://cc-dev.mixc.co/shopbase/storefronts/13/design/builder/site/13';
 

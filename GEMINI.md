@@ -28,7 +28,7 @@ navigate → resize(1920×1080) → wait_for(page_load) → snapshot → interac
 * **KHÔNG** chụp screenshot tràn lan — chỉ khi cần thiết (fail / milestone quan trọng)
 
 ### ⏳ Timeout & Skip Policy
-* Nếu một **step** trong một test case thực thi quá lâu (**từ 2-3 phút trở lên**) mà không có tiến triển:
+* Nếu một **step** trong một test case thực thi quá lâu (**từ 1 phút trở lên**) mà không có tiến triển:
     * **BẮT BUỘC** dừng (skip) test case hiện tại.
     * **Ghi nhận lí do skip** rõ ràng vào báo cáo (ví dụ: "Timeout: Web Builder loading quá lâu > 3p").
     * Chuyển sang test case tiếp theo hoặc thử phục hồi (refresh page) trước khi tiếp tục.

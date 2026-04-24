@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
-import { BreadcrumbBuilderPage } from '../pages/BreadcrumbBuilderPage';
-import { StorefrontPage } from '../pages/StorefrontPage';
-import { LoginPage } from '../pages/LoginPage';
+import { BreadcrumbBuilderPage } from '../../pages/BreadcrumbBuilderPage';
+import { StorefrontPage } from '../../pages/StorefrontPage';
+import { LoginPage } from '../../pages/LoginPage';
 // import { v4 as uuidv4 } from 'uuid';
 
 const BUILDER_URL = 'https://cc-dev.mixc.co/shopbase/storefronts/13/design/builder/site/13';

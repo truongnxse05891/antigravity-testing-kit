@@ -1,0 +1,34 @@
+========================================================================
+PROMPT: SINH TEST CASES TỪ FIGMA DESIGN (SHIFT-LEFT TESTING)
+========================================================================
+[HƯỚNG DẪN SỬ DỤNG]
+1. Đảm bảo bạn đã cấu hình Figma MCP (Personal Access Token).
+2. Copy toàn bộ nội dung bên dưới.
+3. Thay thế [FIGMA_URL_HOẶC_NODE_ID] bằng link thực tế.
+4. Paste vào khung chat với AI Agent.
+========================================================================
+
+/generate_testcases_from_figma
+
+Dựa trên bản thiết kế Figma tại đường link sau: [FIGMA_URL_HOẶC_NODE_ID]
+
+Hãy thực hiện quy trình Shift-Left Testing chuyên sâu theo các yêu cầu sau:
+
+1. ĐỌC & PHÂN TÍCH FIGMA:
+   - Hãy sử dụng công cụ của Figma MCP để đọc node/file này.
+   - Trích xuất toàn bộ Text, Form Inputs, Buttons, Component Names và các trạng thái UI có sẵn (như disabled, hover, error).
+
+2. SUY LUẬN YÊU CẦU (REQUIREMENTS):
+   - Đóng vai một BA/QA, dịch các thiết kế UI đó thành các Yêu cầu chức năng và luồng UX ngầm định.
+
+3. SINH TEST CASES:
+   - Áp dụng kỹ năng `rbt_manual_testing` để viết file Markdown Test Cases.
+   - Bắt buộc phải có cả 2 loại:
+     + UI/Visual Test: Kiểm tra hiển thị tĩnh (Text, Font, Layout, Padding, State màu sắc).
+     + Functional Test: Các thao tác tương tác dự kiến (Click, validation form, điều hướng).
+
+4. ĐỀ XUẤT LOCATOR (TESTABILITY PREPARATION):
+   - Ở cuối file báo cáo, hãy liệt kê một bảng đề xuất các thuộc tính `data-testid` cho Developer.
+   - Tên `data-testid` phải được suy ra từ chính tên Layer/Component trên Figma (Ví dụ: Layer 'btn-submit' -> `data-testid="btn-submit"`).
+
+Hãy thực thi và xuất kết quả hoàn toàn bằng Tiếng Việt.

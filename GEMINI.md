@@ -139,6 +139,7 @@ Agent sử dụng skills trong `.agent/skills/` tùy theo nhiệm vụ:
 | `locator_healer_agent` | Sửa locator hỏng |
 | `test_data_generator` | Sinh test data unique, traceable |
 | `flaky_test_analyzer` | Phân tích và khắc phục flaky tests |
+| `figma_ui_comparator` | So sánh Figma design với Live UI — phát hiện visual bugs |
 
 ## 6. Kế Hoạch Kiểm Thử (Plan Templates)
 
@@ -213,3 +214,4 @@ Agent sử dụng workflows trong `.agent/workflows/` qua slash commands:
 | `/generate_regression_suite` | Sinh regression test suite |
 | `/generate_application_test_plan` | Sinh test plan cho application |
 | `/analyze_flaky_tests` | Phân tích và khắc phục flaky tests |
+| `/compare_figma_with_ui` | So sánh Figma design với Live UI, phát hiện visual bugs |

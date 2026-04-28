@@ -101,3 +101,8 @@ node_modules/
 
 # Xray token cache
 .xray_token_cache.json
+
+# Figma comparison screenshots (binary files, no need to track in git)
+report-compare-figma/**/*.png
+report-compare-figma/**/*.jpg
+report-compare-figma/**/*.webp

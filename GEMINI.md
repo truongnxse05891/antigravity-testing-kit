@@ -109,8 +109,7 @@ Test chỉ được coi là **hoàn thành** khi đáp ứng **toàn bộ** các
 | Loại | Công nghệ |
 |------|-----------|
 | Ngôn ngữ | Java, TypeScript |
-| Web Automation | Playwright (TS/Java), Selenium WebDriver (Java) |
-| Mobile Automation | Appium (Java) |
+| Web Automation | Playwright (TS/Java) |
 | API Automation | REST Assured |
 | Test Framework | TestNG, Playwright Test |
 | Build Tool | Maven, npm |
@@ -122,8 +121,6 @@ Agent phải tham chiếu quy tắc chi tiết trong `.agent/rules/`:
 - [Quy tắc chung Automation](.agent/rules/automation_rules.md) — POM, Test Data, Naming, Assertions
 - [Chiến lược chọn Locator](.agent/rules/locator_strategy.md) — Thứ tự ưu tiên locator
 - [Quy tắc Playwright](.agent/rules/playwright_rules.md) — Browser setup, locator semantic, wait strategy
-- [Quy tắc Selenium](.agent/rules/selenium_rules.md) — WebDriverWait, TestNG structure
-- [Quy tắc Appium](.agent/rules/appium_rules.md) — Mobile locator, scroll, permission
 
 ## 5. Tham Chiếu Skills
 
@@ -177,8 +174,6 @@ code:     TC_LOGIN_1712049200
 | Framework | Smart Wait |
 |-----------|-----------|
 | Playwright | `expect().toBeVisible()`, `expect().toBeEnabled()`, Locator APIs |
-| Selenium | `WebDriverWait` + `ExpectedConditions` |
-| Appium | `WebDriverWait` + custom conditions |
 
 - Hạn chế `waitForSelector` nếu `expect()` đáp ứng được.
 - Mọi assertion phải có **timeout rõ ràng** hoặc dùng default timeout hợp lý.

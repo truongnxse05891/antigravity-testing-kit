@@ -14,7 +14,6 @@ Tài liệu này cung cấp cái nhìn tổng quan về kiến trúc, các thàn
 - **Chiến lược Locator (`locator_strategy.md`)**: Hướng dẫn thứ tự ưu tiên khi chọn locator (ưu tiên data-testid, role, text...).
 - **Quy tắc Framework-specific**: 
   - `playwright_rules.md`: Bắt buộc viewport 1920x1080, thứ tự debug (navigate -> resize -> wait), chụp ảnh khi fail, không dùng sleep cứng.
-  - `selenium_rules.md` & `appium_rules.md`: Hướng dẫn tương tự cho Selenium và Appium.
 
 ### 1.2. Skills (`.agent/skills/`)
 Skills là các "kỹ năng" chuyên biệt được nạp vào Agent để thực hiện các nghiệp vụ cụ thể. Mỗi skill đóng vai trò như một chuyên gia:

@@ -1,0 +1,158 @@
+﻿case_id,module_id,case_code,case_name,case_is_approved,case_approved_by_id,case_description,case_pre_conditions,case_need_automation,case_is_automated,case_is_api,case_risk_level,case_ordering,case_qa_id,case_dev_id,collection_id,step_action,step_input_data,step_expected_result,step_sort
+78680,1508,SB_WEB_BUILDER_BD_3,Sidebar\_Check remove block divider,1,10,"Check remove block divider
+
+","- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Page 1 đang setting Override website style = off  
+- Đã add section A gồm 1 row, 1 column, block divider
+
+",1,1,0,0,50,30,,0,"Click vào block divider
+
+",,"Hiển thị block setting ở sidebar
+
+",50
+,,,,,,,,,,,,,,,,"Click remove block
+
+",,"Preview Không hiển thị block divider vừa xóa
+
+",50
+,,,,,,,,,,,,,,,,"Save và check hiển thị ngoài SF
+
+",,"Không hiển thị block divider vừa xóa
+
+",50
+78679,1508,SB_WEB_BUILDER_BD_2,Check thay đổi data setting block divider,1,,"Check thay đổi data setting block divider
+
+","- Shop: https://wb-block-divider.onshopbase.com/  
+- Acc: shopbase@beeketing.net / Q(f!3Kx+6n;?Us%F  
+- Product page> Add mới product > Design sale page > Apply Blank page   
+- Đã add blank section A, add block button vào section này  
+- Click icon style setting trên thanh bar > Button setting > Colors setting:  
++ Màu 1 = #F7F9FC  
++ Màu 2 = #C6D8EC  
++ Màu 3 = #3C87DD  
++ Màu 4 = #203E60  
++ Màu 5 = #0A141F
+
+",1,1,0,0,50,30,,0,"Click vào block button
+
+",,"Hiển thị block setting ở sidebar
+
+",50
+,,,,,,,,,,,,,,,,"- Setting data block divider:  
++ Align = right  
++ width = 100%  
++ height = 10px  
++ Background = màu custom (#6B5C5CA6)  
++ Opacity = 81  
++ Radius =100  
++ Shadow = light  
++ Padding = 3 3 3 3  
++ Margin = 0 0 0 0
+
+
+![](chrome-extension://bpggmmljdiliancllaapiggllnkbjocb/logo/48.png)",,"- Trên preview, hiển thị divider:  
++ Căn phải collumn  
++ width block = collumn  
++ height = 10px  
++ background màu #6B5C5CA6  
++ opacity = 81  
++ bo viền các góc: 100px  
++ shadow = light  
++ padding = 3 3 3 3  
++ margin = 0 0 0 0  
+http://joxi.ru/nAyDXkDtkXY4a2
+
+
+![](chrome-extension://bpggmmljdiliancllaapiggllnkbjocb/logo/48.png)",50
+,,,,,,,,,,,,,,,,"Click button save > click icon preview trên thanh bar
+
+",,"- Trên SF, hiển thị divider:   
++ Căn phải collumn  
++ width block = collumn  
++ height = 10px  
++ background màu #6B5C5CA6  
++ opacity = 81  
++ bo viền các góc: 100px  
++ shadow = light  
++ padding = 3 3 3 3  
++ margin = 0 0 0 0  
+http://joxi.ru/nAyDXkDtkXY4a2
+
+
+![](chrome-extension://bpggmmljdiliancllaapiggllnkbjocb/logo/48.png)",50
+78678,1508,SB_WEB_BUILDER_BD_1,Check data mặc định khi add block divider,1,10,"Check data mặc định khi add block divider
+
+","- Shop: https://wb-block-divider.onshopbase.com/  
+- Acc: shopbase@beeketing.net / Q(f!3Kx+6n;?Us%F  
+- Product page> Add mới product > Design sale page > Apply Blank page   
+- Đã add blank section A  
+- Click icon style setting trên thanh bar > Button setting > Colors setting:  
++ Màu 1 = #F7F9FC  
++ Màu 2 = #C6D8EC  
++ Màu 3 = #3C87DD  
++ Màu 4 = #203E60  
++ Màu 5 = #0A141F
+
+",1,1,0,0,50,30,,0,"Click add block trong blank section
+
+",,"Hiển thị drawer Insert block
+
+",50
+,,,,,,,,,,,,,,,,"Chọn height block divider trên sidebar
+
+",,"- Hiển thị list option:  
++ Px  
++ %  
++ Không có trường auto
+
+",50
+,,,,,,,,,,,,,,,,"Chọn block divider
+
+",,"- Hiển thị block button ở vị trí vừa add block + hiển thị setting block bên sidebar  
+- Bên sidebar, chỉ có tab styles:  
++ Align = center  
++ width = 50%  
++ height = 2px  
++ Background = màu 5  
++ Opacity = 100  
++ Radius = 0  
++ Shadow = 0  
++ Padding = 0 0 0 0  
++ Margin = 30 0 30 0
+
+
+- Bên preview: Show đúng divider theo data setting  
++ Căn giữa column  
++ width block = 1/2 column  
++ height = 2px  
++ background màu #0A141F  
++ opacity = 100  
++ không bo viền các góc  
++ shadow = 0  
++ padding = 0 0 0 0  
++ margin = 30 0 30 0  
+http://joxi.ru/DrlDO6DtdbYMWr
+
+
+![](chrome-extension://bpggmmljdiliancllaapiggllnkbjocb/logo/48.png)
+![](chrome-extension://bpggmmljdiliancllaapiggllnkbjocb/logo/48.png)",50
+,,,,,,,,,,,,,,,,"Click button save > click icon preview trên thanh bar
+
+",,"- Trên SF, Show đúng divider theo data setting:  
++ Căn giữa collumn  
++ width block = 1/2 column  
++ height = 2px  
++ background màu #0A141F  
++ opacity = 100  
++ không bo viền các góc  
++ shadow = 0  
++ padding = 0 0 0 0  
++ margin = 30 0 30 0  
+http://joxi.ru/8AnY0dYHK1b192
+
+
+![](chrome-extension://bpggmmljdiliancllaapiggllnkbjocb/logo/48.png)",50

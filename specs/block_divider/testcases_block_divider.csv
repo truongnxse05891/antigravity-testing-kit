@@ -1,0 +1,62 @@
+"TC ID","Module","Risk Level","Test Scenario","Pre-Condition","Test Steps","Test Data","Expected Result","Priority"
+"WB_DIVIDER_TC_001","Block Divider","High","Verify default states của Block Divider khi vừa thêm mới (Happy Path)","Web Builder được mở","1. Mở Insert Panel
+2. Kéo thả Block Divider vào Webfront
+3. Click vào Block Divider để xem Setting Panel","Không có Test Data","Block Divider hiển thị mặc định:
+- Content Source: None
+- Width: 50%
+- Height: 2px
+- Background: Màu [5]
+- Border: none
+- Opacity: 100%
+- Radius: 0px
+- Shadow: none
+- Padding: 0
+- Margin: Top = 30px ; Bottom = 30px
+- Z-Index: 0
+- Position: on/off tương ứng","High"
+"WB_DIVIDER_TC_002","Block Divider","High","Verify tăng giảm độ dày Divider thông qua Height với Giá trị biên (BVA)","Block Divider đã nằm trên Webfront","1. Select Divider
+2. Ở mục Height nhập các giá trị biên
+3. Quan sát Divider trên Webfront","Height: 1px, 0px, -5px, 9999px","Height:
+- 1px: Divider siêu mỏng
+- 0px: Hệ thống đổi về 1px hoặc không cho lưu/không hiển thị
+- -5px: Hệ thống báo lỗi/reset về hợp lệ nhỏ nhất
+- 9999px: Divider rất dày hoặc đạt cấu hình tối đa cho phép (nếu có giới hạn max)","High"
+"WB_DIVIDER_TC_003","Block Divider","Medium","Verify không cho phép nhập text/auto vào Width/Height (Negative Case)","Block Divider đang được chọn trên Webfront","1. Mở Setting Panel
+2. Nhập từ khóa ""auto"" hoặc text vào Width
+3. Nhập từ khóa ""auto"" hoặc text vào Height","Width: ""auto""
+Height: ""auto""","Hệ thống báo lỗi validation hoặc tự động xóa giá trị text nhập vào, giá trị width/height hiện tại không đổi.","Medium"
+"WB_DIVIDER_TC_004","Block Divider","Medium","Verify thay đổi chiều rộng Width qua % và px bằng phân lớp tương đương (EP)","Block Divider đang được chọn trên Webfront","1. Mở mục Width trên Setting
+2. Nhập đơn vị theo px và %
+3. Quan sát giao diện","Width: 10%, 100%, 0px, 500px","Width của block tự co dãn / thay đổi tương ứng theo tỷ lệ phần trăm màn hình hoặc fix cứng theo đơn vị pixel","Medium"
+"WB_DIVIDER_TC_005","Block Divider","Medium","Verify thay đổi màu nền Background (Decision Table)","Block Divider đang được chọn trên Webfront","1. Mở mục Background
+2. Thay đổi nhiều loại mã màu khác nhau (Màu Solid, màu Gradient, Transparent)
+3. Lưu và xem bảng điều khiển","HEX1: #FF0000 (đỏ)
+HEX2: Transparent
+HEX3: Gradient linear (Đỏ - Xanh)","Trạng thái màu cập nhật tức thời trên đường Divider ở Webfront","High"
+"WB_DIVIDER_TC_006","Block Divider","Medium","Verify thay đổi Opacity, Border và Radius của Divider","Block Divider được chọn, Height = 10px để dễ nhìn thấy Border","1. Kéo mục Opacity xuống thấp
+2. Đặt Border Size và Border Color
+3. Đặt Radius ở góc","Opacity: 10%
+Border Size: 1px red
+Radius: 50%","Divider mờ đi còn 10%, có viền đỏ nhỏ bao quanh và các góc bị bo lại.","Medium"
+"WB_DIVIDER_TC_007","Block Divider","Medium","Verify thay đổi Padding và Shadow (Edge Case)","Block Divider được chọn có màu nền đen","1. Thêm khoảng cách Padding các 4 phía
+2. Bật Shadow với Drop Shadow","Padding: 10px (All)
+Shadow: Drop shadow mờ vòng ngoài 10px","Diện tích block giãn ra 10px ở trong lõi, đường Divider có bóng đen đằng sau","Medium"
+"WB_DIVIDER_TC_008","Block Divider","Medium","Verify tính năng Margin (Khoảng cách với Block liền kề)","Divider nằm giữa Block text (dưới) và Block ảnh (trên)","1. Vào thuộc tính Margin
+2. Đặt Margin Top và Bottom giá trị dương
+3. Đặt Margin Top và Bottom giá trị âm (nếu UI cho phép)","Margin Top: 50px
+Margin Bottom: 50px
+Margin âm: -20px","Khoảng cách trên dưới với các block liền kề kéo dãn 50px hoặc bị hút lên theo margin âm (đè lên nhau)","Medium"
+"WB_DIVIDER_TC_009","Block Divider","Low","Verify kéo và thả (Drag and Drop) block Divider giữa danh sách (State Transition)","Có 3 Blocks (A, B, C) sẵn trên Webfront","1. Nhấn giữ Divider
+2. Kéo thả Divider xuống giữa Block B và C
+3. Kéo thả sang Section khác chứa Column","Kéo thả Divider","Divider chèn thành công vào giữa vị trí mới, Settings Width/Height/Style không thay đổi","High"
+"WB_DIVIDER_TC_010","Block Divider","Low","Verify thuộc tính Z-Index và Position overlapping","Có 1 Block Ảnh nằm cạnh Divider","1. Chuyển Position của Divider sang Absolute
+2. Kéo đè Divider lên Block Ảnh
+3. Set Z-Index của Divider cao hơn Ảnh","Position: Absolute
+Z-Index: 10","Divider định dạng tự do, nằm đè lên trên Block Ảnh","Medium"
+"WB_DIVIDER_TC_011","Block Divider","High","Verify Editor/Admin đăng xuất và End User xem Storefront không bị vỡ Layout (Security & Integration)","Đã lưu thiết lập Divider (Background Đỏ, Height:10px, Width:100%)","1. Bấm nút Save Editor
+2. Copy đường dẫn Preview gửi cho tab ẩn danh
+3. Truy cập xem Website","Mở chế độ Storefront Preview","Người dùng End User xem được Divider như đã Cấu hình mà không nhìn thấy/ không can thiệp được vào Setting panel","High"
+"WB_DIVIDER_TC_012","Block Divider","Medium","Verify thao tác Duplicate (nhân bản) Block Divider","Có 1 Block Divider (Xanh da trời, Height 5px, Width 90%)","1. Click chọn Block Divider
+2. Bấm vào icon Duplicate (Nhân đôi)","Bấm Duplicate","Sinh ra Divider thứ 2, giữ nguyên toàn bộ cấu hình màu, width, height, margin... giống Divider thứ 1 nằm ngay phía dưới","Medium"
+"WB_DIVIDER_TC_013","Block Divider","Low","Verify thao tác Delete & Undo (Ctrl Z)","Divider trên màn hình đang được Focus","1. Bấm phím Delete hoặc biểu tượng Thùng rác để xoá Block
+2. Bấm Undo (Ctrl + Z hoặc nút mũi tên quay lại)","Phím Delete và Ctrl+Z","Divider bị xóa. Khi bấm Undo thì Divider khôi phục hoàn chỉnh với cấu hình cũ","Medium"

@@ -1,0 +1,30 @@
+"TC ID","Module","Risk Level","Test Scenario","Pre-Condition","Test Steps","Test Data","Expected Result","Priority"
+"WB_SLIDESHOW_TC_001","Block Slideshow","High","Verify render Layout 1 & Default content components","Slideshow block được thêm vào trang","1. Quan sát Layout mặc định ban đầu
+2. Điền text tại tất cả fields: Sub heading, Heading, Description, Primary button, Secondary button","Sub heading: ""New season"", Primary Btn: ""Buy Now""","Hiển thị Layout 1 (Full width BG). Hiển thị đầy đủ cả 5 thành phần content overlay đè lên trên nền (background).","High"
+"WB_SLIDESHOW_TC_002","Block Slideshow","High","Verify switch Layout 2 (Split) và State Flip Content","Đang chọn Layout 1 với đầy đủ nội dung","1. Chỉnh sửa sang Layout 2
+2. Bật [ON] Flip content","Flip content = ON","Slideshow chia đôi màn hình 1/2 Text 1/2 Media. Các text cũ bên Layout 1 được kế thừa chính xác. Khi Flip ON, vị trí khối Text và Media tráo đổi trái/phải cho nhau.","High"
+"WB_SLIDESHOW_TC_003","Block Slideshow","Low","Verify trạng thái ẩn Component Content khi rỗng (EP)","Slideshow có đủ nội dung","1. Xoá trắng content Sub-heading
+2. Xoá trắng Secondary button","Sub-heading rỗng, Second Button text rỗng","Các thẻ chứa Sub-heading và Second button biến mất hoàn toàn trên DOM UI (không chừa khoảng trắng trống).","Medium"
+"WB_SLIDESHOW_TC_004","Block Slideshow","High","Verify Upload Media (Video Youtube) và logic Sync qua thiết bị","Đang ở màn hình thiết kế slide 1","1. Tại media input, nhập link Youtube
+2. Chuyển thiết bị sang Mobile Preview","URL: ""https://youtube.com/watch?v=123456""","Video load nhanh làm background. Bên phân cảnh Mobile Preview video Youtube vẫn sync đầy đủ hiển thị y hệt Desktop.","High"
+"WB_SLIDESHOW_TC_005","Block Slideshow","High","Verify tính năng Override Media Device riêng biệt Mobile (Alternate Path)","Đã upload chung 1 ảnh nền cho slide","1. Chọn chế độ Upload cho ""Mobile""
+2. Tải 1 ảnh hình chữ dọc riêng
+3. Kiểm tra Settings Overlay/Position","Ảnh Mobile dung lượng 500kb","Trên Desktop hiển thị ảnh 1. Trên Mobile hiển thị ảnh riêng biệt số 2. Các tham số config ảnh (như Position, Overlay đen 50%) vẫn ăn theo cài đặt gốc như file yêu cầu.","High"
+"WB_SLIDESHOW_TC_006","Block Slideshow","Medium","Verify View Partial Items phía sau (Layout 1)","Chọn Layout 1, Slideshow có 3 slides","1. Bật Use Item Partially = ON
+2. Quan sát 2 mép trái phải màn hình","Show items partially: ON","Slide đang xuất hiện toàn bộ nằm ở giữa, 2 bên mép trái phải web front sẽ hé lộ một phần 10-20% của Slide chót và Slide tiếp theo.","Medium"
+"WB_SLIDESHOW_TC_007","Block Slideshow","Medium","Verify Slide Management (Add, Duplicate, Remove, Drag Order)","Slideshow có slide A, B, C","1. Duplicate Slide B
+2. Kéo thả Slide C lên đầu tiên
+3. Xoá slide A","Click Duplicate icon B, Kéo thả C->A","Sau khi dup B, C sẽ trượt xuống và ngay dưới B là bản B Copy. Sau khi kéo thả, C đứng vị trí số 1. Xóa A thành công không lỗi hệ thống.","High"
+"WB_SLIDESHOW_TC_008","Block Slideshow","Medium","Verify tính năng Autoplay Delay Duration với Giá Trị Biên (BVA)","Autoplay Slideshow đang bật [ON]","1. Nhập Delay = 0s
+2. Nhập Delay = 1s
+3. Nhập Delay = 20s
+4. Nhập Delay = 21s","0s, 1s, 20s, 21s","Nhập 0s hoặc 21s, input tự động validate từ chối/báo lỗi đỏ hoặc reset về range 1s hoặc 20s. 1s và 20s chạy slideshow bình thường.","High"
+"WB_SLIDESHOW_TC_009","Block Slideshow","Medium","Verify tương tác Pause on Hover của Autoplay","Autoplay đang chạy với Loop = ON, Delay 2s","1. Trong khi slide tự nhảy, di chuột Rê vào giữa khối Slide
+2. Di chuột ra chỗ khác","Hover Event","Di chuột vào -> Slide dừng đếm giờ, đứng im tại slide hiện tại. Di chuột ra ngoài -> Sau 2s slide tiếp tục Next tự động.","Medium"
+"WB_SLIDESHOW_TC_010","Block Slideshow","Medium","Verify cơ chế Auto Rewind và Mũi tên Arrow (Navigation Decision Table)","Có 3 Slides, bật sẵn Nav Arrow","1. Auto Rewind = OFF. Click Next đến slide 3. Quan sát icon Arrow Right.
+2. Auto Rewind = ON. Click Next tại slide 3.","TH1: Auto Rewind OFF
+TH2: ON","Với OFF: Tại slide thứ 3 (Cuối cùng), mũi tên Next bên Phải bị ẩn đi (disabled). Với ON: Mũi tên Next vẫn sáng, bấm Next sẽ trượt ngược quay lại Slide số 1.","High"
+"WB_SLIDESHOW_TC_011","Block Slideshow","Medium","Verify bật / tắt Slide Nav Dot","Slide đang chạy bình thường 3 trang","1. Toggle Slide Nav (Dấu chấm điều hướng) = [OFF]
+2. Toggle lên [ON] lại","Slide Nav: OFF -> ON","Icon Dots dưới chân slideshow bị văng mất khỏi UI khi OFF. Mở ON Dots xuất hiện lại số lượng chấm trùng khớp 3 slides.","Low"
+"WB_SLIDESHOW_TC_012","Block Slideshow","High","Verify Migration Block từ Theme Ver 2 sang Ver 3","Theme đang có Section Slideshow V2 cũ chứa 2 Image","1. Vào Block v3
+2. Click nút ấn 'Import now' CTA","Import Migration Click","Block Slideshow v3 sẽ tiếp nhận thành công data cấu hình cũ từ V2 (bao gồm Ảnh nền, text) và fill vào list Slides hiện hữu.","High"

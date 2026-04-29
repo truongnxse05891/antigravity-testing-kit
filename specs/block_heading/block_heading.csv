@@ -1,0 +1,1511 @@
+﻿case_id,module_id,case_code,case_name,case_is_approved,case_approved_by_id,case_description,case_pre_conditions,case_need_automation,case_is_automated,case_is_api,case_risk_level,case_ordering,case_qa_id,case_dev_id,collection_id,step_action,step_input_data,step_expected_result,step_sort
+91857,1416,SB_WEB_BUILDER_LB_BH_09,Verify các page policy được link đến text editor heading block,1,,"Verify các page policy được link đến text editor heading block
+
+","- shop: https://test-template-creator3.myshopbase.net/  
+
+acc: nule+1@beeketing.net  
+
+pass: Qafront@123  
+
+- Shop có các trang polices đang visible:  
+
++ Refund policy  
+
++ Privacy policy  
+
++ Shipping policy  
+
++ Terms of service  
+
++ Return policy
+
+",0,0,0,0,1,187,,0,"Online store -> Customize ở template đang publish
+
+",,,50
+,,,,,,,,,,,,,,,,"Drag and drop block Heading
+
+",,"Thấy show dòng text [Edit your title here]
+
+",50
+,,,,,,,,,,,,,,,,"Select dòng text [Edit your title here] -> Click Edit -> click icon link 
+
+",,"Popup https://prnt.sc/DfoUxWSBnlrM hiển thị
+
+",50
+,,,,,,,,,,,,,,,,"Select [Go to page]
+
+",,"Dropdown hiển thị có category [Policy Pages]
+
+",50
+,,,,,,,,,,,,,,,,"Click Select
+
+",,,50
+,,,,,,,,,,,,,,,,"Click Policy Pages
+
+",,"Show https://prnt.sc/XniP56KnlFvD
+
+",50
+,,,,,,,,,,,,,,,,"Chọn một page bất kỳ
+
+","Refund policy
+
+",,50
+,,,,,,,,,,,,,,,,"Click button Apply -> Click button Save
+
+",,,50
+,,,,,,,,,,,,,,,,"Open storefront -> Click link [Edit your title here]
+
+",,"Redirect to trang Refund policy
+
+",50
+,,,,,,,,,,,,,,,,"Back to dashboard -> Click Online store -> Customize ở template đang publish
+
+",,,50
+,,,,,,,,,,,,,,,,"Select dòng text [Edit your title here] -> Click Edit 
+
+",,"icon link ở trạng thái được select
+
+",50
+,,,,,,,,,,,,,,,,"Turn on toggle Open in new tab -> Click Apply -> Click Save
+
+",,,50
+,,,,,,,,,,,,,,,,"Open storefront -> Click link [Edit your title here]
+
+",,"Open Refund policy page ở new tab
+
+",50
+,,,,,,,,,,,,,,,,"Back to dashboard -> Click Online store -> Pages -> Làm hidden trang Refund policy
+
+",,,50
+,,,,,,,,,,,,,,,,"Open storefront -> Click link [Edit your title here]
+
+",,"Open new tab với hiển thị page not found
+
+",50
+,,,,,,,,,,,,,,,,"Back to dashboard -> Click Online store -> Click customize ở template đang publish
+
+",,,50
+,,,,,,,,,,,,,,,,"Click [Edit your title here] -> Click Edit 
+
+",,"icon link đang ở trạng thái được select
+
+",50
+,,,,,,,,,,,,,,,,"Click icon link
+
+",,"Show dropdown fill các dữ liệu:  
+
+- Go to page  
+
+- Refund policy  
+
+- Turn on Open in new tab
+
+",50
+,,,,,,,,,,,,,,,,"Turn off toggle Open in new tab -> Click Apply -> Click Save
+
+",,,50
+,,,,,,,,,,,,,,,,"Click 
+
+",,,50
+,,,,,,,,,,,,,,,,"Open storefront -> Click link [Edit your title here]
+
+",,"Redirect to page not found
+
+",50
+73705,1416,SB_WEB_BUILDER_BH_01,Check setting mặc định khi add block Heading,1,,"Check setting mặc định khi add block Heading
+
+","- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Setting Override Website style = Off  
+- Đã add section A gồm 1 row, 1 column
+
+",1,1,0,0,1,30,,0,"Tại column, click Add block
+
+",,"Hiển thị drawer Insert block
+
+",50
+,,,,,,,,,,,,,,,,"Chọn block Heading
+
+",,"- Hiển thị block Heading ở vị trí vừa add block + hiển thị setting block bên sidebar  
+- Bên sidebar:   
++ Width = Auto  
++ Height = Auto  
++ Background = none  
++ Border = none  
++ Opacity = 100%  
++ Radius = 0px  
++ Shadow = none  
++ Padding = 0  
++ Margin = 0  
++ Z-Index = 0  
+- Helptext: To customize font style, go to Fonts in Website Style 
+
+
+  
+- Bên preview:  
++ Nội dung mặc định: "" Edit your title here""  
++ Màu mặc định ban đầu là màu đen.  
++ Font-size: Heading 1  
++ Tag: <h1>  
++ Block Heading có font, font style, font size, color ăn theo font, font style, font size, color của Website style  
++ Position = auto[https://prnt.sc/hQDyjWw-5SV](https://prnt.sc/hQDyjWw-5SV-)-  
+
+
+",50
+,,,,,,,,,,,,,,,,Click dấu + trên thanh menu,,Hiển thị drawer Insert section + block,50
+,,,,,,,,,,,,,,,,"Chọn block Heading, thực hiện drag & drop vào Webfront vị trí ngoài row, column",,"- Hiển thị block Heading ở vị trí vừa add block + hiển thị setting block bên sidebar  
+- Bên sidebar:   
++ Width = Auto  
++ Height = Auto  
++ Background = none  
++ Border = none  
++ Opacity = 100%  
++ Radius = 0px  
++ Shadow = none  
++ Padding = 0  
++ Margin = 0  
++ Z-Index = 0  
+- Helptext: To customize font style, go to Fonts in Website Style   
+- Bên preview:  
++ Nội dung mặc định: "" Edit your title here""  
++ Màu mặc định ban đầu là màu đen.  
++ Font-size: Heading 1  
++ Tag: <h1>  
++ Block Heading có font, font style, font size, color ăn theo font, font style, font size, color của Website style  
++ Position = Auto",50
+,,,,,,,,,,,,,,,,Click vào Fonts ở helptext ,,"Mở ra Fonts ở website style
+
+",50
+73706,1416,SB_WEB_BUILDER_BH_02,Input text\_Check hiển thị khi input text vào block Heading,1,,"Check hiển thị khi gõ trực tiếp text vào textbox
+
+","- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Setting Override Website style = On  
+- Đã add section A gồm 1 row, 2 column: Column 1 và Column 2  
+- Column 1 có add block Heading
+
+",1,1,0,0,2,30,,0,"Tại block Heading, gõ trực tiếp vào textbox
+
+","Input text: Collection list
+
+","Hiển thị block Heading có text đã input  
+- Block Heading có font, font style, font size, color ăn theo font, font style, font size, color của Page style
+
+",50
+,,,,,,,,,,,,,,,,"Tại block Heading, dán text có format
+
+","Text có color = red
+
+","- Remove style format của text trong clipboard  
+- Block Heading có font, font style, font size, color ăn theo font, font style, font size, color của Text được copy
+
+",50
+,,,,,,,,,,,,,,,,"Tại block Heading, dán text có bullet
+
+","Text: ""a. How to Use Facebook Advertising to Find and Attract Clients.  
+b. How to Leverage Your Existing Network to Find New Clients. ""
+
+","Tự động chuyển sang bullet mặc định của Page style
+
+",50
+,,,,,,,,,,,,,,,,"Tại block Heading, dán ảnh
+
+",,"Không cho phép dán ảnh
+
+",50
+,,,,,,,,,,,,,,,,,,,50
+73707,1416,SB_WEB_BUILDER_BH_03,Định vị con trỏ\_Check hiển thị định vị con trỏ vào text khi thực hiện click vào block,1,,"Check hiển thị định vị con trỏ vào text khi thực hiện click vào block
+
+","- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Đã add section A gồm 1 row, 2 column: Column 1 và Column 2  
+- Column 1 có add block Heading có text: ""Your Creative writing career accelerated""
+
+",1,0,0,0,3,187,,0,"Click 1 lần vào block Heading
+
+",,"Hiển thị block Heading:  
+- Webfront: show Quickbar setting ở bên trên block  
+- Sidebar: show setting  
+- Block ở trạng thái selected  
+- Không định vị con trỏ vào text
+
+",50
+,,,,,,,,,,,,,,,,"Con trỏ đang trỏ vào text hoặc vùng trắng của block-> double click vào block
+
+",,Con trỏ chuột nằm ở vị trí text đầu tiên của block,50
+,,,,,,,,,,,,,,,,,,,50
+73708,1416,SB_WEB_BUILDER_BH_04,Bôi đen text\_Check hiển thị khi thực hiện bôi đen vùng text,1,,"Check hiển thị khi thực hiện bôi đen vùng text
+
+","- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Đã add section A gồm 1 row, 2 column: Column 1 và Column 2  
+- Column 1 có add block Heading có text: Your Creative writing career accelerated
+
+",1,0,0,0,4,187,,0,"Click 1 lần vào Text
+
+",,"Không bôi đen text
+
+",50
+,,,,,,,,,,,,,,,,"Định vị con trỏ vào đằng trước chữ cái đầu tiên của text, double click
+
+","Đặt con trỏ tại trước chữ ""y"" của text ""Your""
+
+","Bôi đen text ""Your""
+
+",50
+,,,,,,,,,,,,,,,,"Định vị con trỏ vào chữ cái bất kì của text, double click
+
+","Đặt con trỏ tại chữ ""u"" của text ""Your""
+
+","Bôi đen text ""Your""
+
+",50
+,,,,,,,,,,,,,,,,"Định vị con trỏ vào đằng sau chữ cái cuối của text, double click
+
+","Đặt con trỏ tại đằng sau chữ ""r""
+
+","Bôi đen space
+
+",50
+,,,,,,,,,,,,,,,,"Định vị con trỏ vào đằng sau chữ cái cuối của text, triple click",,Bôi đen toàn bộ dòng chứa text đó,50
+,,,,,,,,,,,,,,,,,,,50
+73709,1416,SB_WEB_BUILDER_BH_05,Font style\_Check font style của block Heading,1,,"Check font style của block Heading
+
+","- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Page 1 đang setting Override website style = off  
+- Đã add section A gồm 1 row, 1 column, 1 block Heading
+
+",1,0,0,0,5,30,,0,"Click vào block Heading, chọn Heading 2 trên thanh Quickbar setting 
+
+",,"Hiển thị block Heading có style: Heading 2  
+- Quickbar setting hiển thị Heading 2, tag tự động hiển thị <h2>
+
+",50
+,,,,,,,,,,,,,,,,"Click vào block Heading, chọ Heading 3 trên thanh Quickbar setting
+
+",,"Hiển thị block Heading có style: Heading 3  
+- Quickbar setting hiển thị Heading 3, tag tự động hiển thị <h3> 
+
+",50
+,,,,,,,,,,,,,,,,"Click vào block Heading, chọ Heading 4 trên thanh Quickbar setting
+
+",,"Hiển thị block Heading có style: Heading 4  
+- Quickbar setting hiển thị Heading 4, tag tự động hiển thị <h4>
+
+",50
+,,,,,,,,,,,,,,,,"Ở sidebar, setting Override website style = off, check hiển thị font size block Heading
+
+",,"Hiển thị block Heading có style: Heading 4  
+- Quickbar setting hiển thị Heading 4,  tag tự động hiển thị <h4>
+
+",50
+,,,,,,,,,,,,,,,,"Click vào block Heading, chọ Heading 1 trên thanh Quickbar setting
+
+",,"Hiển thị block Heading có style: Heading 1   
+Quickbar setting hiển thị Heading 1,  tag tự động hiển thị <h1>
+
+",50
+,,,,,,,,,,,,,,,,"Click vào block Heading, chọ Heading 2 trên thanh Quickbar setting
+
+",,"Hiển thị block Heading có style: Heading 2  
+- Quickbar setting hiển thị Heading 2,  tag tự động hiển thị <h2>
+
+",50
+,,,,,,,,,,,,,,,,"Click vào block Heading, chọ Heading 3 trên thanh Quickbar setting
+
+",,"Hiển thị block Heading có style: Heading 3  
+- Quickbar setting hiển thị Heading 3,  tag tự động hiển thị <h3>
+
+",50
+,,,,,,,,,,,,,,,,"Click vào block Heading, chọn Paragraph 1 trên thanh Quickbar setting",,"Hiển thị block Heading có style: Paragraph   
+- Quickbar setting hiển thị Heading 3,  tag tự động hiển thị <p>",50
+,,,,,,,,,,,,,,,,"Enter xuống dòng, text thành 2 paragraph, nhập thêm text   
+Để chuột ở paragraph thứ 2. Chọn Style Heading 1",,"Block hiển thị 2 paragraph có paragraph ở trên ăn theo style Paragraph 1, paragraph thứ 2 ăn theo style Heading 1",50
+73710,1416,SB_WEB_BUILDER_BH_06,Text decorations\_Check setting text decorations của block Heading,1,,"Check setting text decorations của block Heading
+
+","- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Page 1 đang setting Override website style = off  
+- Đã add section A gồm 1 row, 1 column, 1 block Heading  
+- Block Heading có input text: Your Creative writing career accelerated
+
+",1,0,0,0,6,187,,0,"Click vào block Heading, click edit text
+
+",,"- Hiển thị Quickbar có 4 icon text decorations: Bold, Italic, Underline, Strikethrought  
+- Không highlight icon text decorations
+
+",50
+,,,,,,,,,,,,,,,,"Bôi đen text ""Achieve""  
+Chọn decoration ""Bold""",,"- text ""Achieve"" hiển thị in đậm  
+- Highlight icon ""B"" trên Quickbar
+
+",50
+,,,,,,,,,,,,,,,,"Bôi đen text ""Financial"", chọn decoration ""Italic""",,"Text ""Financial"" hiển thị nghiêng  
+- Highlight icon ""I"" tương ứng trên Quickbar
+
+",50
+,,,,,,,,,,,,,,,,"Bôi đen text ""Freedom"", chọn decoration ""Underline""",,"- Text ""Freedom"" hiển thị có underline   
+- Highlight icon ""U"" tương ứng trên Quickbar
+
+",50
+,,,,,,,,,,,,,,,,"Bôi đen text ""Faster"", chọn decoration ""Strikethrought""",,"- Text ""Faster"" hiển thị có gạch ngang  
+- Highlight icon ""S"" tương ứng trên Quickbar",50
+,,,,,,,,,,,,,,,,"Bôi đen text ""Safer"", chọn decoration "" Bold + Italic + Underline + Strike through""",,"- Text ""Safer"" hiển thị in đậm, nghiêng, có gạch chân và gạch ngang  
+- Highlight icon ""S -I - U -S"" tương ứng trên Quickbar",50
+,,,,,,,,,,,,,,,,,,,50
+,,,,,,,,,,,,,,,,,,,50
+,,,,,,,,,,,,,,,,,,,50
+,,,,,,,,,,,,,,,,,,,50
+,,,,,,,,,,,,,,,,,,,50
+,,,,,,,,,,,,,,,,,,,50
+,,,,,,,,,,,,,,,,,,,50
+,,,,,,,,,,,,,,,,,,,50
+73711,1416,SB_WEB_BUILDER_BH_07,Color\_Check setting color của block Heading,1,,"Check setting text decorations của block Heading
+
+","- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Page 1 đang setting Override website style = off  
+- Đã add section A gồm 1 row, 2 column  
+- Column 1 có Block Heading có input text: Your Creative writing career accelerated  
+- Column 2 có block Heading có input text: You are my sunshine 
+
+",1,0,0,0,7,187,,0,"Tại column 1, Click vào block Heading",,"Quickbar: hiển thị mã màu theo màu đã setting trong Website/ page style  
+- Block Heading: text có màu theo bộ màu đã setting trong Website/ Page style
+
+",
+,,,,,,,,,,,,,,,,"Bôi đen text ""Your Creative"", click icon màu trên thanh quick bar, chọn màu số (2) trong dải màu",,"Text "" Your Creative"" hiển thị đúng màu số (2) trong dải màu",
+,,,,,,,,,,,,,,,,"Bôi đen text "" my sunshine"", click icon màu, chọn custom color, chọn màu (R:219 G:57 B:57)",,"Text ""my sunshine"" hiển thị đúng màu như đã chọn  
+Màu của line 1 vẫn như cũ",
+,,,,,,,,,,,,,,,,,,,50
+,,,,,,,,,,,,,,,,,,,50
+73712,1416,SB_WEB_BUILDER_BH_08,Text align\_Check hiển thị block Heading khi setting text align,1,,"Check hiển thị block Heading khi setting text align
+
+","- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Page 1 đang setting Override website style = off  
+- Đã add section A gồm 1 row, 1 column, 1 block Heading  
+- Block Heading có input text: Your Creative writing career accelerated
+
+",1,0,0,0,8,187,,0,"Click vào block Heading
+
+",,"Quickbar: highlight text align tương ứng
+
+",50
+,,,,,,,,,,,,,,,,"Trên Quickbar, chọn 1 option text align
+
+","left, center, right
+
+","- Highlight icon tương ứng trên Quickbar  
+- Apply text align tương ứng lên vùng đã chọn
+
+",50
+,,,,,,,,,,,,,,,,"Click vào icon text align đang được highlight
+
+",,"- Không highlight icon tương ứng trên Quickbar  
+- Không apply text align tương ứng lên vùng đã chọn
+
+",50
+,,,,,,,,,,,,,,,,,,,50
+,,,,,,,,,,,,,,,,,,,50
+73713,1416,SB_WEB_BUILDER_BH_09,Hyperlink\_Check hiển thị block Heading khi setting Hyperlink,1,,"Check hiển thị block Heading khi setting Hyperlink
+
+","- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Page 1 đang setting Override website style = off  
+- Đã add section A gồm 1 row, 1 column, 1 block Heading  
+- Block Heading có input text: Your Creative writing career accelerated
+
+",1,0,0,0,9,187,,0,"Tại block Heading, bôi đen vùng text  ""Your Creative"", click icon hyperlink",,Hiển thị textbox có placeholder: Insert your link here,50
+,,,,,,,,,,,,,,,,Nhập link vào textbox,https://sb-svlive.onshopbase.com/,"- Text ""Your Creative "" được underline   
+- Highlight icon hyperlink  
+- Hyperlink riêng cho vùng text được chọn",50
+,,,,,,,,,,,,,,,,"Mở ngoài SF, Click vào vùng text đã được hyperlink",,"Mở tab mới, điều hướng đến link đã input",50
+,,,,,,,,,,,,,,,,"Tại block Heading, bôi đen vùng text ""Your Creative"" , click vào icon hyperlink đang highlight",,- Ko highlight icon hyperlink,50
+,,,,,,,,,,,,,,,,"Ngoài SF, click vào text ""Your creative""",,Không redirect tới trang nào cả,50
+,,,,,,,,,,,,,,,,,,,50
+73714,1416,SB_WEB_BUILDER_BH_10,Auto listing\_Check hiển thị block Heading khi setting auto listing,1,,"Check hiển thị block Heading khi setting auto listing
+
+","- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Page 1 đang setting Override website style = off  
+- Đã add section A gồm 1 row, 1 column, 1 block Heading
+
+",1,0,0,0,10,187,,0,,,,50
+,,,,,,,,,,,,,,,,"Click vào edit text của block Heading A  
+Click chọn bullet order list
+
+",,"- Text giữa nguyên style có thêm number 1. phía trước  
+- Highlight icon order list trên quickbar
+
+",50
+,,,,,,,,,,,,,,,,"Enter xuống dòng, nhập text ""Edit more""",,"Tự động nhảy số lần lượt khi enter xuống dòng
+
+",50
+,,,,,,,,,,,,,,,,"- Click ""edit text"" ở block Heading B  
+- Click chọn bullet list
+
+",,"- Text giữ nguyên style, có thêm bullet dot phía trước   
+- Highlight icon bullet list trên quickbar",50
+,,,,,,,,,,,,,,,,"Enter xuống dòng, nhập text ""Edit more"" 
+
+",,"Tự động thêm dot khi enter xuống dòng
+
+",50
+,,,,,,,,,,,,,,,,"Click icon bullet đang được highlight trên quickbar, nhập text "" Rightnow""",,"Text giữ nguyên style, ko có bullet ở phía trước",50
+,,,,,,,,,,,,,,,,,,,50
+,,,,,,,,,,,,,,,,,,,50
+,,,,,,,,,,,,,,,,,,,50
+,,,,,,,,,,,,,,,,,,,50
+73715,1416,SB_WEB_BUILDER_BH_11,Heading tag\_Check khi setting Heading tag,1,,"Check khi setting Heading tag
+
+","- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Page 1 đang setting Override website style = off  
+- Đã add section A gồm 1 row, 1 column, 1 block Heading
+
+",1,1,0,0,11,30,,0,"Click vào block Heading
+
+",,"Quickbar: hiển thị default heading tag: <h1>
+
+
+",50
+,,,,,,,,,,,,,,,,"Setting Heading tag từ h1 -> h6
+
+",,"Text vẫn giữ nguyên style, chỉ thay đổi thẻ tương ứng trong mã HTML 
+
+",50
+94907,1416,SB_WEB_BUILDER_LB_BH_10,Check interaction states của các loại text link,1,30,"Check interaction states của các loại text link
+
+","- Login on shop test    
++ shop: au-sf-interaction.onshopbase.com  
+- acc: ""front-qe-1@beeketing.net""  
+- pass: ""Front@123""  
+- Setup 1 theme bất kỳ và publish có các block: heading, paragraph, bullet, toggle list, block html sử dụng description product có gắn hyperlink  
+- Mở SF của các page có chứa block setup trên  
+  
+1. Env Dev: dpro-qe-1@beeketing.net / 43AhIn|VWp;[?9&  
+- Shop: <https://au-interaction-states.myshopbase.net/>  
+  
+2. Env Prodtest: dpro-qe-2@beeketing.net / [Dpro@123](mailto:Dpro@123)  
+- Shop: <https://interaction-prodtest.onshopbase.com>  
+  
+3. Env prod: [trangle@beeketing.net](mailto:trangle@beeketing.net) / trang14021998  
+- Shop: https://onb-gen-prod.onshopbase.com  
+  
+  
+- Design: <https://www.figma.com/file/R1BQoafo2EJJq5koITiKzk/branch/Sr0N47p15vzyfpb59sUhjr/Webfront-kit?node-id=12717%3A39925&mode=dev> 
+
+",1,0,0,0,12,25,341,0,"Hover vào text có hyperlink
+
+","a. Underlined  
+b. Underlined after hover
+
+","Text color & underline color = setting, opacity 75%
+
+
+a. Show animation underline có khoảng trắng chạy từ trái qua phải   
+Demo: <https://www.figma.com/proto/R1BQoafo2EJJq5koITiKzk/branch/Sr0N47p15vzyfpb59sUhjr/Webfront-kit?page-id=12667%3A36428&type=design&node-id=12667-39392&viewport=515%2C429%2C0.3&t=xkVClgI7NiHTPr3Y-1&scaling=min-zoom>   
+  
+- Riêng với block HTML mà textlink tạo bởi text editor khi có set underline thì không apply animation. Còn textlink tạo bởi text editor không set underline thì vẫn apply animation.
+
+
+b. Hiển thị underline, animation chạy từ trái qua phải  
+Demo: <https://www.figma.com/proto/R1BQoafo2EJJq5koITiKzk/branch/Sr0N47p15vzyfpb59sUhjr/Webfront-kit?page-id=12667%3A36428&type=design&node-id=12717-39957&viewport=799%2C-257%2C1.47&t=242sqi1fI14gDroE-1&scaling=min-zoom> 
+
+
+- Block HTML textlink tạo bởi text editor không set underline thì vẫn apply animation.
+
+
+ 
+
+",50
+,,,,,,,,,,,,,,,,"Hover chuột ra khỏi hyperlink
+
+","a. Underlined  
+b. Underlined after hover
+
+","a. Animation chạy từ phải qua trái  
+b. Animation ẩn underline từ trái qua phải
+
+",50
+,,,,,,,,,,,,,,,,"Press vào hyperlink
+
+",,"- Hiển thị clickzone với height = line-height của label width theo width của label  
+- Clickzone color = #081708 opacity 5%
+
+",50
+,,,,,,,,,,,,,,,,"Check disabled text link (hiện tại chưa có states này)
+
+",,"Opacity 40%
+
+",50
+75136,1416,SB_WEB_BUILDER_BH_12,Check line-height của text trong block Heading khi thay đổi fontsize,1,,Check line-height của text trong block Heading khi thay đổi fontsize,"- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Setting Fonts ở Web style:   
++ Heading 1: 64px  +Heading 2: 56px   +Heading 3: 48px     +Heading 4: 40px    +Para1: 24px    +Para2: 16px    +Para3: 12px  
+- Override Website style = Off  
+- Đã add section A gồm 1 row, 1 column",1,0,0,,12,187,,0,Add 1 block Heading vào section,,"Block có các setting mặc định: + Nội dung: "" Edit your title here"" + Font-size: Heading 1 + Tag: <H1>   
+Line-height= 130% font-size",50
+,,,,,,,,,,,,,,,,Thay đổi font-size của block Heading vừa add thành Paragraph3,,"Font- size hiển thị tương ứng, line-height= 160% font-size",50
+,,,,,,,,,,,,,,,,Thay đổi font-size của block Paragraph vừa add thành Heading 1,,"Font- size hiển thị tương ứng, line-height= 130% font-size",50
+94908,1416,SB_WEB_BUILDER_LB_BH_11,Check clickzone của các loại text link,1,30,"Check clickzone của các loại text link
+
+","- Login on shop test    
++ shop: au-sf-interaction.onshopbase.com  
+- acc: ""front-qe-1@beeketing.net""  
+- pass: ""Front@123""  
+- Setup 1 theme bất kỳ và publish có các block: heading, paragraph, bullet, toggle list, html có gắn hyperlink  
+- Mở SF của các page có chứa block setup trên  
+  
+1. Env Dev: dpro-qe-1@beeketing.net / 43AhIn|VWp;[?9&  
+- Shop: <https://au-interaction-states.myshopbase.net/>  
+  
+2. Env Prodtest: dpro-qe-2@beeketing.net / [Dpro@123](mailto:Dpro@123)  
+- Shop: <https://interaction-prodtest.onshopbase.com>  
+  
+3. Env prod: [trangle@beeketing.net](mailto:trangle@beeketing.net) / trang14021998  
+- Shop: https://onb-gen-prod.onshopbase.com  
+  
+- Design: <https://www.figma.com/file/R1BQoafo2EJJq5koITiKzk/branch/Sr0N47p15vzyfpb59sUhjr/Webfront-kit?node-id=12717%3A39925&mode=dev> 
+
+",0,0,0,0,13,25,341,0,"Click vào label text
+
+",,"Thành công redirect tới link đc gắn
+
+",50
+75137,1416,SB_WEB_BUILDER_BH_13,Check hiển thị paragraph spacing ở block Heading,1,187,Check hiển thị paragraph spacing ở block Heading,"- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Setting Fonts ở Web style:   
++ Heading 1: 64px  +Heading 2: 56px   +Heading 3: 48px     +Heading 4: 40px    +Para1: 24px    +Para2: 16px    +Para3: 12px  
+- Override Website style = Off  
+- Đã add section A gồm 1 row, 1 column",1,0,0,,13,187,,0,Add 1 block Heading vào section A,,"Block có các setting mặc định: + Nội dung: "" Edit your title here"" + Font-size: Heading 1 + Tag: <H1>",50
+,,,,,,,,,,,,,,,,Edit text có 2 paragraph,"Your time is limited, so don’t waste it living someone else’s life.  
+Don’t be trapped by dogma – which is living with the results of other people’s thinking.","Block hiển thị text vừa input, có Paragraph spacing =80% font-size (44.8 px)",50
+,,,,,,,,,,,,,,,,Thay đổi font-size của block Paragraph thành Paragraph 1,,"Block hiển thị text vừa input, có Paragraph spacing =80% font-size (19.2 px)",50
+79587,1416,SB_WEB_BUILDER_LB_BH_01,Check width height block heading,1,,"Check width height block heading
+
+","- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Page 1 đang setting Override website style = off  
+- Đã add section A gồm 1 row, 1 column, block Heading 1 (text nhiều dòng)  
+- Position static = ON
+
+",1,0,0,0,14,187,,0,"Click vào block heading
+
+",,"Hiển thị block setting ở sidebar
+
+",50
+,,,,,,,,,,,,,,,,"Setting width = px, height = px
+
+",,"Trên preview hiển thị đúng width height đã setting, text lớn hơn khung thì sẽ tràn khỏi khung
+
+",50
+,,,,,,,,,,,,,,,,"Save và check hiển thị ngoài SF
+
+",,"Hiển thị đúng width height đã setting, text lớn hơn khung thì sẽ tràn khỏi khung
+
+",50
+,,,,,,,,,,,,,,,,"Setting width = px, height = %
+
+",,"Trên preview hiển thị đúng width height đã setting, text lớn hơn khung thì sẽ tràn khỏi khung
+
+",50
+,,,,,,,,,,,,,,,,"Save và check hiển thị ngoài SF
+
+",,"Hiển thị đúng width height đã setting, text lớn hơn khung thì sẽ tràn khỏi khung
+
+",50
+,,,,,,,,,,,,,,,,"Setting width = px, height = auto
+
+",,"- Trên preview hiển thị đúng width height đã setting, text sẽ không tràn viền,   
+- Chiều cao của Block tăng theo dòng mới tạo do chữ drop xuống
+
+",50
+,,,,,,,,,,,,,,,,"Save và check hiển thị ngoài SF
+
+",,"- Hiển thị đúng width height đã setting, text sẽ không tràn viền,   
+- Chiều cao của Block tăng theo dòng mới tạo do chữ drop xuống
+
+",50
+,,,,,,,,,,,,,,,,"Setting width = %, height = px
+
+",,"Trên preview hiển thị đúng width height đã setting, text lớn hơn khung thì sẽ tràn khỏi khung
+
+",50
+,,,,,,,,,,,,,,,,"Save và check hiển thị ngoài SF
+
+",,"Hiển thị đúng width height đã setting, text lớn hơn khung thì sẽ tràn khỏi khung
+
+",50
+,,,,,,,,,,,,,,,,"Setting width = %, height = %
+
+",,"Trên preview hiển thị đúng width height đã setting, text lớn hơn khung thì sẽ tràn khỏi khung
+
+",50
+,,,,,,,,,,,,,,,,"Save và check hiển thị ngoài SF
+
+",,"Hiển thị đúng width height đã setting, text lớn hơn khung thì sẽ tràn khỏi khung
+
+",50
+,,,,,,,,,,,,,,,,"Setting width = %, height = auto
+
+",,"- Trên preview hiển thị đúng width height đã setting, text sẽ không tràn viền,   
+- Chiều cao của Block tăng theo dòng mới tạo do chữ drop xuống
+
+",50
+,,,,,,,,,,,,,,,,"Save và check hiển thị ngoài SF
+
+",,"- Hiển thị đúng width height đã setting, text sẽ không tràn viền,   
+- Chiều cao của Block tăng theo dòng mới tạo do chữ drop xuống
+
+",50
+,,,,,,,,,,,,,,,,"Setting width = auto, height = px
+
+",,"Trên preview hiển thị đúng width height đã setting, text lớn hơn khung thì sẽ tràn khỏi khung
+
+",50
+,,,,,,,,,,,,,,,,"Save và check hiển thị ngoài SF
+
+",,"Hiển thị đúng width height đã setting, text lớn hơn khung thì sẽ tràn khỏi khung
+
+",50
+,,,,,,,,,,,,,,,,"Setting width = auto, height = %
+
+",,"Trên preview hiển thị đúng width height đã setting, text lớn hơn khung thì sẽ tràn khỏi khung
+
+",50
+,,,,,,,,,,,,,,,,"Save và check hiển thị ngoài SF
+
+",,"Hiển thị đúng width height đã setting, text lớn hơn khung thì sẽ tràn khỏi khung
+
+",50
+,,,,,,,,,,,,,,,,"Setting width = auto, height = auto
+
+",,"- Trên preview hiển thị đúng width height đã setting, text sẽ không tràn viền,   
+- Text nhập đến đâu, width tự tăng đến đó, chạm viền collumng thì text tự động drop xuống  
+- Chiều cao của Block tăng theo dòng mới tạo do chữ drop xuống
+
+",50
+,,,,,,,,,,,,,,,,"Save và check hiển thị ngoài SF
+
+",,"- Hiển thị đúng width height đã setting, text sẽ không tràn viền,   
+- Text nhập đến đâu, width tự tăng đến đó, chạm viền collumng thì text tự động drop xuống  
+- Chiều cao của Block tăng theo dòng mới tạo do chữ drop xuống
+
+",50
+79588,1416,SB_WEB_BUILDER_LB_BH_02,"Check background, border, opacity, radus, shadow, padding, margin block heading",1,,"Check background, border, opacity, radus, shadow, padding, margin block heading
+
+","- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Page 1 đang setting Override website style = off  
+- Đã add section A gồm 1 row, 1 column, block Heading 1 (text nhiều dòng)  
+- Position static = ON
+
+",1,0,0,0,15,187,,0,"Click vào block heading
+
+",,"Hiển thị block setting ở sidebar
+
+",50
+,,,,,,,,,,,,,,,,"Setting style của block heading:  
+- Background: có chọn color (có opacity) + upload ảnh  
+- border: size 3, color = 1 trong 5 bộ màu của page style  
+- opacity = 100  
+- radius = 100  
+- shadow = strong  
+- padding = 5px 10px 5px 10px  
+- margin = 15px 20px 15px 20px
+
+",,"Trên preview, hiển thị đúng như setting 
+
+",50
+,,,,,,,,,,,,,,,,"Save và check hiển thị ngoài SF
+
+",,"Hiển thị đúng như setting 
+
+",50
+,,,,,,,,,,,,,,,,"Setting style của block heading:  
+- Background: không chọn color + chọn ảnh từ library  
+- border: size 5, color = màu custom  
+- opacity = 80  
+- radius = 10  
+- shadow = light  
+- padding = 5px 0px 5px 0px  
+- margin = 0px 20px 15px 20px
+
+",,"Trên preview, hiển thị đúng như setting 
+
+",50
+,,,,,,,,,,,,,,,,"Save và check hiển thị ngoài SF
+
+",,"Hiển thị đúng như setting 
+
+",50
+,,,,,,,,,,,,,,,,"Setting style của block heading:  
+- Background: chọn color + không ảnh  
+- border: size 5, color = none  
+- opacity = 20  
+- radius = 0  
+- shadow = medium  
+- padding = 0px 0px 15px 0px  
+- margin = 0px 0px 15px 20px
+
+",,"Trên preview, hiển thị đúng như setting 
+
+",50
+,,,,,,,,,,,,,,,,"Save và check hiển thị ngoài SF
+
+",,"Hiển thị đúng như setting 
+
+",50
+,,,,,,,,,,,,,,,,"Setting style của block heading:  
+- Background: none  
+- border: size 0, color = có màu  
+- opacity = 0  
+- radius = 0  
+- shadow = none  
+- padding = 0px 0px 0px 0px  
+- margin = 0px 0px 0px 0px
+
+",,"Trên preview, không hiển thị block heading
+
+",50
+,,,,,,,,,,,,,,,,"Save và check hiển thị ngoài SF
+
+",,"Không hiển thị block heading vừa setting
+
+",50
+79589,1416,SB_WEB_BUILDER_LB_BH_03,Check remove block heading,1,,"Check remove block heading
+
+","- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Page 1 đang setting Override website style = off  
+- Đã add section A gồm 1 row, 1 column, block Heading 1 (text nhiều dòng)  
+- Position static = ON
+
+",1,0,0,0,16,187,,0,"Click vào block heading
+
+",,"Hiển thị block setting ở sidebar
+
+",50
+,,,,,,,,,,,,,,,,"Click button remove block ở sidebar
+
+",,"Preview Không hiển thị block heading vừa xóa
+
+",50
+,,,,,,,,,,,,,,,,"Save và check hiển thị ngoài SF
+
+",,"Không hiển thị block heading vừa xóa
+
+",50
+87881,1416,SB_WEB_BUILDER_LB_BH_08,Tab setting\_Check setting button với action = Send to email,1,,"Check setting button với action = Send to email
+
+","- Shop: https://wb-block-heading.onshopbase.com/  
+
+- Acc: shopbase@beeketing.net / Q(f!3Kx+6n;?Us%F  
+
+- Product page> Add mới product > Design sale page  
+
+- Sale page có 1 list các section với các setting sau:  
+
++ Section 1, 2, 3, 4 đều chứa block button
+
+",0,0,0,0,50,187,,0,"- Setting heading trong section 1:  
+
++ Label = Email 1  
+
++ Action = Send to email  
+
++ Email = Nhập đúng định dạng email + email có tồn tại (shopbase@beeketing.net)
+
+
+- Setting heading trong section 2:  
+
++ Label = Email 2  
+
++ Action = Send to email  
+
++ Email = Nhập đúng định dạng email + email không tồn tại (abc@beeketing.net)
+
+
+- Setting heading trong section 3:  
+
++ Label = Email 3  
+
++ Action = Send to email  
+
++ Email = Nhập sai định dạng email (abc)
+
+
+- Setting heading trong section 4:  
+
++ Label = Email 4  
+
++ Action = Send to email  
+
++ Email = Để trống
+
+",,"- Trên webfront hiển thị 4 heading với text tương ứng như setting
+
+",50
+,,,,,,,,,,,,,,,,"Click vào các heading trên webfront
+
+",,"Không có action gì xảy ra
+
+",50
+,,,,,,,,,,,,,,,,"Click save > click icon preview trên thanh bar
+
+",,"Trên SF hiển thị 4 heading với text tương ứng
+
+",50
+,,,,,,,,,,,,,,,,"Click vào heading của section 1
+
+",,"- Điều hướng tới mailto: + email đã nhập
+
+",50
+,,,,,,,,,,,,,,,,"Click vào heading của section 2
+
+",,"- Điều hướng tới mailto: + email đã nhập
+
+",50
+,,,,,,,,,,,,,,,,"Click vào heading của section 3
+
+",,"Không có action gì xảy ra
+
+",50
+,,,,,,,,,,,,,,,,"Click vào heading của section 4
+
+",,"Không có action gì xảy ra
+
+",50
+87880,1416,SB_WEB_BUILDER_LB_BH_07,Actions links\_Check setting text với action = Make a call,1,,"Actions links\_Check setting text với action = Make a call
+
+","- Shop: https://wb-block-heading.onshopbase.com/  
+
+- Acc: shopbase@beeketing.net / Q(f!3Kx+6n;?Us%F  
+
+- Shop có theme v3, đang customize theme này, có các section với các setting sau:  
+
++ Section 1, 2, 3, 4, 5, 6, 7 đều chứa block heading
+
+",0,0,0,0,50,187,,0,"- Setting heading trong section 1:  
+
++ Label = Make a call 1  
+
++ Action = Make a call  
+
++ Number = Nhập số hợp lệ (+84 339161999)
+
+
+- Setting heading trong section 2:  
+
++ Label = Make a call 2  
+
++ Action = Make a call  
+
++ Number = Nhập số hợp lệ (1-900-6098)
+
+
+- Setting heading trong section 3:  
+
++ Label = Make a call 3  
+
++ Action = Make a call  
+
++ Number = Nhập đúng số  (0979995575)
+
+
+- Setting heading trong section 4:  
+
++ Label = Make a call 4  
+
++ Action = Make a call  
+
++ Number = Nhập sai số; có ký tự đặc biệt, chứa chữ (abc@12)
+
+
+- Setting heading trong section 5:  
+
++ Label = Make a call 5  
+
++ Action = Make a call  
+
++ Number = để trống 
+
+",,"- Trên webfront hiển thị 5 block heading với text đúng như setting
+
+",50
+,,,,,,,,,,,,,,,,"Click heading save > click icon preview trên thanh bar
+
+",,"Trên SF hiển thị 5 heading với text đúng như setting
+
+",50
+,,,,,,,,,,,,,,,,"Click vào heading của section 1
+
+",,"- Desktop: select option call của browser trên desktop  
+
+- Mobile: Tạo cuộc gọi
+
+",50
+,,,,,,,,,,,,,,,,"Click vào heading của section 2
+
+",,"- Desktop: select option call của browser trên desktop  
+
+- Mobile: Tạo cuộc gọi
+
+",50
+,,,,,,,,,,,,,,,,"Click vào heading của section 3
+
+",,"- Desktop: select option call của browser trên desktop  
+
+- Mobile: Tạo cuộc gọi
+
+",50
+,,,,,,,,,,,,,,,,"Click vào heading của section 4
+
+",,"Không có action gì xảy ra
+
+",50
+,,,,,,,,,,,,,,,,"Click vào heading của section 5
+
+",,"Không có action gì xảy ra
+
+",50
+87879,1416,SB_WEB_BUILDER_LB_BH_06,Actions links\_Check setting text với action = Go to section,1,,"Actions links\_Check setting text với action = Go to section
+
+","- Shop: https://wb-block-heading.onshopbase.com/  
+
+- Acc: shopbase@beeketing.net / Q(f!3Kx+6n;?Us%F  
+
+- Shop add theme v3, đang ở trang customize theme  
+
+- Sale page có 1 list các section với các setting sau:  
+
++ Section 1, 2, 3, 4, 5 đều chứa block heading  
+
++ Section 6, 7, 8 không chứa block button, chỉ chứa block khác (heading, icon,..)  
+
++ Section 2 được save as section với tên là Section abc  
+
++ Section 4 bị hide 
+
+",0,0,0,0,50,187,,0,"- Setting heading trong section 1:  
+
++ Text = Test 1  
+
++ Action = Go to section  
+
++ Section = Section 8
+
+
+- Setting heading trong section Abc:  
+
++ Text = Test 2   
+
++ Action = Go to section  
+
++ Section = Section 4
+
+
+- Setting heading trong section 3:  
+
++ Text = Test 3  
+
++ Action = Go to section  
+
++ Section = Section abc
+
+
+- Setting heading trong section 4:  
+
++ Text = Test 4  
+
++ Action = Go to section  
+
++ Section = Section 3
+
+
+- Setting heading trong section 5:  
+
++ Text = Test 5  
+
++ Action = Go to section  
+
++ Section = để trống
+
+",,"- Trên webfront, hiển thị list các block Heading với text tương ứng
+
+",50
+,,,,,,,,,,,,,,,,"Click button save > click icon preview trên thanh bar
+
+",,"- Trên webfront, hiển thị list các block Heading với text tương ứng
+
+",50
+,,,,,,,,,,,,,,,,"Click vào heading 1
+
+",,"Scroll đến section 8
+
+",50
+,,,,,,,,,,,,,,,,"Click vào heading 2
+
+",,"Không có action gì xảy ra
+
+",50
+,,,,,,,,,,,,,,,,"Click vào heading 3
+
+",,"Scroll đến section abc
+
+",50
+,,,,,,,,,,,,,,,,"Click vào heading 4
+
+",,"Scroll đến section 3
+
+",50
+,,,,,,,,,,,,,,,,"Click vào heading 5
+
+",,"Không có action gì xảy ra
+
+",50
+87878,1416,SB_WEB_BUILDER_LB_BH_05,Actions links\_Check setting text với action = Go to page,1,,"Actions links\_Check setting text với action = Go to page
+
+","- Shop: https://wb-block-button.onshopbase.com/  
+
+- Acc: shopbase@beeketing.net / Q(f!3Kx+6n;?Us%F  
+
+- Shop đã add theme v3, mở customize theme này  
+
+- Sale page đã add blank section 1, section 2, section 3, section 4, section 5, section 6, section 7  
+
+- Đã add block button vào các section 1,  section 2, section 3, section 4, section 5, section 6, section 7  
+
+- Store có collection 1, product 1, blog 1, page Contact us 
+
+",0,0,0,0,50,187,,0,"- Setting text của block Heading trong section 1:  
+
++ Text = Heading 1  
+
++ Action = Go to page  
+
++ Page = Home  
+
++ New tab = ON
+
+
+- Settingtext của block Heading trong section 2:  
+
++ Text: Heading 2  
+
++ Action = Go to page  
+
++ Page = Collections > Chọn collection 1  
+
++ New tab = OFF
+
+
+- Setting text của block Heading trong section 3:  
+
++ Text: Heading 3  
+
++ Action = Go to page  
+
++ Page = Products > Chọn product 1  
+
++ New tab = ON
+
+
+- Setting text của block Heading trong section 4:  
+
++ Text: Heading 4  
+
++ Action = Go to page  
+
++ Page = Pages > Chọn Contact Us  
+
++ New tab = ON
+
+
+- Setting text của block Heading trong section 5:  
+
++ Text: Heading 5  
+
++ Action = Go to page  
+
++ Page = Blogs > Chọn Blog 1  
+
++ New tab = OFF
+
+
+- Setting text của block Heading trong section 6:  
+
++ Label = Heading 6  
+
++ Action = Go to page  
+
++ Page = Collection list  
+
++ New tab = OFF
+
+
+- Setting text của block Heading trong section 7:  
+
++ Label = Heading 7   
+
++ Action = Go to page  
+
++ Page = Blog list  
+
++ New tab = OFF
+
+
+- Setting text của block Heading trong section 8:  
+
++ Label = Heading 8  
+
++ Action = Go to page  
+
++ Page = để trống  
+
++ New tab = OFF
+
+",,"- Trên WF, hiển thị list các block heading:  
+
+- Heading 1  
+
+- Heading 2   
+
+- Heading 3  
+
+- Heading 4  
+
+- Heading 5   
+
+- Heading 6   
+
+- Heading 7  
+
+- Heading 8
+
+",50
+,,,,,,,,,,,,,,,,"Click button save > click icon preview trên thanh bar
+
+",,"- Trên SF, hiển thị list các block heading:  
+
+- Heading 1  
+
+- Heading 2   
+
+- Heading 3  
+
+- Heading 4  
+
+- Heading 5   
+
+- Heading 6   
+
+- Heading 7  
+
+- Heading 8
+
+",50
+,,,,,,,,,,,,,,,,"Click vào block Heading ở section 1 ngoài SF
+
+",,"- Open tab mới  
+
+- Điều hướng đến đúng Homepage (domain)
+
+",50
+,,,,,,,,,,,,,,,,"Click vào block Heading ở section 2 ngoài SF
+
+",,"- Điều hướng đến Collection 1, loading ngay ở tab đang action (domain/collections/collection 1)  
+
+- Hiển thị đúng thông tin của collection
+
+",50
+,,,,,,,,,,,,,,,,"Click vào block Heading ở section 3 ngoài SF
+
+",,"- Open tab mới  
+
+- Điều hướng đến Product 1 (domain/products/Product 1)  
+
+- Hiển thị đúng thông tin của product
+
+",50
+,,,,,,,,,,,,,,,,"Click vào block Heading ở section 4 ngoài SF
+
+",,"- Open tab mới  
+
+- Điều hướng đến Contact us (domain/pages/contact-us)  
+
+- Hiển thị đúng thông tin của page
+
+",50
+,,,,,,,,,,,,,,,,"Click vào block Heading ở section 5 ngoài SF
+
+",,"- Điều hướng đến Blog 1, loading ngay ở tab đang action (domain/blogs/blog 1)  
+
+- Hiển thị đúng thông tin của blog
+
+",50
+,,,,,,,,,,,,,,,,"Click vào block Heading ở section 6 ngoài SF
+
+",,"- Điều hướng đến collection list page, loading ngay ở tab đang action (domain/collections)  
+
+- Hiển thị đúng các collection trong collection list
+
+",50
+,,,,,,,,,,,,,,,,"Click vào block Heading ở section 7 ngoài SF
+
+",,"- Điều hướng đến Blog list, loading ngay ở tab đang action (domain/blogs)  
+
+- Hiển thị đúng các blog trong blog list
+
+",50
+,,,,,,,,,,,,,,,,"Click vào block Heading ở section 8 ngoài SF
+
+",,"- Ko có action gì xảy ra, vẫn ở trang SF hiện tại
+
+",50
+87877,1416,SB_WEB_BUILDER_LB_BH_04,Actions links\_Check setting text với action = Open a link,1,,"Actions links\_Check setting text với action = Open a link
+
+","- Shop: https://wb-block-heading.onshopbase.com/  
+
+- Acc: shopbase@beeketing.net / Q(f!3Kx+6n;?Us%F  
+
+- Shop đã add 1 theme v3, mở trang customize theme đó   
+
+- Đã add section A có block Heading 1, Heading 2, Heading 3, Heading 4
+
+",0,0,0,0,50,187,,0,"- Click select block Heading  
+
+- Click ""Edit text"" trên thanh quickbar   
+
+- Bôi đen text ""title"" của block Heading, chọn actions ""Links"" trên thanh quickbar Edit text
+
+",,"Hiển thị drop down list các actions links bao gồm:   
+
+- Open a link  
+
+- Go to page  
+
+- Go to section  
+
+- Make a call  
+
+- Send email to  
+
+",50
+,,,,,,,,,,,,,,,,"Setting block Heading 1 có   
+
++ Text: Open a link 1  
+
++ Action = Open a link  
+
++ Target URL = https://www.google.com/  
+
++ New tab = ON  
+
+Setting block Heading 2 có   
+
++ Text: Open a link 2  
+
++ Action = Open a link  
+
++ Target URL = /pages/about-us  
+
++ New tab = ON  
+
+Setting block Heading 3 có   
+
++ Text: Open a link 3  
+
++ Action = Open a link  
+
++ Target URL = để trống   
+
++ New tab = ON  
+
+Setting block Heading 4 có   
+
++ Text: Open a link 4  
+
++ Action = Open a link  
+
++ Target URL = 12344  
+
++ New tab = OFF
+
+",,"- Trên WF, hiển thị list các block heading:  
+
+- Heading 1  
+
+- Heading 2   
+
+- Heading 3  
+
+- Heading 4
+
+",50
+,,,,,,,,,,,,,,,,"Click button save > click icon preview trên thanh bar
+
+",,"- Trên SF, hiển thị list các block heading:  
+
+- Heading 1  
+
+- Heading 2   
+
+- Heading 3  
+
+- Heading 4
+
+",50
+,,,,,,,,,,,,,,,,"Click vào block Heading ở section 1 ngoài SF
+
+",,"- Open tab mới  
+
+- Điều hướng đến đúng trang https://www.google.com/
+
+",50
+,,,,,,,,,,,,,,,,"Click vào block Heading ở section 2 ngoài SF
+
+",,"- Open tab mới  
+
+- Điều hướng đến đúng trang domain/pages/about-us
+
+",50
+,,,,,,,,,,,,,,,,"Click vào block Heading ở section 3 ngoài SF
+
+",,"- Không Open tab mới  
+
+- Vẫn ở trang SF hiện tại
+
+",50
+,,,,,,,,,,,,,,,,"Click vào block Heading ở section 4 ngoài SF
+
+",,"- Không Open tab mới  
+
+- Redirect tới link ngay trong tab đang mở  
+
+- URL là domain/đúng link đã nhập   
+
+domain/12344  
+
+- Hiển thị page 404
+
+",50
+84481,1416,SB_WEB_BUILDER_BH_14,Check hiển thị text khi thêm các variable của text editor,1,238,,"- Shop: <https://au-wsb-sections.onshopbase.com/>  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Page 1 đang có 2 block: Heading và Paragraph  
++ Tên của Store {{shop.name}}  
++ Địa chỉ Email {{shop.email}}  
++ Số điện thoại {{shop.phone}}  
++ Địa chỉ {{shop.address}}  
++ URL Homepage {{shop.domain}}",1,0,0,,50,187,,0,Click vào Paragraph block,,"Mở quick bar setting, có option Edit text <http://joxi.ru/xAePXDZUM0RQe2>",50
+,,,,,,,,,,,,,,,,Click Edit text,,"Mở setting trên desktop đủ các trường, trong đó có Insert variable[http://joxi.ru/xAePXDZUM0RQe](http://joxi.ru/xAePXDZUM0RQe2)2",50
+,,,,,,,,,,,,,,,,Click Get text from,,"Hiển thị dropdown list   
+a. New Ecom:Shop có thêm 3 options con 
+
+
+- Name  
+- Domain  
+- Address  
+  
+b. Creator:   
+- Shop có 3 options tương tự new ecom  
+- Profile có 2 options:  
+Name & Bio
+
+",50
+,,,,,,,,,,,,,,,,"Click chọn Shop name, nhấn save",,"- Trên web front:  
+Hiển thị input {{SHOP.NAME}} tại vị trí chuột http://joxi.ru/4AkdEoXHjQXkDr  
+- Trên SF:   
+Hiển thị paragraph block: ""au-wsb-sections.onshopbase.comParagraph block""",50
+,,,,,,,,,,,,,,,,"Click chọn store domain, nhấn save","a. Shop Creator  
+b. Shop Newecom","a. Đối với Creator:  
+- Hiển thị primary domain của dòng creator thay vì myshopbase.net/onshopbase.com  
+b. Đối với Newecom:  
+- Trên web front:  
+Hiển thị input {{SHOP.NAME}} tại vị trí chuột http://joxi.ru/4AkdEoXHjQXkDr  
+- Trên SF:   
+Hiển thị paragraph block: ""au-wsb-sections.onshopbase.comParagraph block""",50
+,,,,,,,,,,,,,,,,"Nhập tên shop trong paragraph block, chọn Shop name trong Insert variable",,"- Trên web front:  
+Hiển thị input: ""[au-wsb-sections.onshopbase.com](http://au-wsb-sections.onshopbase.com/){{SHOP.NAME}}"" tại vị trí chuột http://joxi.ru/4AkdEoXHjQXkDr  
+- Trên SF:   
+Hiển thị paragraph block: ""au-wsb-sections.onshopbase.comau-wsb-sections.onshopbase.comParagraph block""",50
+,,,,,,,,,,,,,,,,Click vào heading block,,"Mở quick bar setting, có option Edit text <http://joxi.ru/xAePXDZUM0RQe2>",50
+,,,,,,,,,,,,,,,,Click Edit text,,"Mở setting trên desktop đủ các trường, trong đó có Insert variable[http://joxi.ru/xAePXDZUM0RQe](http://joxi.ru/xAePXDZUM0RQe2)2",50
+,,,,,,,,,,,,,,,,Click Get text from,,"Hiển thị dropdown list đủ 6 trường như design:  
+- Shop name  
+- Address  
+- Store d[omain](http://joxi.ru/L21MJzgiweRe92)[http://joxi.ru/L21MJzgi](http://joxi.ru/L21MJzgiweRe92)weRe92",50
+,,,,,,,,,,,,,,,,"Click chọn Shop name, nhấn save",,"- Trên web front:  
+Hiển thị input {{SHOP.NAME}} tại vị trí chuột http://joxi.ru/4AkdEoXHjQXkDr  
+- Trên SF:   
+Hiển thị heading block: ""au-wsb-sections.onshopbase.comheading block""",50
+,,,,,,,,,,,,,,,,"Click chọn store domain, nhấn save",,"a. Đối với Creator:  
+- Hiển thị primary domain của dòng creator thay vì myshopbase.net/onshopbase.com  
+b. Đối với Newecom:  
+- Trên web front:  
+Hiển thị input {{SHOP.NAME}} tại vị trí chuột http://joxi.ru/4AkdEoXHjQXkDr  
+- Trên SF:   
+Hiển thị heading block: ""au-wsb-sections.onshopbase.comheading block""",50
+,,,,,,,,,,,,,,,,"Nhập tên shop trong heading block, chọn Shop name trong Get text from",[au-wsb-sections.onshopbase.com](http://au-wsb-sections.onshopbase.com/),"- Trên web front:  
+Hiển thị input: ""[au-wsb-sections.onshopbase.com](http://au-wsb-sections.onshopbase.com/){{SHOP.NAME}}"" tại vị trí chuột http://joxi.ru/4AkdEoXHjQXkDr  
+- Trên SF:   
+Hiển thị heading block: ""au-wsb-sections.onshopbase.comau-wsb-sections.onshopbase.comheading block""",50
+,,,,,,,,,,,,,,,,Switch mobile và Check tương tự,,Tương tự như desktop,50
+,,,,,,,,,,,,,,,,Đổi domain và check variable Shop domain,Liên hệ Huy hoặc Elsa để lấy domain test,Hiển thị đúng với tên  domain đã đổi,50
+,,,,,,,,,,,,,,,,Click Get text from > Shop address,,"- Trên web front:  
+Hiển thị input {{SHOP.ADDRESS}} tại vị trí chuột   
+- Trên SF:   
+Hiển thị heading block: có vị trí mà user đã setup",50

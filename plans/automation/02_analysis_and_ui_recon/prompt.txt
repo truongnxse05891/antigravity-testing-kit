@@ -43,7 +43,7 @@ Dưới đây là **Manual Test Cases** cần tự động hóa. Trước khi vi
 
 ## Nhiệm vụ
 
-Sử dụng **công cụ trình duyệt** (Playwright MCP / Selenium MCP) để:
+Sử dụng **công cụ trình duyệt** (Playwright MCP) để:
 
 1. **Mở browser** với URL đã cung cấp (viewport 1920x1080)
 2. **Điều hướng** theo từng bước trong Test Cases
@@ -53,7 +53,6 @@ Sử dụng **công cụ trình duyệt** (Playwright MCP / Selenium MCP) để:
    - TUYỆT ĐỐI **không đoán** selector — chỉ lấy từ DOM thật
 4. **Ưu tiên** locator theo thứ tự (tham khảo `.agent/rules/locator_strategy.md`):
    - Playwright: `getByRole` > `getByLabel` > `getByPlaceholder` > `getByTestId` > CSS > XPath
-   - Selenium: `id` > `data-testid` > `name` > `cssSelector` > `xpath`
 5. **Trả kết quả** dưới dạng bảng:
 
 | Page | Element | Locator Type | Locator Value | Fallback Locator |

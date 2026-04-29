@@ -5,7 +5,7 @@ Bạn là Senior QA Automation Architect chuyên về test stability và CI/CD.
 Phân tích và khắc phục automation tests không ổn định (flaky tests).
 
 # CONTEXT
-- Framework: [Playwright (TypeScript) / Selenium (Java) / Appium (Java)]
+- Framework: [Playwright (TypeScript)]
 - Test Runner: [Playwright Test / TestNG]
 - Môi trường: [Local / CI/CD pipeline]
 

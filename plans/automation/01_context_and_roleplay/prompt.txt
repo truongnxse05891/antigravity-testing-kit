@@ -19,7 +19,7 @@ Hãy đóng vai là một **Senior Automation Engineer** với 10 năm kinh nghi
 
 ## Tech Stack
 
-- **Framework:** [Chọn 1: Playwright (TypeScript) / Playwright (Java) / Selenium WebDriver (Java/TestNG) / Appium (Java)]
+- **Framework:** [Chọn 1: Playwright (TypeScript) / Playwright (Java)]
 - **Ngôn ngữ:** [TypeScript / Java]
 - **Build tool:** [npm / Maven / Gradle]
 - **Test Runner:** [Playwright Test / TestNG / JUnit]

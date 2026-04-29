@@ -24,35 +24,6 @@ Project/
 └── reports/         # Báo cáo cuối (HTML, Trace, Evidence)
 ```
 
-### Java / Selenium / TestNG
-
-```text
-Project/
-├── src/main/java/
-│   ├── pages/       # Page Objects
-│   └── utils/       # Utilities, Helpers, DataProviders
-├── src/test/java/
-│   └── tests/       # Test classes
-├── src/test/resources/
-│   └── test_data/   # JSON/Excel data files
-├── reports/         # Allure/ExtentReport output
-└── pom.xml          # Maven dependencies
-```
-
-### Java / Appium
-
-```text
-Project/
-├── src/main/java/
-│   ├── screens/     # Screen Objects (tương đương Page Objects)
-│   └── utils/       # Utilities, Appium Helpers
-├── src/test/java/
-│   └── tests/       # Test classes
-├── src/test/resources/
-│   ├── apps/        # APK/IPA files
-│   └── test_data/   # Test data
-└── pom.xml
-```
 
 ## Cách sử dụng
 

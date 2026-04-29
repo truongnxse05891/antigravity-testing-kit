@@ -57,11 +57,6 @@ import { DataGenerator } from '../utils/data-generator';
 const testData = DataGenerator.createCustomer();
 ```
 
-Selenium/Java:
-```java
-import utils.DataGenerator;
-String email = DataGenerator.generateEmail("createCustomer");
-```
 
 ## 5. Quy tắc bắt buộc (tham khảo `.agent/rules/automation_rules.md`)
 

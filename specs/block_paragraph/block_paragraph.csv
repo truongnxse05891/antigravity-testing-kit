@@ -1,0 +1,1097 @@
+﻿case_id,module_id,case_code,case_name,case_is_approved,case_approved_by_id,case_description,case_pre_conditions,case_need_automation,case_is_automated,case_is_api,case_risk_level,case_ordering,case_qa_id,case_dev_id,collection_id,step_action,step_input_data,step_expected_result,step_sort
+91856,1417,SB_WEB_BUILDER_LB_BP_04,Verify các page policy được link đến text editor,1,,"Verify các page policy được link đến text editor
+
+","- shop: https://test-template-creator3.myshopbase.net/  
+
+acc: nule+1@beeketing.net  
+
+pass: Qafront@123  
+
+- Shop có các trang polices đang visible:  
+
++ Refund policy  
+
++ Privacy policy  
+
++ Shipping policy  
+
++ Terms of service  
+
++ Return policy
+
+",1,0,0,0,1,187,,0,"Online store -> Customize ở template đang publish
+
+",,,50
+,,,,,,,,,,,,,,,,"Drag and drop block Paragraph
+
+",,"Thấy show dòng text [Edit your paragraph here]
+
+",50
+,,,,,,,,,,,,,,,,"Select dòng text [Edit your paragraph here] -> Click Edit -> click icon link 
+
+",,"Popup https://prnt.sc/DfoUxWSBnlrM hiển thị
+
+",50
+,,,,,,,,,,,,,,,,"Select [Go to page]
+
+",,"Dropdown hiển thị có category [Policy Pages]
+
+",50
+,,,,,,,,,,,,,,,,"Click Select
+
+",,,50
+,,,,,,,,,,,,,,,,"Click Policy Pages
+
+",,"Show https://prnt.sc/XniP56KnlFvD
+
+",50
+,,,,,,,,,,,,,,,,"Chọn một page bất kỳ
+
+","Refund policy
+
+",,50
+,,,,,,,,,,,,,,,,"Click button Apply -> Click button Save
+
+",,,50
+,,,,,,,,,,,,,,,,"Open storefront -> Click link [Edit your paragraph here]
+
+",,"Redirect to trang Refund policy
+
+",50
+,,,,,,,,,,,,,,,,"Back to dashboard -> Click Online store -> Customize ở template đang publish
+
+",,,50
+,,,,,,,,,,,,,,,,"Select dòng text [Edit your paragraph here] -> Click Edit 
+
+",,"icon link ở trạng thái được select
+
+",50
+,,,,,,,,,,,,,,,,"Turn on toggle Open in new tab -> Click Apply -> Click Save
+
+",,,50
+,,,,,,,,,,,,,,,,"Open storefront -> Click link [Edit your paragraph here]
+
+",,"Open Refund policy page ở new tab
+
+",50
+,,,,,,,,,,,,,,,,"Back to dashboard -> Click Online store -> Pages -> Làm hidden trang Refund policy
+
+",,,50
+,,,,,,,,,,,,,,,,"Open storefront -> Click link [Edit your paragraph here]
+
+",,"Open new tab với hiển thị page not found
+
+",50
+,,,,,,,,,,,,,,,,"Back to dashboard -> Click Online store -> Click customize ở template đang publish
+
+",,,50
+,,,,,,,,,,,,,,,,"Click [Edit your paragraph here] -> Click Edit 
+
+",,"icon link đang ở trạng thái được select
+
+",50
+,,,,,,,,,,,,,,,,"Click icon link
+
+",,"Show dropdown fill các dữ liệu:  
+
+- Go to page  
+
+- Refund policy  
+
+- Turn on Open in new tab
+
+",50
+,,,,,,,,,,,,,,,,"Turn off toggle Open in new tab -> Click Apply -> Click Save
+
+",,,50
+,,,,,,,,,,,,,,,,"Click 
+
+",,,50
+,,,,,,,,,,,,,,,,"Open storefront -> Click link [Edit your paragraph here]
+
+",,"Redirect to page not found
+
+",50
+84675,1417,SB_WEB_BUILDER_BP_11,Check hiển thị block Paragraph khi setting tag,1,238,,,1,0,0,,50,187,,0,Click vào block Heading,,"Quickbar: hiển thị default heading tag: <h1>
+
+",50
+,,,,,,,,,,,,,,,,"Setting Heading tag từ h1 -> h6
+
+",,"Text vẫn giữ nguyên style, chỉ thay đổi thẻ tương ứng trong mã HTML 
+
+",50
+79592,1417,SB_WEB_BUILDER_LB_BP_03,Check remove block paragraph,1,,"Check remove block paragraph
+
+","- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Page 1 đang setting Override website style = off  
+- Đã add section A gồm 1 row, 1 column, block paragraph 1 (text nhiều dòng)  
+- Position static = ON
+
+",1,0,0,0,50,187,,0,"Click vào block paragraph
+
+",,"Hiển thị block setting ở sidebar
+
+",50
+,,,,,,,,,,,,,,,,"Click button remove block
+
+",,"Preview Không hiển thị block paragraph vừa xóa
+
+",50
+,,,,,,,,,,,,,,,,"Save và check hiển thị ngoài SF
+
+",,"Không hiển thị block paragraph vừa xóa
+
+",50
+79591,1417,SB_WEB_BUILDER_LB_BP_02,"Check background, border, opacity, radus, shadow, padding, margin block paragraph",1,,"Check background, border, opacity, radus, shadow, padding, margin block paragraph
+
+","- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Page 1 đang setting Override website style = off  
+- Đã add section A gồm 1 row, 1 column, block paragraph 1 (text nhiều dòng)  
+- Position static = ON
+
+",1,0,0,0,50,187,,0,"Click vào block paragraph
+
+",,"Hiển thị block setting ở sidebar
+
+",50
+,,,,,,,,,,,,,,,,"Setting style của block paragraph:  
+- Background: có chọn color (có opacity) + upload ảnh  
+- border: size 3, color = 1 trong 5 bộ màu của page style  
+- opacity = 100  
+- radius = 100  
+- shadow = strong  
+- padding = 5px 10px 5px 10px  
+- margin = 15px 20px 15px 20px
+
+",,"Trên preview, hiển thị đúng như setting 
+
+",50
+,,,,,,,,,,,,,,,,"Save và check hiển thị ngoài SF
+
+",,"Hiển thị đúng như setting 
+
+",50
+,,,,,,,,,,,,,,,,"Setting style của block paragraph:  
+- Background: không chọn color + chọn ảnh từ library  
+- border: size 5, color = màu custom  
+- opacity = 80  
+- radius = 10  
+- shadow = light  
+- padding = 5px 0px 5px 0px  
+- margin = 0px 20px 15px 20px
+
+",,"Trên preview, hiển thị đúng như setting 
+
+",50
+,,,,,,,,,,,,,,,,"Save và check hiển thị ngoài SF
+
+",,"Hiển thị đúng như setting 
+
+",50
+,,,,,,,,,,,,,,,,"Setting style của block paragraph:  
+- Background: chọn color + không ảnh  
+- border: size 5, color = none  
+- opacity = 20  
+- radius = 0  
+- shadow = medium  
+- padding = 0px 0px 15px 0px  
+- margin = 0px 0px 15px 20px
+
+",,"Trên preview, hiển thị đúng như setting 
+
+",50
+,,,,,,,,,,,,,,,,"Save và check hiển thị ngoài SF
+
+",,"Hiển thị đúng như setting 
+
+",50
+,,,,,,,,,,,,,,,,"Setting style của block paragraph:  
+- Background: none  
+- border: size 0, color = có màu  
+- opacity = 0  
+- radius = 0  
+- shadow = none  
+- padding = 0px 0px 0px 0px  
+- margin = 0px 0px 0px 0px
+
+",,"Trên preview, không hiển thị block paragraph
+
+",50
+,,,,,,,,,,,,,,,,"Save và check hiển thị ngoài SF
+
+",,"Không hiển thị block paragraph vừa setting
+
+",50
+79590,1417,SB_WEB_BUILDER_LB_BP_01,Check width height block paragraph,1,,"Check width height block paragraph
+
+","- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Page 1 đang setting Override website style = off  
+- Đã add section A gồm 1 row, 1 column, block paragraph 1 (text nhiều dòng)  
+- Position static = ON
+
+",1,0,0,0,50,30,,0,"Click vào block paragraph
+
+",,"Hiển thị block setting ở sidebar
+
+",50
+,,,,,,,,,,,,,,,,"Setting width = px, height = px
+
+",,"Trên preview hiển thị đúng width height đã setting, text lớn hơn khung thì sẽ tràn khỏi khung
+
+",50
+,,,,,,,,,,,,,,,,"Save và check hiển thị ngoài SF
+
+",,"Hiển thị đúng width height đã setting, text lớn hơn khung thì sẽ tràn khỏi khung
+
+",50
+,,,,,,,,,,,,,,,,"Setting width = px, height = %
+
+",,"Trên preview hiển thị đúng width height đã setting, text lớn hơn khung thì sẽ tràn khỏi khung
+
+",50
+,,,,,,,,,,,,,,,,"Save và check hiển thị ngoài SF
+
+",,"Hiển thị đúng width height đã setting, text lớn hơn khung thì sẽ tràn khỏi khung
+
+",50
+,,,,,,,,,,,,,,,,"Setting width = px, height = auto
+
+",,"- Trên preview hiển thị đúng width height đã setting, text sẽ không tràn viền,   
+- Chiều cao của Block tăng theo dòng mới tạo do chữ drop xuống
+
+",50
+,,,,,,,,,,,,,,,,"Save và check hiển thị ngoài SF
+
+",,"- Hiển thị đúng width height đã setting, text sẽ không tràn viền,   
+- Chiều cao của Block tăng theo dòng mới tạo do chữ drop xuống
+
+",50
+,,,,,,,,,,,,,,,,"Setting width = %, height = px
+
+",,"Trên preview hiển thị đúng width height đã setting, text lớn hơn khung thì sẽ tràn khỏi khung
+
+",50
+,,,,,,,,,,,,,,,,"Save và check hiển thị ngoài SF
+
+",,"Hiển thị đúng width height đã setting, text lớn hơn khung thì sẽ tràn khỏi khung
+
+",50
+,,,,,,,,,,,,,,,,"Setting width = %, height = %
+
+",,"Trên preview hiển thị đúng width height đã setting, text lớn hơn khung thì sẽ tràn khỏi khung
+
+",50
+,,,,,,,,,,,,,,,,"Save và check hiển thị ngoài SF
+
+",,"Hiển thị đúng width height đã setting, text lớn hơn khung thì sẽ tràn khỏi khung
+
+",50
+,,,,,,,,,,,,,,,,"Setting width = %, height = auto
+
+",,"- Trên preview hiển thị đúng width height đã setting, text sẽ không tràn viền,   
+- Chiều cao của Block tăng theo dòng mới tạo do chữ drop xuống
+
+",50
+,,,,,,,,,,,,,,,,"Save và check hiển thị ngoài SF
+
+",,"- Hiển thị đúng width height đã setting, text sẽ không tràn viền,   
+- Chiều cao của Block tăng theo dòng mới tạo do chữ drop xuống
+
+",50
+,,,,,,,,,,,,,,,,"Setting width = auto, height = px
+
+",,"Trên preview hiển thị đúng width height đã setting, text lớn hơn khung thì sẽ tràn khỏi khung
+
+",50
+,,,,,,,,,,,,,,,,"Save và check hiển thị ngoài SF
+
+",,"Hiển thị đúng width height đã setting, text lớn hơn khung thì sẽ tràn khỏi khung
+
+",50
+,,,,,,,,,,,,,,,,"Setting width = auto, height = %
+
+",,"Trên preview hiển thị đúng width height đã setting, text lớn hơn khung thì sẽ tràn khỏi khung
+
+",50
+,,,,,,,,,,,,,,,,"Save và check hiển thị ngoài SF
+
+",,"Hiển thị đúng width height đã setting, text lớn hơn khung thì sẽ tràn khỏi khung
+
+",50
+,,,,,,,,,,,,,,,,"Setting width = auto, height = auto
+
+",,"- Trên preview hiển thị đúng width height đã setting, text sẽ không tràn viền,   
+- Text nhập đến đâu, width tự tăng đến đó, chạm viền collumng thì text tự động drop xuống  
+- Chiều cao của Block tăng theo dòng mới tạo do chữ drop xuống
+
+",50
+,,,,,,,,,,,,,,,,"Save và check hiển thị ngoài SF
+
+",,"- Hiển thị đúng width height đã setting, text sẽ không tràn viền,   
+- Text nhập đến đâu, width tự tăng đến đó, chạm viền collumng thì text tự động drop xuống  
+- Chiều cao của Block tăng theo dòng mới tạo do chữ drop xuống
+
+",50
+75126,1417,SB_WEB_BUILDER_BP_13,Check hiển thị paragraph spacing ở block paragraph,0,,Check hiển thị paragraph spacing ở block paragraph,"- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Setting Fonts ở Web style:   
++ Heading 1: 64px  +Heading 2: 56px   +Heading 3: 48px     +Heading 4: 40px    +Para1: 24px    +Para2: 16px    +Para3: 12px  
+- Override Website style = Off  
+- Đã add section A gồm 1 row, 1 column",1,0,0,,50,187,,0,Add 1 block Paragraph vào section A,,"Block có các setting mặc định: + Nội dung: "" Edit your paragraph here"" + Font-size: Paragraph 1 + Tag: <p>",50
+,,,,,,,,,,,,,,,,Edit text có 2 paragraph,"Your time is limited, so don’t waste it living someone else’s life.  
+Don’t be trapped by dogma – which is living with the results of other people’s thinking.","Block hiển thị text vừa input, có Paragraph spacing =80% font-size (19.2 px)",50
+,,,,,,,,,,,,,,,,Thay đổi font-size của block Paragraph thành Heading 1,,"Block hiển thị text vừa input, có Paragraph spacing =80% font-size (44.8 px)",50
+75125,1417,SB_WEB_BUILDER_BP_12,Check line-height của text trong block khi thay đổi fontsize,1,,Check line-height của text trong block khi thay đổi fontsize,"- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Setting Fonts ở Web style:   
++ Heading 1: 64px  +Heading 2: 56px   +Heading 3: 48px     +Heading 4: 40px    +Para1: 24px    +Para2: 16px    +Para3: 12px  
+- Override Website style = Off  
+- Đã add section A gồm 1 row, 1 column",1,0,0,,50,187,,0,Add 1 block Paragraph vào section A,,"Block có các setting mặc định: + Nội dung: "" Edit your paragraph here"" + Font-size: Paragraph 1 + Tag: <p>   
+Line-height= 140% font-size",50
+,,,,,,,,,,,,,,,,Thay đổi font-size của block Paragraph vừa add thành Paragraph3,,"Font- size hiển thị tương ứng, line-height= 160% font-size",50
+,,,,,,,,,,,,,,,,Thay đổi font-size của block Paragraph vừa add thành Heading 1,,"Font- size hiển thị tương ứng, line-height= 130% font-size",50
+73703,1417,SB_WEB_BUILDER_BP_10,Auto listing\_Check hiển thị block Paragraph khi setting auto listing,0,,"Auto listing\_Check hiển thị block Paragraph khi setting auto listing
+
+","- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Page 1 đang setting Override website style = off  
+- Đã add section A gồm 1 row, 1 column, 1 block Paragraph
+
+",1,1,0,0,50,30,,0,"Click vào block Paragraph
+
+",,"Quickbar: có 2 dạng bullet của auto listing: dạng number và dạng dot
+
+",50
+,,,,,,,,,,,,,,,,"Click chọn bullet dạng number
+
+",,"Highlight icon bullet
+
+",50
+,,,,,,,,,,,,,,,,"Input text vào các dòng text vào block
+
+",,"Tự động nhảy số khi enter xuống dòng
+
+",50
+,,,,,,,,,,,,,,,,"Click chọn bullet dạng dot
+
+",,"Highlight icon bullet
+
+",50
+,,,,,,,,,,,,,,,,"Input text vào các dòng text vào block
+
+",,"Tự động thêm dot khi enter xuống dòng
+
+",50
+,,,,,,,,,,,,,,,,"Tại block, bôi đen 1 đoạn text, chọn bullet
+
+",,"Tự động nhảy thêm icon tương ứng khi enter xuống dòng
+
+",50
+,,,,,,,,,,,,,,,,"Tại đoạn text có auto-listing, click Tab để thụt lề
+
+",,"Giữ nguyên setting bullet
+
+",50
+,,,,,,,,,,,,,,,,"Tại vào block Paragraph, click vào icon bullet đang highlight
+
+",,"- Giữ nguyên setting bullet cho đoạn văn bản đã input trước đó  
+- Không highlight icon bullet tương ứng
+
+",50
+,,,,,,,,,,,,,,,,"Input text vào các dòng text vào block
+
+",,"Không tự động nhảy số/dot khi enter xuống dòng
+
+",50
+,,,,,,,,,,,,,,,,"Tại block, bôi đen 1 đoạn text, chọn bullet
+
+",,"Tự động nhảy thêm icon tương ứng khi enter xuống dòng
+
+",50
+,,,,,,,,,,,,,,,,"Tại đoạn text có auto-listing, click Tab để thụt lề
+
+",,"Giữ nguyên setting bullet
+
+",50
+,,,,,,,,,,,,,,,,"Tại vào block Heading, click vào icon bullet đang highlight
+
+",,"- Giữ nguyên setting bullet cho đoạn văn bản đã input trước đó  
+- Không highlight icon bullet tương ứng
+
+",50
+,,,,,,,,,,,,,,,,"Input text vào các dòng text vào block
+
+",,"Không tự động nhảy số/dot khi enter xuống dòng
+
+",50
+,,,,,,,,,,,,,,,,Thay đổi setting Fonts ở Web style thành bộ fonts khác. Setting lại Font-size toàn bộ text thành Heading 2,,"Bullet ăn theo setting font style, fontsize vừa set",50
+73702,1417,SB_WEB_BUILDER_BP_09,Hyperlink\_Check hiển thị block Paragraph khi setting Hyperlink,0,,"Hyperlink\_Check hiển thị block Paragraph khi setting Hyperlink
+
+","- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Page 1 đang setting Override website style = off  
+- Đã add section A gồm 1 row, 1 column, 1 block Paragraph  
+- Block Paragraph có input text:  ""After graduating with my MBA, I was hit with over 100K in student loan debt. Not exactly the way I expected to start my new career! But with smart financial decisions and a little hard work, I was debt-free in a year and well on my way to early retirement""
+
+",1,1,0,0,50,30,,0,"Click vào block Paragraph
+
+",,"Quickbar: không highlight icon link
+
+",50
+,,,,,,,,,,,,,,,,"Click icon hyperlink
+
+",,"Hiển thị textbox có placeholder: Insert your link here
+
+",50
+,,,,,,,,,,,,,,,,"Nhập link vào textbox
+
+","https://sb-svlive.onshopbase.com/
+
+","- Highlight icon hyperlink  
+- Hyperlink toàn bộ text: underline toàn bộ text
+
+",50
+,,,,,,,,,,,,,,,,"Click vào block Paragraph
+
+",,"Mở tab mới, điều hướng đến link đã input
+
+",50
+,,,,,,,,,,,,,,,,"Tại block Paragraph, click vào icon hyperlink đang highlight
+
+",,"- Ko underline toàn bộ text của block  
+- Ko highlight icon hyperlink
+
+",50
+,,,,,,,,,,,,,,,,"Click vào block Paragraph
+
+",,"Không redirect 
+
+",50
+,,,,,,,,,,,,,,,,"Tại block Paragraph, bôi đen vùng text  ""After graduating with my MBA"", click icon hyperlink
+
+",,"Hiển thị textbox có placeholder: Insert your link here
+
+",50
+,,,,,,,,,,,,,,,,"Nhập link vào textbox
+
+","https://sb-svlive.onshopbase.com/
+
+","- Highlight icon hyperlink  
+- Hyperlink riêng cho vùng text được chọn
+
+",50
+,,,,,,,,,,,,,,,,"Click vào vùng text đã được hyperlink
+
+",,"Mở tab mới, điều hướng đến link đã input
+
+",50
+,,,,,,,,,,,,,,,,"Tại block Paragraph, bôi đen vùng text ""After graduating with my MBA"" , click vào icon hyperlink đang highlight
+
+",,"- Ko underlinevùng text đã bôi đen  
+- Ko highlight icon hyperlink
+
+",50
+,,,,,,,,,,,,,,,,"Click vào block Paragraph
+
+",,"Không redirect 
+
+",50
+,,,,,,,,,,,,,,,,"Tại block Paragraph, bôi đen vùng text  ""student loan debt"", paste link
+
+","https://sb-svlive.onshopbase.com/
+
+","Hiển thị hyperlink có màu xanh và underline (nếu wb có shortcut)
+
+",50
+,,,,,,,,,,,,,,,,"Tại block Paragraph, bôi đen vùng text  ""student loan debt"" set hyperlink",- Go to page: All products,"Hiển thị hyperlink có màu xanh và underline, khi hover hiển thị tooltip ""All products""",50
+,,,,,,,,,,,,,,,,Save và check click hyperlink ngoài storefront,,Redirect đến trang all product với đường dẫn (domain/collections/all),50
+73701,1417,SB_WEB_BUILDER_BP_08,Text align\_Check hiển thị block Paragraph khi setting text align,0,,"Text align\_Check hiển thị block Paragraph khi setting text align
+
+","- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Page 1 đang setting Override website style = off  
+- Đã add section A gồm 1 row, 1 column, 1 block Paragraph  
+- Block Paragraph có input text: ""After graduating with my MBA, I was hit with over 100K in student loan debt. Not exactly the way I expected to start my new career! But with smart financial decisions and a little hard work, I was debt-free in a year and well on my way to early retirement""
+
+",1,1,0,0,50,30,,0,"Click vào block Paragraph
+
+",,"Quickbar: highlight text align left
+
+",50
+,,,,,,,,,,,,,,,,"Trên Quickbar, chọn 1 option text align
+
+","left, center, right, justify
+
+","- Highlight icon tương ứng trên Quickbar  
+- Apply text align tương ứng lên vùng đã chọn
+
+",50
+,,,,,,,,,,,,,,,,"Click vào icon text align đang được highlight
+
+",,"- Không highlight icon tương ứng trên Quickbar  
+- Không apply text align tương ứng lên vùng đã chọn
+
+",50
+,,,,,,,,,,,,,,,,"Tại sidebar, tăng padding top và bottom của block
+
+",,"Text căn middle tương ứng theo chiều cao của block
+
+",50
+,,,,,,,,,,,,,,,,"Tại sidebar, giảm padding top và bottom của block
+
+",,"Text căn middle tương ứng theo chiều cao của block
+
+",50
+73700,1417,SB_WEB_BUILDER_BP_07,Color\_Check setting color của block Paragraph,0,,"Color\_Check setting color của block Paragraph
+
+","- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Page 1 đang setting Override website style = off  
+- Đã add section A gồm 1 row, 2 column  
+- Column 1 có Block Paragraph có input text: ""Welcome to Blackwater Writing, home to The Advanced Creative Writing Course. Helping emerging writers achieve excellence and publication.""  
+- Column 2 có block Paragraph có input text: ""After graduating with my MBA, I was hit with over 100K in student loan debt. Not exactly the way I expected to start my new career! But with smart financial decisions and a little hard work, I was debt-free in a year and well on my way to early retirement""
+
+",1,1,0,0,50,30,,0,"Tại column 1, Click vào block Paragraph
+
+",,"Quickbar: hiển thị mã màu theo màu đã setting trong Website/ page style  
+- Block Paragraph: text có màu theo bộ màu đã setting trong Website/ Page style
+
+",50
+,,,,,,,,,,,,,,,,"Click vào icon màu
+
+",,"- Hiển thị bộ chỉnh màu gồm các phần:  
++ Hiển thị preset bộ màu sẵn của Web/Page Style để quick select  
++ Pallet màu  
++ Nhập mã màu HEX  
++ Opacity  
+- Hiển thị bộ 5 màu mặc định (bộ màu đầu tiên của web base)  
++ Mặc định tích chọn vào màu số 3   
++ Color picker hiển thị màu với màu số 3 đang active   
++ Mã hex hiển thị mã màu với màu số 3 đang active
+
+",50
+,,,,,,,,,,,,,,,,"Chọn vào từng slot màu ở bộ 5 màu được show
+
+",,"- Color picker + mã hex sẽ thay đổi theo mã màu được chọn
+
+",50
+,,,,,,,,,,,,,,,,"Chọn màu 2 của dải 1 trên bộ màu + thay đổi thành màu z
+
+",,"- Màu 2 được chuyển thành màu z  
+- Mã hex sẽ thay đổi theo màu đã chọn  
+- Trên Webfront, Block Paragraph hiển thị màu đã chọn
+
+",50
+,,,,,,,,,,,,,,,,"Chọn màu 2 của dải 1 trên bộ màu + Nhập mã hex 6 số (không chứa opacity)
+
+",,"- Color picker sẽ thay đổi theo màu đã chọn  
+- Màu 2 được chuyển thành màu theo mã hex  
+- Trên Webfront, Block Paragraph sẽ thay đổi màu tương ứng.
+
+",50
+,,,,,,,,,,,,,,,,"Chọn màu 2 của dải 1 trên bộ màu + Nhập mã hex 8 số (không chứa opacity)
+
+",,"- Color picker sẽ thay đổi theo màu đã chọn  
+- Có nhập được mã hex 8 số, tự động chuyển về 6 số, opacity 100  
+- Màu 2 được chuyển thành màu theo mã hex  
+- Trên Webfront, block Paragraph sẽ thay đổi màu tương ứng.
+
+",50
+,,,,,,,,,,,,,,,,"Định vị con trỏ vào bất kì text nào thuộc block
+
+",,"Trên Quickbar, Hiển thị icon màu đã setting
+
+",50
+,,,,,,,,,,,,,,,,"Chọn màu 1 của dải 1 trên bộ màu + Nhập mã hex = giá trị sai (ABC) hoặc trống
+
+",,"- Mã hex tự động chuyển về màu trắng #FFFFFF  
+- Color picker sẽ thay đổi theo màu đã chọn  
+- Trên Webfront, block Paragraph sẽ giữ nguyên màu trước đó
+
+",50
+,,,,,,,,,,,,,,,,"Tại column 2, Click vào block Paragraph
+
+",,"Quickbar: hiển thị mã màu theo màu đã setting trong Website/ page style  
+- Block Paragraph: text có màu theo bộ màu đã setting trong Website/ Page style
+
+",50
+,,,,,,,,,,,,,,,,"Bôi đen text ""  I was hit with over 100K in student loan debt."", click icon màu
+
+",,"""- Hiển thị bộ chỉnh màu gồm các phần:  
++ Hiển thị preset bộ màu sẵn của Web/Page Style để quick select  
++ Pallet màu  
++ Nhập mã màu HEX  
++ Opacity  
+- Hiển thị bộ 5 màu mặc định (bộ màu đầu tiên của web base)  
++ Mặc định tích chọn vào màu số 3   
++ Color picker hiển thị màu với màu số 3 đang active   
++ Mã hex hiển thị mã màu với màu số 3 đang active""
+
+",50
+,,,,,,,,,,,,,,,,"Chọn vào từng slot màu ở bộ 5 màu được show
+
+",,"- Color picker + mã hex sẽ thay đổi theo mã màu được chọn
+
+",50
+,,,,,,,,,,,,,,,,"Chọn màu 2 của dải 1 trên bộ màu + thay đổi thành màu z
+
+",,"- Màu 2 được chuyển thành màu z  
+- Mã hex sẽ thay đổi theo màu đã chọn  
+- Trên Webfront, vùng text bôi đen hiển thị màu đã chọn
+
+",50
+,,,,,,,,,,,,,,,,"Chọn màu 2 của dải 1 trên bộ màu + Nhập mã hex 6 số (không chứa opacity)
+
+",,"- Color picker sẽ thay đổi theo màu đã chọn  
+- Màu 2 được chuyển thành màu theo mã hex  
+- Trên Webfront, vùng text bôi đen sẽ thay đổi màu tương ứng.
+
+",50
+,,,,,,,,,,,,,,,,"Chọn màu 2 của dải 1 trên bộ màu + Nhập mã hex 8 số (không chứa opacity)
+
+",,"- Color picker sẽ thay đổi theo màu đã chọn  
+- Có nhập được mã hex 8 số, tự động chuyển về 6 số, opacity 100  
+- Màu 2 được chuyển thành màu theo mã hex  
+- Trên Webfront, vùng text bôi đen sẽ thay đổi màu tương ứng.
+
+",50
+,,,,,,,,,,,,,,,,"Định vị con trỏ vào vùng text được bôi đen
+
+",,"Trên Quickbar, Hiển thị icon màu đã setting cho vùng bôi đen
+
+",50
+,,,,,,,,,,,,,,,,"Định vị con trỏ vào vùng text  không được bôi đen
+
+",,"Trên Quickbar, Hiển thị icon màu đã setting cho vùng text không được bôi đen
+
+",50
+,,,,,,,,,,,,,,,,"Click vào block Paragraph, check hiển thị icon màu ở Quickbar
+
+",,"Hiển thị màu của nhiều text nhất
+
+",50
+,,,,,,,,,,,,,,,,"Chọn màu 1 của dải 1 trên bộ màu + Nhập mã hex = giá trị sai (ABC) hoặc trống
+
+",,"- Mã hex tự động chuyển về màu trắng #FFFFFF  
+- Color picker sẽ thay đổi theo màu đã chọn  
+- Trên Webfront, vùng bôi đen sẽ giữ nguyên màu trước đó
+
+",50
+73699,1417,SB_WEB_BUILDER_BP_06,Text decorations\_Check setting text decorations của block Paragraph,0,,"Text decorations\_Check setting text decorations của block Paragraph
+
+","- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Page 1 đang setting Override website style = off  
+- Đã add section A gồm 1 row, 1 column, 1 block Paragraph  
+- Block Paragraph có input text: Your Creative writing career accelerated
+
+",1,1,0,0,50,30,,0,"Click vào block Paragraph, click edit text
+
+",,"- Hiển thị Quickbar có 4 icon text decorations: Bold, Italic, Underline, Strikethrought  
+- Không highlight icon text decorations
+
+",50
+,,,,,,,,,,,,,,,,"Trên Quickbar, chọn 1 option text decoration
+
+","Chọn 1 option:  
+- Bold  
+- Italic  
+- Underline  
+- Strikethrought
+
+","- Apply option đã chọn lên toàn bộ text  
+- Highlight icon decorations tương ứng trên Quickbar
+
+",50
+,,,,,,,,,,,,,,,,"Trên Quickbar, kết hợp 2 option
+
+","Chọn 2 option trong 4 option:   
+- Bold  
+- Italic  
+- Underline  
+- Strikethrought
+
+","- Apply những option đã chọn lên toàn bộ text  
+- Highlight icon decorations tương ứng trên Quickbar
+
+",50
+,,,,,,,,,,,,,,,,"Trên Quickbar, kết hợp 3 option
+
+","Chọn 3 option trong 4 option:   
+- Bold  
+- Italic  
+- Underline  
+- Strikethrought
+
+","- Apply những option đã chọn lên toàn bộ text  
+- Highlight icon decorations tương ứng trên Quickbar
+
+",50
+,,,,,,,,,,,,,,,,"Trên Quickbar, kết hợp 4 option
+
+","Chọn 4 option:   
+- Bold  
+- Italic  
+- Underline  
+- Strikethrought
+
+","- Apply những option đã chọn lên toàn bộ text  
+- Highlight icon decorations tương ứng trên Quickbar
+
+",50
+,,,,,,,,,,,,,,,,"Định vị con trỏ vào text bất kì thuộc block
+
+",,"Tại bất kì vị trí nào của text cũng highlight icon decorations tương ứng trên Quickbar
+
+",50
+,,,,,,,,,,,,,,,,"Trên Quickbar, click vào icon text decoration đang được highlight
+
+",,"- Không highlight icon tương ứng trên Quickbar  
+- Không apply option tương ứng lên toàn bộ text
+
+",50
+,,,,,,,,,,,,,,,,"Tại block Paragraph, bôi đen vùng text  ""Your Creative"", chọn 1 option text decoration
+
+","Chọn 1 option:  
+- Bold  
+- Italic  
+- Underline  
+- Strikethrought
+
+","- Apply option đã chọn lên vùng text  
+- Highlight icon decorations tương ứng trên Quickbar
+
+",50
+,,,,,,,,,,,,,,,,"Trên Quickbar, kết hợp 2 option
+
+","Chọn 2 option trong 4 option:   
+- Bold  
+- Italic  
+- Underline  
+- Strikethrought
+
+","- Apply những option đã chọn lên vùng text  
+- Highlight icon decorations tương ứng trên Quickbar
+
+",50
+,,,,,,,,,,,,,,,,"Trên Quickbar, kết hợp 3 option
+
+","Chọn 3 option trong 4 option:   
+- Bold  
+- Italic  
+- Underline  
+- Strikethrought
+
+","- Apply những option đã chọn lên vùng text  
+- Highlight icon decorations tương ứng trên Quickbar
+
+",50
+,,,,,,,,,,,,,,,,"Trên Quickbar, kết hợp 4 option
+
+","Chọn 4 option:   
+- Bold  
+- Italic  
+- Underline  
+- Strikethrought
+
+","- Apply những option đã chọn lên vùng text  
+- Highlight icon decorations tương ứng trên Quickbar
+
+",50
+,,,,,,,,,,,,,,,,"Định vị con trỏ vào text thuộc vùng bôi đen đã setting text decorations
+
+",,"Tại bất kì vị trí nào của text cũng highlight icon decorations tương ứng trên Quickbar
+
+",50
+,,,,,,,,,,,,,,,,"Định vị con trỏ vào text không thuộc vùng bôi đen đã setting text decorations
+
+",,"Tại bất kì vị trí nào của text cũng ko có highlight icon decorations tương ứng trên Quickbar
+
+",50
+,,,,,,,,,,,,,,,,"Bôi đen vùng text ""Your Creative"", click vào icon text decorations đang được highlight
+
+",,"- Không highlight icon tương ứng trên Quickbar  
+- Không apply option tương ứng lên vùng text được bôi đen
+
+",50
+,,,,,,,,,,,,,,,,Save và check hiển thị paragraph ngoài SF,,"Hiển thị text với các setting tương ứng, giống trong preview",50
+73698,1417,SB_WEB_BUILDER_BP_05,Font style\_Check font style của block Paragraph,0,,"Font style\_Check font style của block Paragraph
+
+","- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Setting Website style có:  
++ Paragraph 1 = 20px  
++ Paragraph 2 = 16px  
++ Paragraph 3 = 12px  
+- Setting Page style có:  
++ Paragraph 1 = 19px  
++ Paragraph 2 = 16px  
++ Paragraph 3 = 14px  
+- Page 1 đang setting Override website style = off  
+- Đã add section A gồm 1 row, 1 column, 1 block Paragraph
+
+",1,1,0,0,50,30,,0,"Tại page 1, add block Paragraph
+
+",,"- Hiển thị block Paragraph có style: Paragraph 1 có font size = 20px  
+- Quickbar setting hiển thị Paragraph 1  
+http://joxi.net/52apaXWclMpdOm
+
+",50
+,,,,,,,,,,,,,,,,"Click vào block Paragraph, chọ Paragraph 2 trên thanh Quickbar setting
+
+",,"Hiển thị block Paragraph có style: Paragraph 2 có font size = 16px  
+- Quickbar setting hiển thị Paragraph 2
+
+",50
+,,,,,,,,,,,,,,,,"Click vào block Paragraph, chọ Paragraph 3 trên thanh Quickbar setting
+
+",,"Hiển thị block Paragraph có style: Paragraph 3 có font size = 12px  
+- Quickbar setting hiển thị Paragraph 3
+
+",50
+,,,,,,,,,,,,,,,,"Ở sidebar, setting Override website style = on, check hiển thị font size block Paragraph
+
+",,"Hiển thị block Paragraph có style: Paragraph 3 có font size = 14px  
+- Quickbar setting hiển thị Paragraph 4
+
+",50
+,,,,,,,,,,,,,,,,"Click vào block Paragraph, chọ Paragraph 1 trên thanh Quickbar setting
+
+",,"Hiển thị block Paragraph có style: Paragraph 1 có font size = 19px - Quickbar setting hiển thị Paragraph 1
+
+",50
+,,,,,,,,,,,,,,,,"Click vào block Paragraph, chọ Paragraph 2 trên thanh Quickbar setting
+
+",,"Hiển thị block Paragraph có style: Paragraph 2 có font size = 16px  
+- Quickbar setting hiển thị Paragraph 2
+
+",50
+,,,,,,,,,,,,,,,,"Click chọn Heading 1-> Heading 4
+
+",,"Hiển thị block Heading có style tương ứng với style đã chọn, style ăn theo Web/Page style
+
+",50
+73697,1417,SB_WEB_BUILDER_BP_04,Bôi đen text\_Check hiển thị khi thực hiện bôi đen vùng text,0,,"Bôi đen text\_Check hiển thị khi thực hiện bôi đen vùng text
+
+","- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Đã add section A gồm 1 row, 2 column: Column 1 và Column 2  
+- Column 1 có add block Paragraph có text:  ""We have been producing top-notch, comprehensive, and affordable courses on financial trading and value investing for your students all over the world since 2014.""
+
+",1,1,0,0,50,30,,0,"Click 1 lần vào Text
+
+",,"Không bôi đen text
+
+",50
+,,,,,,,,,,,,,,,,"Định vị con trỏ vào đằng trước chữ cái đầu tiên của text, double click
+
+","Đặt con trỏ tại trước chữ ""y"" của text ""your""
+
+","Bôi đen text ""your""
+
+",50
+,,,,,,,,,,,,,,,,"Định vị con trỏ vào chữ cái bất kì của text, double click
+
+","Đặt con trỏ tại chữ ""u"" của text ""your""
+
+","Bôi đen text ""your""
+
+",50
+,,,,,,,,,,,,,,,,"Định vị con trỏ vào đằng sau chữ cái cuối của text, double click
+
+","Đặt con trỏ tại đằng sau chữ ""r""
+
+","Bôi đen space
+
+",50
+,,,,,,,,,,,,,,,,"Double click vào vùng trống của block
+
+",,"Bôi đen toàn bộ text
+
+",50
+,,,,,,,,,,,,,,,,"Double click vào cạnh (đường viền) của block
+
+",,"Bôi đen toàn bộ text
+
+",50
+73696,1417,SB_WEB_BUILDER_BP_03,Định vị con trỏ\_Check hiển thị định vị con trỏ vào text khi thực hiện click vào block,0,,"Định vị con trỏ\_Check hiển thị định vị con trỏ vào text khi thực hiện click vào block
+
+","- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Đã add section A gồm 1 row, 2 column: Column 1 và Column 2  
+- Column 1 có add block Paragraph có text: ""We have been producing top-notch, comprehensive, and affordable courses on financial trading and value investing for your students all over the world since 2014.""
+
+",1,1,0,0,50,30,,0,"Click 1 lần vào block Paragraph
+
+",,"Hiển thị block Paragraph:  
+- Webfront: show Quickbar setting ở bên trên block  
+- Sidebar: show setting  
+- Highlight block  
+- Không định vị con trỏ vào text
+
+",50
+,,,,,,,,,,,,,,,,"Con trỏ đang trỏ vào text, click Edit text ở quick bar hoặc double click vào block
+
+",,"- Bôi đen toàn bộ text  
+- User bắt đầu edit text
+
+",50
+,,,,,,,,,,,,,,,,"Con trỏ đang trỏ vào khoảng trống giữa các text hoặc khoảng trống bên ngoài text, triple click vào block
+
+",,"- Bôi đen toàn dòng text
+
+",50
+73695,1417,SB_WEB_BUILDER_BP_02,Input text\_Check hiển thị khi input text vào block Paragraph,0,,"Input text\_Check hiển thị khi input text vào block Paragraph
+
+","- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Setting Override Website style = On  
+- Đã add section A gồm 1 row, 2 column: Column 1 và Column 2  
+- Column 1 có add block Paragraph
+
+",1,1,0,0,50,187,,0,"Tại block Paragraph, gõ trực tiếp vào textbox
+
+","Input text: ""We have been producing top-notch, comprehensive, and affordable courses on financial trading and value investing for students all over the world since 2014.""
+
+","Hiển thị block Paragraph có text đã input  
+- Block Paragraph có font, font style, font size, color ăn theo font, font style, font size, color của Page style
+
+",50
+,,,,,,,,,,,,,,,,"Tại block Paragraph, dán text có format
+
+","Text có color = red, font style = Roboto, italic
+
+","- Block Paragraph có font, font style, font size, color ăn theo font, font style, font size, color của text copy
+
+",50
+,,,,,,,,,,,,,,,,"Tại block Paragraph, dán text có bullet đặc biệt
+
+","Text: ""a. How to Use Facebook Advertising to Find and Attract Clients.  
+b. How to Leverage Your Existing Network to Find New Clients. ""
+
+","Ko nhận bullet
+
+",50
+,,,,,,,,,,,,,,,,"Tại block Paragraph, dán ảnh
+
+",,"Không cho phép dán ảnh
+
+",50
+,,,,,,,,,,,,,,,,"Tại block Paragraph, dán text có hyperlink
+
+",,"Hiển thị hyperlink có màu xanh và underline
+
+",50
+,,,,,,,,,,,,,,,,"Tại block Paragraph, dán text có bullet list hoặc number
+
+","Text: ""
+* Website Builder có 2 Block để User add thêm/xử lý text là:  
+
+	+ Block Heading
+	+ Block Paragraph""
+",Sẽ nhận bullet như input,50
+73694,1417,SB_WEB_BUILDER_BP_01,Check setting mặc định khi add block Paragraph,0,,"Check setting mặc định khi add block Paragraph
+
+","- Shop: https://au-wsb-sections.onshopbase.com/  
+Account: shopbase@beeketing.net  
+Pass: Q(f!3Kx+6n;?Us%F  
+- Shop add theme website builder và active theme này  
+- Customize website builder active  
+- Setting Override Website style = Off  
+- Đã add section A gồm 1 row, 1 column
+
+",1,1,0,0,50,30,,0,"Tại column 2, click Add block
+
+",,"Hiển thị drawer Insert block
+
+",50
+,,,,,,,,,,,,,,,,"Chọn block Paragraph, thực hiện drag & drop vào Webfront
+
+",,"- Hiển thị block Paragraph ở vị trí vừa add block + hiển thị setting block bên sidebar  
+- Bên sidebar:   
++ Width = Auto  
++ Height = Auto  
++ Background = none  
++ Border = none  
++ Opacity = 100%  
++ Radius = 0px  
++ Shadow = none  
++ Padding = 0  
++ Margin = 0  
+- Helptext: To customize font style, go to Fonts in Website Style""  
+- Bên preview:  
++ Nội dung mặc định: "" Edit your paragraph here""  
++ Font-size: Paragraph 1  
++ Tag: <p>  
++ Block Paragraph có font, font style, font size, color ăn theo font, font style, font size, color của Website style  
++ Position = ON[https://prnt.sc/dvEdeKbV0as](https://prnt.sc/dvEdeKbV0asK)K
+
+
+![](chrome-extension://bpggmmljdiliancllaapiggllnkbjocb/logo/48.png)",50
+,,,,,,,,,,,,,,,,Click dấu + trên thanh menu,,"Hiển thị drawer Insert section + block
+
+",50
+,,,,,,,,,,,,,,,,"Chọn block Paragraph, thực hiện drag & drop vào Webfront vị trí khác vị trí static",,"- Hiển thị block Paragraph ở vị trí vừa add block + hiển thị setting block bên sidebar  
+- Bên sidebar:   
++ Width = 188px  
++ Height = Auto  
++ Background = none  
++ Border = none  
++ Opacity = 100%  
++ Radius = 0px  
++ Shadow = none  
++ Padding = 0  
++ Margin = 0  
+- Helptext: To customize font style, go to Fonts in Website Style""  
+- Bên preview:  
++ Nội dung mặc định: "" Edit your paragraph here""  
++ Font-size: Paragraph 1  
++ Tag: <p>  
++ Block Paragraph có font, font style, font size, color ăn theo font, font style, font size, color của Website style[https://prnt.sc/dvEdeKbV0as](https://prnt.sc/dvEdeKbV0asK)K
+![](chrome-extension://bpggmmljdiliancllaapiggllnkbjocb/logo/48.png)",50
+,,,,,,,,,,,,,,,,Click vào Fonts ở helptext bên sidebar,,Mở phần Fonts trong Website styles,50

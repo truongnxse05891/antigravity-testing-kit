@@ -1,0 +1,1639 @@
+﻿case_id,module_id,case_code,case_name,case_is_approved,case_approved_by_id,case_description,case_pre_conditions,case_need_automation,case_is_automated,case_is_api,case_risk_level,case_ordering,case_qa_id,case_dev_id,collection_id,step_action,step_input_data,step_expected_result,step_sort
+96933,1583,SB_WEB_BUILDER_LB_SLS_28,Verify case setup widget Action cho cả tab Button và Media của cùng 1 slide,0,,"Verify case setup widget Action cho cả tab Button và Media của cùng 1 slide
+
+","- shop: https://test-insert-panel-1.myshopbase.net/  
+acc: nule+1@beeketing.net/ Qafront@123
+
+
+![](chrome-extension://bpggmmljdiliancllaapiggllnkbjocb/logo/48.png)",0,0,0,0,1,238,,0,"Login to dashboard -> Online store -> Click customize template đang publish
+
+",,,50
+,,,,,,,,,,,,,,,,"Open insert panel -> drag and drop block Slideshow
+
+",,,50
+,,,,,,,,,,,,,,,,"Delete Slide 2 và Slide 3
+
+",,,50
+,,,,,,,,,,,,,,,,"Click vào icon settings của Slide 1
+
+",,"Show popup settings:   
+https://prnt.sc/lgbFy1OEH\_Lr
+
+",50
+,,,,,,,,,,,,,,,,"Click tab Media
+
+",,"Show dropdown Action ở vị trí cuối cùng của popup  
+https://prnt.sc/UCbLr7pWM-BK
+
+",50
+,,,,,,,,,,,,,,,,"Click dropdown Action
+
+",,"Show data như ảnh:  
+https://prnt.sc/4PMh9foUgNEi
+
+",50
+,,,,,,,,,,,,,,,,"Select [Go to page]
+
+",,"- Hiển thị field Page  
+- turn on toggle Open in new tab
+
+",50
+,,,,,,,,,,,,,,,,"- Select data field Page  
+  
+
+
+","- Page = Cart  
+- Overlay = #C22B2BA1  
+- Size = Cover  
+- Postion: Center-center
+
+",,50
+,,,,,,,,,,,,,,,,"Click tab Button -> Select data field Action
+
+","Action = Open a link  
+Target url = [https://manual-ne-04.myshopbase.net/blogs/go-lang  
+  
+Open in new tab = Off](https://manual-ne-04.myshopbase.net/blogs/go-lang)
+![](chrome-extension://bpggmmljdiliancllaapiggllnkbjocb/logo/48.png)"," 
+
+
+![](chrome-extension://bpggmmljdiliancllaapiggllnkbjocb/logo/48.png)",50
+,,,,,,,,,,,,,,,,"Click [Save]
+
+",,"Ở WB, Slideshow hiển thị như setting
+
+",50
+,,,,,,,,,,,,,,,,"Open SF
+
+"," 
+
+
+![](chrome-extension://bpggmmljdiliancllaapiggllnkbjocb/logo/48.png)",Hiển thị Slideshow giống như trong WB,50
+,,,,,,,,,,,,,,,,"Click vào button
+
+",,Redirect đến trang <https://manual-ne-04.myshopbase.net/blogs/go-lang>,50
+,,,,,,,,,,,,,,,,"Click nút Back trên trình duyệt
+
+",,"Open trang home của shop, show Slideshow
+
+",50
+,,,,,,,,,,,,,,,,"Click vào ảnh media
+
+",,Redirect đến trang cart ở new tab,50
+91861,1583,SB_WEB_BUILDER_LB_SLS_19,Verify thêm widget Action cho tab Media với Media là Image của block Slideshow,1,,"Verify thêm widget Action cho tab Media với Image của block Slideshow
+
+","- shop: https://test-insert-panel-1.myshopbase.net/  
+acc: nule+1@beeketing.net/ qafront@123  
+- shop có section: A  
+- Ngoài storefront đã add sẵn product B vào cart
+
+",0,0,0,0,1,238,,0,"Login to dashboard -> Online store -> Click customize template đang publish
+
+",,,50
+,,,,,,,,,,,,,,,,"Open insert panel -> drag and drop block Slideshow
+
+",,,50
+,,,,,,,,,,,,,,,,"Delete Slide 2 và Slide 3
+
+",,,50
+,,,,,,,,,,,,,,,,"Click vào icon settings của Slide 1
+
+",,"Show popup settings:   
+https://prnt.sc/lgbFy1OEH\_Lr
+
+",50
+,,,,,,,,,,,,,,,,"Click tab Media
+
+",,"Show dropdown Action ở vị trí cuối cùng của popup  
+https://prnt.sc/UCbLr7pWM-BK
+
+",50
+,,,,,,,,,,,,,,,,"Click dropdown Action
+
+",,"Show data như ảnh:  
+https://prnt.sc/4PMh9foUgNEi
+
+",50
+,,,,,,,,,,,,,,,,"Select [Open a link]
+
+",,"- Hiển thị field Target URL  
+- turn on toggle Open in new tab
+
+",50
+,,,,,,,,,,,,,,,,"- Input data field Target URL:   
+- Set Style
+
+","- <https://manual-ne-04.myshopbase.net/blogs/go-lang>  
+- Overlay = #C22B2BA1  
+- Size = Cover  
+- Postion: Center-center
+
+",,50
+,,,,,,,,,,,,,,,,"Click Save -> Open storefront -> Click image ở slide 1
+
+",,"Open page https://manual-ne-04.myshopbase.net/blogs/go-lang  
+ trong tab mới
+
+",50
+,,,,,,,,,,,,,,,,"Back to dashboard -> select Action = [Go to page]
+
+",,"Hiển thị dropdown Page:  
+https://prnt.sc/s9fg\_izhhg8E
+
+",50
+,,,,,,,,,,,,,,,,"Ở dropdown Page, chọn 1 page bất kỳ
+
+","Page = All products
+
+",,50
+,,,,,,,,,,,,,,,,"Turn off toggle [Open in new tab] -> Click Save
+
+",,,50
+,,,,,,,,,,,,,,,,"Open storefront -> Click image ở slide 1
+
+",,"Redirect tới trang https://test-insert-panel-1.myshopbase.net/collections/all
+
+",50
+,,,,,,,,,,,,,,,,"Back to dashboard -> select Action = [Go to section]
+
+",,"Show dropdown section: https://prnt.sc/7Fi7yc0pRHBm
+
+",50
+,,,,,,,,,,,,,,,,"Chọn 1 section bất kỳ trong dropdown
+
+","Section = section A
+
+",,50
+,,,,,,,,,,,,,,,,"Click Save -> Open storefront -> Click image ở slide 1
+
+",,"Redirect to section A
+
+",50
+,,,,,,,,,,,,,,,,"Back to dashboard -> select [Make a call]
+
+",,"Hiển thị field Phone Number:  
+https://prnt.sc/wtLsXmL0\_OZx
+
+",50
+,,,,,,,,,,,,,,,,"Input data vào field Phone Number
+
+","987654321
+
+",,50
+,,,,,,,,,,,,,,,,"Click Save -> Open storefront -> Click image ở slide 1
+
+",,"Open popup Phone link:   
+https://prnt.sc/NlKqxulpPmNd
+
+",50
+,,,,,,,,,,,,,,,,"Back to dashboard -> select Action = [Send email to]
+
+",,"Show field Email  
+https://prnt.sc/R7h4P1hi0so0
+
+",50
+,,,,,,,,,,,,,,,,"Click Save -> Open storefront -> Click image ở slide 1
+
+",,"Show popup select email app  
+https://prnt.sc/Jt3bl6OD-Dpn
+
+",50
+,,,,,,,,,,,,,,,,"Back to dashboard -> select Action = [Copy to clipboard]
+
+",,"Show field Content: https://prnt.sc/N32ydiSrpA2A
+
+",50
+,,,,,,,,,,,,,,,,"Input data vào field Content
+
+","abc
+
+",,50
+,,,,,,,,,,,,,,,,"Click Save -> Open storefront -> Click image ở slide 1 -> Paste ở new tab
+
+",,"Show content `abc`
+
+",50
+,,,,,,,,,,,,,,,,"Back to dashboard -> select Action = [Open a popup]
+
+",,"Hiển thị field Popup: https://prnt.sc/S\_V6q3Ub5wyz
+
+",50
+,,,,,,,,,,,,,,,,"Select popup = Cart drawer
+
+",,,50
+,,,,,,,,,,,,,,,,"Click Save -> Open storefront -> Click image ở slide 1
+
+",,"Open cart drawer
+
+",50
+,,,,,,,,,,,,,,,,"Back to dashboard -> select Action = [Go to checkout]
+
+",,"Show lại toggle Open in new tab https://prnt.sc/nUWx0g\_2DTB3
+
+",50
+,,,,,,,,,,,,,,,,"Turn off toggle [Open in new tab] 
+
+",,,50
+,,,,,,,,,,,,,,,,"Click Save -> Open storefront -> Click image ở slide 1
+
+",,"Redirect to checkout page
+
+",50
+,,,,,,,,,,,,,,,,"Back to dashboard -> click button [Add slide]
+
+",,"Ở sidebar hiển thị thêm 1 slide có tên slide 2
+
+",50
+,,,,,,,,,,,,,,,,"Click vào icon settings của Slide 2
+
+",,,50
+,,,,,,,,,,,,,,,,"Click tab Media của Slide 2
+
+",,,50
+,,,,,,,,,,,,,,,,"Click dropdown Action
+
+",,"Show data như ảnh:  
+https://prnt.sc/4PMh9foUgNEi
+
+",50
+,,,,,,,,,,,,,,,,"Select [Open a link]
+
+",,"- Hiển thị field Target URL  
+- turn on toggle Open in new tab
+
+",50
+,,,,,,,,,,,,,,,,"Input data field Target URL: 
+
+","https://manual-ne-04.myshopbase.net/blogs/go-lang
+
+",,50
+,,,,,,,,,,,,,,,,"Click Save -> Open storefront 
+
+",,,50
+,,,,,,,,,,,,,,,,"Click image ở slide 1
+
+",,"Redirect to checkout page
+
+",50
+,,,,,,,,,,,,,,,,"Click image ở slide 2
+
+",,"Open page https://manual-ne-04.myshopbase.net/blogs/go-lang  
+ trong tab mới
+
+
+![](chrome-extension://bpggmmljdiliancllaapiggllnkbjocb/logo/48.png)",50
+,,,,,,,,,,,,,,,,"Back lại WB, upload image cho mobile ở slide 2-> Save",,"Upload thành công ảnh cho mobile. Webfront, hiển thị đúng preview của mobile",50
+,,,,,,,,,,,,,,,,Open SF on mobile -> Click ảnh ở slide 2,,"Open page https://manual-ne-04.myshopbase.net/blogs/go-lang  
+ trong tab mới",50
+82004,1583,SB_WEB_BUILDER_LB_SLS_01,"Check default style, settings khi add mới block Slideshow vào webfront preview",1,238,,"Product A đã được apply template
+
+
+Mở webbuilder bằng các cách sau:
+
+
+- Dashboard->Products->Chọn product A->Design sales page
+
+
+- Dashboard->Products->Chọn product A->Checkout-> Add upsell offer -> Save -> Design offer -> Apply a template
+
+
+- Dashboard -> Website-> Pages->Chọn 1 page bất kỳ-> Customize
+
+
+Có ít nhất 1 blank section  
+  
+https://prnt.sc/3t3fOh7Ro4lj
+
+",1,1,0,,1,30,,0,Ấn Add Block ở blank section,,Mở cửa sổ insert panel,50
+,,,,,,,,,,,,,,,,Click chọn block Slideshow,,"Block slideshow được add và hiển thị ở trong column 1 thuộc blank section 
+![](chrome-extension://bpggmmljdiliancllaapiggllnkbjocb/logo/48.png)",50
+,,,,,,,,,,,,,,,,Ấn (+) Insert panel,,Hiển thị Insert panel ở sidebar,50
+,,,,,,,,,,,,,,,,Drag and drop block Slideshow đến blank section,"Nhấc chuột khi hiển thị placeholder
+
+","Block slideshow được add và hiển thị ở trong column 1 thuộc blank section   
+Các option khác:  
+Design:  
+- Layout: Full   
++ Slide Nav On   
++ Arrows On   
++ Show items partially Off   
+- Width: 100%   
+- Height: 600px   
+- Background: màu 4  
+- Border: none   
+- Opacity: 100   
+- Radius: 0   
+- Shadow: none   
+- Padding: left - top - right - bottom 0, 0, 0, 0   
+- Content position: Center - center   
+- Description: p3 - color 1   
+- Title: H2, color 1,   
+- Content Width = 50% so với block  
+  
+Content:   
+- Content ở các slide được điền đầy đủ   
+- Autoplay Off  
+- Delay duration default: 3s  
+-Pause on hover Off  
+  
+Ở Preview, hover hiển thị đầy đủ navigation, pagination.
+
+
+http://joxi.ru/v29Kv6MtjLk38r
+
+
+![](chrome-extension://bpggmmljdiliancllaapiggllnkbjocb/logo/48.png)",50
+91862,1583,SB_WEB_BUILDER_LB_SLS_20,Verify thêm widget Action cho tab Media với Media là video của block Slideshow,1,,"Verify thêm widget Action cho tab Media với Image của block Slideshow
+
+","- shop: https://test-insert-panel-1.myshopbase.net/  
+
+acc: nule+1@beeketing.net/ qafront@123  
+
+- shop có section: A  
+
+- Ngoài storefront đã add sẵn product B vào cart
+
+",0,0,0,0,2,238,,0,"Login to dashboard -> Online store -> Click customize template đang publish
+
+",,,50
+,,,,,,,,,,,,,,,,"Open insert panel -> drag and drop block Slideshow
+
+",,,50
+,,,,,,,,,,,,,,,,"Delete Slide 2 và Slide 3
+
+",,,50
+,,,,,,,,,,,,,,,,"Click vào icon settings của Slide 1
+
+",,"Show popup settings:   
+
+https://prnt.sc/lgbFy1OEH\_Lr
+
+",50
+,,,,,,,,,,,,,,,,"Click tab Media-> Click Image -> paste 1 link youtube bất kỳ vào field Video URL
+
+",,"Show dropdown Action ở vị trí cuối cùng của popup  
+
+https://prnt.sc/UCbLr7pWM-BK
+
+",50
+,,,,,,,,,,,,,,,,"Click dropdown Action
+
+",,"Show data như ảnh:  
+
+https://prnt.sc/4PMh9foUgNEi
+
+",50
+,,,,,,,,,,,,,,,,"Select [Open a link]
+
+",,"- Hiển thị field Target URL  
+
+- turn on toggle Open in new tab
+
+",50
+,,,,,,,,,,,,,,,,"Input data field Target URL: 
+
+","https://manual-ne-04.myshopbase.net/blogs/go-lang
+
+",,50
+,,,,,,,,,,,,,,,,"Click Save -> Open storefront -> Click video ở slide 1
+
+",,"Open page https://manual-ne-04.myshopbase.net/blogs/go-lang  
+
+ trong tab mới
+
+",50
+,,,,,,,,,,,,,,,,"Back to dashboard -> select Action = [Go to page]
+
+",,"Hiển thị dropdown Page:  
+
+https://prnt.sc/s9fg\_izhhg8E
+
+",50
+,,,,,,,,,,,,,,,,"Ở dropdown Page, chọn 1 page bất kỳ
+
+","Page = All products
+
+",,50
+,,,,,,,,,,,,,,,,"Turn off toggle [Open in new tab] -> Click Save
+
+",,,50
+,,,,,,,,,,,,,,,,"Open storefront -> Click vào slide 1
+
+",,"Redirect tới trang https://test-insert-panel-1.myshopbase.net/collections/all
+
+",50
+,,,,,,,,,,,,,,,,"Back to dashboard -> select Action = [Go to section]
+
+",,"Show dropdown section: https://prnt.sc/7Fi7yc0pRHBm
+
+",50
+,,,,,,,,,,,,,,,,"Chọn 1 section bất kỳ trong dropdown
+
+","Section = section A
+
+",,50
+,,,,,,,,,,,,,,,,"Click Save -> Open storefront -> Click vào slide 1
+
+",,"Redirect to section A
+
+",50
+,,,,,,,,,,,,,,,,"Back to dashboard -> select [Make a call]
+
+",,"Hiển thị field Phone Number:  
+
+https://prnt.sc/wtLsXmL0\_OZx
+
+",50
+,,,,,,,,,,,,,,,,"Input data vào field Phone Number
+
+","987654321
+
+",,50
+,,,,,,,,,,,,,,,,"Click Save -> Open storefront -> Click image ở slide 1
+
+",,"Open popup Phone link:   
+
+https://prnt.sc/NlKqxulpPmNd
+
+",50
+,,,,,,,,,,,,,,,,"Back to dashboard -> select Action = [Send email to]
+
+",,"Show field Email  
+
+https://prnt.sc/R7h4P1hi0so0
+
+",50
+,,,,,,,,,,,,,,,,"Click Save -> Open storefront -> Click vào slide 1
+
+",,"Show popup select email app  
+
+https://prnt.sc/Jt3bl6OD-Dpn
+
+",50
+,,,,,,,,,,,,,,,,"Back to dashboard -> select Action = [Copy to clipboard]
+
+",,"Show field Content: https://prnt.sc/N32ydiSrpA2A
+
+",50
+,,,,,,,,,,,,,,,,"Input data vào field Content
+
+","abc
+
+",,50
+,,,,,,,,,,,,,,,,"Click Save -> Open storefront -> Click vào slide 1 -> Paste ở new tab
+
+",,"Show content `abc`
+
+",50
+,,,,,,,,,,,,,,,,"Back to dashboard -> select Action = [Open a popup]
+
+",,"Hiển thị field Popup: https://prnt.sc/S\_V6q3Ub5wyz
+
+",50
+,,,,,,,,,,,,,,,,"Select popup = Cart drawer
+
+",,,50
+,,,,,,,,,,,,,,,,"Back to dashboard -> select Action = [Go to checkout]
+
+",,"Open cart drawer
+
+",50
+,,,,,,,,,,,,,,,,,,"Show lại toggle Open in new tab https://prnt.sc/nUWx0g\_2DTB3
+
+",50
+,,,,,,,,,,,,,,,,"Turn off toggle [Open in new tab] 
+
+",,,50
+,,,,,,,,,,,,,,,,"Click Save -> Open storefront -> Click vào slide 1
+
+",,"Redirect to checkout page
+
+",50
+,,,,,,,,,,,,,,,,"Back to dashboard -> click button [Add slide]
+
+",,"Ở sidebar hiển thị thêm 1 slide có tên slide 2
+
+",50
+,,,,,,,,,,,,,,,,"Click vào icon settings của Slide 2
+
+",,,50
+,,,,,,,,,,,,,,,,"Click tab Media của Slide 2
+
+",,,50
+,,,,,,,,,,,,,,,,"Click dropdown Action
+
+",,"Show data như ảnh:  
+
+https://prnt.sc/4PMh9foUgNEi
+
+",50
+,,,,,,,,,,,,,,,,"Select [Open a link]
+
+",,"- Hiển thị field Target URL  
+
+- turn on toggle Open in new tab
+
+",50
+,,,,,,,,,,,,,,,,"Input data field Target URL: 
+
+","https://manual-ne-04.myshopbase.net/blogs/go-lang
+
+",,50
+,,,,,,,,,,,,,,,,"Click Save -> Open storefront 
+
+",,,50
+,,,,,,,,,,,,,,,,"Click vào slide 1
+
+",,"Redirect to checkout page
+
+",50
+,,,,,,,,,,,,,,,,"Click vào slide 2
+
+",,"Open page https://manual-ne-04.myshopbase.net/blogs/go-lang  
+
+ trong tab mới
+
+",50
+82005,1583,SB_WEB_BUILDER_LB_SLS_02,Check remove block slideshow,0,,,Web builder đã có block slideshow và đã save,1,0,0,,2,238,,0,Click vào block slideshow,,"- Block có trạng thái selected  
+- Sidebar hiển thị detail style/settings của block slideshow",50
+,,,,,,,,,,,,,,,,Ấn remove ở sidebar/quickbar settings,,"- Sidebar back trở về layers list  
+- Block slideshow không hiển thị ở cả sidebar và webfront preview nữa",50
+,,,,,,,,,,,,,,,,Ấn Save sau đó ấn Preview,,"- Mở màn Preview  
+- Không hiển thị block slideshow ở màn preview",50
+82008,1583,SB_WEB_BUILDER_LB_SLS_03,"Check edit layout block slideshow khi đã setup content, buttons",0,,,"Product đã được apply template  
+Có block slideshow default  
+https://prnt.sc/3t3fOh7Ro4lj",1,1,0,,3,30,,0,Click vào block,,Hiển thị quickbar settings,50
+,,,,,,,,,,,,,,,,Click Items layout,,Hiển thị 2 options layout,50
+,,,,,,,,,,,,,,,,Chọn layout Split,,"- Nội dung content, vị trí buttons được đồng bộ theo layout mới tương ứng",50
+,,,,,,,,,,,,,,,,Save và đi đến màn preview,,Block slideshow với layout mới hiển thị ở preview,50
+,,,,,,,,,,,,,,,,Edit layout Full,,"- Nội dung content, vị trí buttons được đồng bộ theo layout mới tương ứng  
+- Content color (Filled color cũ) luôn hiển thị trên background color/image",50
+,,,,,,,,,,,,,,,,Save và đi đến màn preview,,Block slideshow với layout mới hiển thị ở preview,50
+82007,1583,SB_WEB_BUILDER_LB_SLS_04,"Check edit layout block slideshow khi không setup content, tắt buttons",0,,,"Product đã được apply template  
+Có block slideshow, không chứa content, buttons  
+https://prnt.sc/3t3fOh7Ro4lj",1,1,0,,4,30,,0,Click vào block,,Hiển thị quickbar settings,50
+,,,,,,,,,,,,,,,,Click items layout,,Hiển thị 2 options layout cho block slideshow,50
+,,,,,,,,,,,,,,,,Chọn layout split,,- Block hiển thị theo đúng layout,50
+,,,,,,,,,,,,,,,,Save và đi đến preview,,Block slideshow với layout mới hiển thị tại màn preview,50
+82009,1583,SB_WEB_BUILDER_LB_SLS_05,Check duplicate block slideshow,0,,,"Product đã được apply template  
+Có block slideshow default  
+https://prnt.sc/3t3fOh7Ro4lj",1,1,0,,5,238,,0,Click vào block,,Hiển thị quickbar settings,50
+,,,,,,,,,,,,,,,,Click Duplicate,,"- Tạo 1 bản copy toàn bộ nội dung, style của block slideshow ở ngay dưới block gốc  
+- Tự động select vào block duplicate.",50
+,,,,,,,,,,,,,,,,Save và đi đến preview,,Hiển thị block duplicate giống với block gốc,50
+82010,1583,SB_WEB_BUILDER_LB_SLS_06,Check hide/show block slideshow,0,,,"Product đã được apply template  
+Có block slideshow default  
+https://prnt.sc/3t3fOh7Ro4lj",1,0,0,,6,238,,0,Click vào block,,Hiển thị quickbar settings,50
+,,,,,,,,,,,,,,,,Bấm hide,,Block bị ẩn khỏi webfront preview,50
+,,,,,,,,,,,,,,,,Save và đi đến preview,,Block bị ẩn khỏi preview,50
+,,,,,,,,,,,,,,,,Tại sidebar hover vào block slideshow bấm Show,,Block slideshow hiển thị lại ở webfront preview,50
+,,,,,,,,,,,,,,,,Save và đi đến preview,,Block slideshow hiển thị tại preview,50
+91762,1583,SB_WEB_BUILDER_LB_SLS_18,Check edit style của block slideshow,0,,,"Product đã được apply template    
+Mở web builder    
+Add sẵn block slideshow    
+https://prnt.sc/3t3fOh7Ro4lj
+
+",1,0,0,0,7,238,,0,"Click block slideshow
+
+",,,50
+,,,,,,,,,,,,,,,,"Ở tab Design edit Layout
+
+","Split
+
+","Ở block slideshow tại webfront preview:    
+- Block slideshow được chia đôi thành 2 phần rõ ràng chỉ 1 bên có thể chứa content
+
+",50
+,,,,,,,,,,,,,,,,"Save và đi đến preview
+
+",,"Hiển thị layout split như ở màn webfront preview
+
+",50
+,,,,,,,,,,,,,,,,"Ở tab Design edit Content Filled color
+
+","- Chọn màu bất kỳ    
+- Chỉnh Opacity 80%(trên mã hex)
+
+","Ở block slideshow tại webfront preview:    
+- Nếu layout là Split -> sẽ nhìn rõ ràng background content đúng theo màu và opacity đã chỉnh.    
+- Nếu layout là Full, background content apply cho toàn bộ size của block. Nếu block đã add image hoặc video thì image, video sẽ đè background color
+
+",50
+,,,,,,,,,,,,,,,,"Save và đi đến preview
+
+",,"Hiển thị Pagination thay đổi như ở màn webfront preview
+
+",50
+,,,,,,,,,,,,,,,,"Ở tab Design edit content position
+
+","Top - Left
+
+","Content, buttons được align đến vị trí top left trong block slideshow
+
+",50
+,,,,,,,,,,,,,,,,"Save và đi đến preview
+
+",,"Hiển thị block slideshow có content, buttons được align top-left
+
+",50
+,,,,,,,,,,,,,,,,"Ở tab Design edit Align, width
+
+","- Align left    
+- Width 50%
+
+","Block được căn về sát phía bên trái của column    
+Width = 50% column
+
+",50
+,,,,,,,,,,,,,,,,"Save và đi đến preview
+
+",,"Hiển thị block slideshow đúng như ở màn webfront preview
+
+",50
+,,,,,,,,,,,,,,,,"Ở tab Design edit Height
+
+","250 px
+
+","Height của block hiển thị đúng 250px
+
+",50
+,,,,,,,,,,,,,,,,"Save và đi đến preview
+
+",,"Hiển thị block slideshow đúng như ở màn webfront preview
+
+",50
+,,,,,,,,,,,,,,,,"Ở tab Design edit Common Background
+
+","color preset 2
+
+","Màu background thay đổi đúng với màu đã chọn
+
+",50
+,,,,,,,,,,,,,,,,"Save và đi đến preview
+
+",,"Hiển thị block slideshow đúng như ở màn webfront preview
+
+",50
+,,,,,,,,,,,,,,,,"Ở tab Design edit Border
+
+","Size m
+
+","Block xuất hiện border size m bao quanh
+
+",50
+,,,,,,,,,,,,,,,,"Save và đi đến preview
+
+",,"Hiển thị block slideshow đúng như ở màn webfront preview
+
+",50
+,,,,,,,,,,,,,,,,"Ở tab Design edit Opacity
+
+","80%
+
+","Block slideshow bị mờ đi, value css style value 0.8
+
+",50
+,,,,,,,,,,,,,,,,"Save và đi đến preview
+
+",,"Hiển thị block slideshow đúng như ở màn webfront preview
+
+",50
+,,,,,,,,,,,,,,,,"Ở tab Design edit Radius
+
+","- 50%    
+- set border bất kỳ
+
+","Hiển thị border bao quanh có 4 góc là đường cong
+
+",50
+,,,,,,,,,,,,,,,,"Save và đi đến preview
+
+",,"Hiển thị block slideshow đúng như ở màn webfront preview
+
+",50
+,,,,,,,,,,,,,,,,"Ở tab Design edit Shadow
+
+","Strong
+
+","Block có hiệu ứng đổ bóng css style value 1
+
+",50
+,,,,,,,,,,,,,,,,"Save và đi đến preview
+
+",,"Hiển thị block slideshow đúng như ở màn webfront preview
+
+",50
+,,,,,,,,,,,,,,,,"Ở tab Design edit Padding
+
+","10, 20,10,20
+
+","Hiển thị content bên trong có khoảng cách với viền block tương ứng đã set
+
+",50
+,,,,,,,,,,,,,,,,"Save và đi đến preview
+
+",,"Hiển thị block slideshow đúng như ở màn webfront preview
+
+",50
+,,,,,,,,,,,,,,,,"Ở tab Design edit Margin
+
+","20,80,44,100
+
+","Thay đổi khoảng cách giữa các block tương ứng như đã set
+
+",50
+,,,,,,,,,,,,,,,,"Save và đi đến preview
+
+",,"Hiển thị block slideshow đúng như ở màn webfront preview
+
+",50
+,,,,,,,,,,,,,,,,"Ở tab Design edit kết hợp các style
+
+",,,50
+,,,,,,,,,,,,,,,,"Save và đi đến preview
+
+",,"Hiển thị block slideshow đúng như ở màn webfront preview
+
+",50
+82141,1583,SB_WEB_BUILDER_LB_SLS_07,Check edit style của block slideshow,0,,,"Product đã được apply template  
+Mở web builder  
+Add sẵn block slideshow  
+https://prnt.sc/3t3fOh7Ro4lj",1,1,0,,7,238,,0,Click block slideshow,,,1
+,,,,,,,,,,,,,,,,Ở tab Design edit Layout,Split,"Ở block slideshow tại webfront preview:  
+- Block slideshow được chia đôi thành 2 phần rõ ràng chỉ 1 bên có thể chứa content",2
+,,,,,,,,,,,,,,,,Save và đi đến preview,,Hiển thị layout split như ở màn webfront preview,3
+,,,,,,,,,,,,,,,,Ở tab Design edit Content Filled color,"- Chọn màu bất kỳ  
+- Chỉnh Opacity 80%(trên mã hex)","Ở block slideshow tại webfront preview:  
+- Nếu layout là Split -> sẽ nhìn rõ ràng background content đúng theo màu và opacity đã chỉnh.  
+- Nếu layout là Full, background content apply cho toàn bộ size của block. Nếu block đã add image hoặc video thì image, video sẽ đè background color",4
+,,,,,,,,,,,,,,,,Save và đi đến preview,,Hiển thị Pagination thay đổi như ở màn webfront preview,5
+,,,,,,,,,,,,,,,,Ở tab Design edit content position,Top - Left,"Content, buttons được align đến vị trí top left trong block slideshow",6
+,,,,,,,,,,,,,,,,Save và đi đến preview,,"Hiển thị block slideshow có content, buttons được align top-left",7
+,,,,,,,,,,,,,,,,Ở tab Design edit Common Position,Manual/auto,"- Manual: block sẽ có thêm z-index (lúc bỏ select block) và có thể di chuyển tuỳ thích trong column  
+- Auto: ko có z-index (lúc bỏ select block) và nếu di chuyển trong column thì sẽ chuyển manual",10
+,,,,,,,,,,,,,,,,"Ở tab Design edit Align, width","- Align left  
+- Width 50%","Block được căn về sát phía bên trái của column  
+Width = 50% column",12
+,,,,,,,,,,,,,,,,Save và đi đến preview,,Hiển thị block slideshow đúng như ở màn webfront preview,13
+,,,,,,,,,,,,,,,,Ở tab Design edit Height,250 px,Height của block hiển thị đúng 250px,14
+,,,,,,,,,,,,,,,,Save và đi đến preview,,Hiển thị block slideshow đúng như ở màn webfront preview,15
+,,,,,,,,,,,,,,,,Ở tab Design edit Common Background,color preset 2,Màu background thay đổi đúng với màu đã chọn,16
+,,,,,,,,,,,,,,,,Save và đi đến preview,,Hiển thị block slideshow đúng như ở màn webfront preview,17
+,,,,,,,,,,,,,,,,Ở tab Design edit Border,Size m,Block xuất hiện border size m bao quanh,18
+,,,,,,,,,,,,,,,,Save và đi đến preview,,Hiển thị block slideshow đúng như ở màn webfront preview,19
+,,,,,,,,,,,,,,,,Ở tab Design edit Opacity,80%,"Block slideshow bị mờ đi, value css style value 0.8",20
+,,,,,,,,,,,,,,,,Save và đi đến preview,,Hiển thị block slideshow đúng như ở màn webfront preview,21
+,,,,,,,,,,,,,,,,Ở tab Design edit Radius,"- 50%  
+- set border bất kỳ",Hiển thị border bao quanh có 4 góc là đường cong,22
+,,,,,,,,,,,,,,,,Save và đi đến preview,,Hiển thị block slideshow đúng như ở màn webfront preview,23
+,,,,,,,,,,,,,,,,Ở tab Design edit Shadow,Strong,Block có hiệu ứng đổ bóng css style value 1,24
+,,,,,,,,,,,,,,,,Save và đi đến preview,,Hiển thị block slideshow đúng như ở màn webfront preview,25
+,,,,,,,,,,,,,,,,Ở tab Design edit Padding,"10, 20,10,20",Hiển thị content bên trong có khoảng cách với viền block tương ứng đã set,26
+,,,,,,,,,,,,,,,,Save và đi đến preview,,Hiển thị block slideshow đúng như ở màn webfront preview,27
+,,,,,,,,,,,,,,,,Ở tab Design edit Margin,"20,80,44,100",Thay đổi khoảng cách giữa các block tương ứng như đã set,28
+,,,,,,,,,,,,,,,,Save và đi đến preview,,Hiển thị block slideshow đúng như ở màn webfront preview,29
+,,,,,,,,,,,,,,,,Ở tab Design edit kết hợp các style,,,30
+,,,,,,,,,,,,,,,,Save và đi đến preview,,Hiển thị block slideshow đúng như ở màn webfront preview,31
+82179,1583,SB_WEB_BUILDER_LB_SLS_08,Check edit content block slideshow,0,,,"- Đã add block slideshow  
+https://prnt.sc/3t3fOh7Ro4lj",1,1,0,,8,30,,0,Chọn block slideshow ở preview hoặc sidebar,,,1
+,,,,,,,,,,,,,,,,Chọn Content,,"Default:  
+- 3 slide  
+- Auto play off
+
+",2
+,,,,,,,,,,,,,,,,Click edit slide 1,,"- Hiển thị popup có chứa 3 tab Content, Button, Background để user edit nội dung  
+- Ở live preview tự động chuyển slide 1
+
+",3
+,,,,,,,,,,,,,,,,Click edit slide 2,,"- Hiển thị popup có chứa 3 tab Content, Button, Background để user edit nội dung  
+- Ở live preview tự động chuyển đến slide 2",4
+,,,,,,,,,,,,,,,,Click edit slide 3,,"- Hiển thị popup có chứa 3 tab Content, Button, Background để user edit nội dung  
+- Ở live preview tự động chuyển đến slide 2",5
+,,,,,,,,,,,,,,,,Click Add slide,"a. Click 1 lần  
+b. Khi đã có 8 slide","a. Add thêm 1 slide mới với content default, wf tự động select vào slide mới add  
+b. Không add được thêm slide (max 8 slide)",6
+,,,,,,,,,,,,,,,,Drag and drop slide,"dnd Slide 2 lên vị trí slide 1
+
+",- Thứ tự slide sẽ thay đổi 2-1 trên cả sidebar và preview,7
+,,,,,,,,,,,,,,,,Click Delete,"a. Slide cuối  
+b. Delete đến khi chỉ còn 1 slide","a. Slide cuối mất khỏi list slide  
+b. Nút delete bị ẩn mất",8
+,,,,,,,,,,,,,,,,Click Duplicate,"a. slide 1  
+b. Duplicate > 8 lần","a. Sao chép slide 1 với content, style trùng khớp  
+b. Duplicate lần 7 nút Add slide bị ẩn & user không duplicate được thêm nữa  
+Khi duplicate thêm 1 slide nav sẽ tăng thêm 1 chấm max 8",9
+,,,,,,,,,,,,,,,,Bật auto play,,"- Delay duration 3s  
+- Pause on hover off",10
+,,,,,,,,,,,,,,,,Edit delay duration và pause on hover,"- Delay 6s  
+- Pause on hover: On
+
+","Tự động chuyển slide kế tiếp sau 6s.  
+Không tự động chuyển slide khi hover vào slide.",11
+,,,,,,,,,,,,,,,,Save và Preview,,"Verify Element - HTML Tag:  
+Sub heading -  h3  
+Heading - h2  
+Description - p  
+theo data : <https://docs.google.com/spreadsheets/d/1KXvrzich2SkqEgdfxvXdRBSf6H3u28JSDV7t9cXCWrs/edit#gid=0>  
+https://prnt.sc/Y4aFG9lb4m6u",12
+82184,1583,SB_WEB_BUILDER_LB_SLS_09,Check thay đổi 2 layout Full và Split ở block slideshow,0,,,"Đã add block slideshow  
+https://prnt.sc/3t3fOh7Ro4lj",1,1,0,,9,30,,0,Select block slideshow,,,1
+,,,,,,,,,,,,,,,,Click layout,,"Mở popup layout  
+Default block slideshow sẽ có layout Full với các settings:  
+- Slide Nav (pagination) On,  
+- Arrows (Navigation) On,  
+- Show items partially Off",2
+,,,,,,,,,,,,,,,,Chuyển layout Split,,"Block slideshow chuyển sang layout split với các default settings:  
+- Slide Nav On  
+- Arrows On  
+- Flip content off  
+- Content nằm phía bên tay trái của block",3
+,,,,,,,,,,,,,,,,Edit settings trong layout Split,"- Slide Nav Off  
+- Arrows Off  
+- Flip content On","- Content được chuyển sang phía bên phải  
+- Không hiển thị arrow, slide nav khi hover vào vùng chứa button (left, right, bottom)",4
+,,,,,,,,,,,,,,,,Save và tới màn preview,,Hiển thị layout tương ứng như ở webfront preview,5
+,,,,,,,,,,,,,,,,Chuyển về layout Full và edit,"- Có ít nhất 3 slide  
+- Slide Nav On  
+- Arrow Off  
+- Show items partially On  
+- Block width >800px","- Không hiển thị arrow  
+- Width content = 50% block width
+
+",6
+,,,,,,,,,,,,,,,,Save và tới màn preview,,Hiển thị layout tương ứng như ở webfront preview,7
+,,,,,,,,,,,,,,,,Edit layout Full,"- Slide Nav Off  
+- Arrow On  
+- Show items partially On  
+- Block width <800px","- Không hiển thị slide  nav  
+- Width content = 80% block width",8
+,,,,,,,,,,,,,,,,Save và tới màn preview,,Hiển thị layout tương ứng như ở webfront preview,9
+82185,1583,SB_WEB_BUILDER_LB_SLS_10,"Check edit content, button & media của 1 slide",0,,,Đã add block slideshow,1,1,0,,10,30,,0,Click Settings,,Hiển thị danh sách slide của block slideshow,1
+,,,,,,,,,,,,,,,,Click icon edit slide,,"Mở popup có 3 tab content, button, media. Mặc định ở tab content  
+Có sẵn text:  
+Sub heading: Deal of the week  
+Heading: 40% off Suffix  
+Description: Description",2
+,,,,,,,,,,,,,,,,Edit Content,"Sub heading: trống  
+Heading: Test Heading  
+Description: test slideshow",Chỉ hiển thị Heading và Description,3
+,,,,,,,,,,,,,,,,Save và đến màn preview,,Hiển thị block slideshow chỉ có Heading và description như ở webfront,4
+,,,,,,,,,,,,,,,,Edit Button,"Tắt button 1, 2","- Không hiển thị button nào ở block slideshow  
+- Ẩn options label, action, new tab...",5
+,,,,,,,,,,,,,,,,Save và đến màn preview,,Hiển thị block slideshow không có button như ở webfront,6
+,,,,,,,,,,,,,,,,Edit Button,"- Bật button 1  
+- Xoá label  
+- Go to page  
+- New tab On",Chỉ hiển thị khung button (tương tự block button khi ko có label),7
+,,,,,,,,,,,,,,,,Save và đến màn preview,,Hiển thị block slideshow có button không label như ở webfront,8
+,,,,,,,,,,,,,,,,Click button ở block slideshow tại preview,,Mở tab mới chuyển đúng đến page đã set,9
+,,,,,,,,,,,,,,,,Edit Button,"- Bật button 2  
+- Set label cho 2 button   
+- Go to page All Products  
+- New tab Off",Hiển thị  button  secondary ở block slideshow,10
+,,,,,,,,,,,,,,,,Save và đến màn preview,,Hiển thị button secondary ở block slideshow như ở webfront preview,11
+,,,,,,,,,,,,,,,,Click button ở block slideshow tại preview,,Chuyển đến page đã setup ở ngay tại cửa sổ màn preview,12
+,,,,,,,,,,,,,,,,Edit Button,"- Bật button 2  
+- Label button  
+- Redirect to link  
+- Link chứa https://. VD: https://google.com",Hiển thị button với label button ở block slideshow,13
+,,,,,,,,,,,,,,,,Save và đến màn preview,,Hiển thị button với label button ở block slideshow như ở webfront preview,14
+,,,,,,,,,,,,,,,,Click button ở block slideshow tại preview,,Chuyển đến google.com,15
+,,,,,,,,,,,,,,,,Edit Button,"- Bật button 2  
+- Label button  
+- Redirect to link  
+- Link ko chứa https://. VD: youtube.com",Hiển thị button với label button ở block slideshow,16
+,,,,,,,,,,,,,,,,Save và đến màn preview,,Hiển thị button với label button ở block slideshow như ở webfront preview,17
+,,,,,,,,,,,,,,,,Click button ở block slideshow tại preview,,Chuyển đến đường dẫn https://(shop-domain)/products/youtube.com,18
+,,,,,,,,,,,,,,,,Edit Media,"- Upload Image   
+- Size Contain  
+- Position Center Left  
+- Overlay: Red/30% opacity","Hiển thị ảnh ở trong block slideshow dạng resize width, height để vừa với block và được căn sang lề trái",19
+,,,,,,,,,,,,,,,,Save và đến màn preview,,Hiển thị background image đúng với image đã upload,20
+,,,,,,,,,,,,,,,,Edit Media,"- Add video URL từ youtube  
+- Overlay: Grey/25% opacity","Video hiển thị full trên block slideshow, video đúng với url được add",21
+,,,,,,,,,,,,,,,,Save và đến màn preview,,Hiển thị background video giống ở webfront preview,22
+82187,1583,SB_WEB_BUILDER_LB_SLS_11,Check tương tác với block slideshow ở webfront preview,0,,,"Đã add block slideshow  
+<https://prnt.sc/3t3fOh7Ro4lj> ",1,1,0,,11,30,,0,Tại webfront preview ấn arrows left/right,,Chuyển đến slide trước/sau slide hiện tại,1
+,,,,,,,,,,,,,,,,Tại webfront preview ấn slide nav,,Chuyển đến slide có thứ tự tương ứng,2
+,,,,,,,,,,,,,,,,Tại webfront preview select block slideshow,,Resize được block,3
+82188,1583,SB_WEB_BUILDER_LB_SLS_12,Check validate Content block slideshow với size block khác nhau,0,,,Đã add block slideshow,1,1,0,,12,30,,0,Resize block slideshow width < 800px,"a. 799px  
+b. Hết cỡ","a. Width content = 80% width block = 639.2px  
+b. Min width  = 80% 256px",1
+,,,,,,,,,,,,,,,,Resize block slideshow width > 800px,"a. 801px  
+b. 1361px","a. Width content = 50% width block = 400.5px  
+b. Width content = max width 680px",2
+,,,,,,,,,,,,,,,,Resize block slideshow height hết cỡ,,Min height = content + 80px,3
+,,,,,,,,,,,,,,,,"Nhập đầy đủ sub heading, heading & description",,"Line4 spacing:  
+- sub heading - heading: 4px  
+- heading - description: 4px  
+- content - button: 24px",4
+82189,1583,SB_WEB_BUILDER_LB_SLS_13,Check block slideshow ở các trình duyệt khác nhau,0,,,,1,0,0,,13,238,,0,Check case 1-12 ở các trình duyệt khác nhau,,Pass đúng như kết quả mong muốn ,50
+82191,1583,SB_WEB_BUILDER_LB_SLS_14,Check block slideshow hiển thị ở Mobile view,1,238,Đã add block slideshow,BLock slideshow có layout split,1,1,0,,14,30,,0,Click icon mobile,,"- Chuyển qua Mobile view  
+- Default settings:  
++ Padding content: all 40  
++ Content width 100%  
++ Background color 4  
+Các settings khác tương tự Desktop",1
+95733,1583,SB_WEB_BUILDER_LB_SLS_27,Verify background dạng image của các block/column/row khác Slideshow,1,10,,"""1. Acc: shopbase@beeketing.net    
+- Dev: front-improve-wb-ux    
+- Prodtest: front-improve-wb-ux-prodtest    
+- Prod: front-improve-wb-ux-dev
+
+
+2. shop setting theme V3.     
+3. Vào web builder  
+Có 2 block:  
+- Button 1:   
++ có background là image 1  
++ Position: Right-Center  
++ Overlay: color 3  
++ Repeat: on  
++ Size: Cover  
+- Button 2: có background là color 3
+
+",0,0,0,0,50,307,,0,"Click vào Button 1 ở webfront
+
+",,"Bên sidebar, mở setting của block Button 1
+
+",50
+,,,,,,,,,,,,,,,,"Click tab Design -> Click Background
+
+",,"Mở tab [Image] với giao diện  https://prnt.sc/9yPOh\_2rsQqG trong đó:  
+- Phần Upload image giữ nguyên  
+- Field Style chọn Cover
+
+",50
+,,,,,,,,,,,,,,,,"Click field Style
+
+",,"Show popup Style với các field:   
+- Đang chọn ảnh Cover  
+- Overlay: color 3  
+- Position: right- center  
+- Show field Repeat: On
+
+",50
+,,,,,,,,,,,,,,,,"Edit data background -> Save
+
+","Chọn ảnh từ Gallery
+
+","Ngoài SF, background apply như đúng setting trong WB
+
+",50
+,,,,,,,,,,,,,,,,"Back lại website builder, click block [Button 2] ở webfront
+
+",,"Bên sidebar, mở setting của block Button 2
+
+",50
+,,,,,,,,,,,,,,,,"Click tab Design -> Click Background
+
+",,"Open tab Color với đang chọn Color 3
+
+",50
+,,,,,,,,,,,,,,,,"Click field Image
+
+",,"Mở tab [Image] với giao diện  https://prnt.sc/9yPOh\_2rsQqG trong đó:  
+- File Upload image hiển thị như cũ: https://prnt.sc/oWO-o0o5Ob70  
+- Field Style chọn Cover
+
+",50
+,,,,,,,,,,,,,,,,"Click field Style
+
+",,"Show popup Style với các field: (data default)  
+- Đang chọn ảnh Cover  
+- Overlay: color 3  
+- Position: center- center  
+- Show field Repeat: Off
+
+",50
+,,,,,,,,,,,,,,,,"Edit data background -> Save
+
+","Upload ảnh bất kỳ
+
+","Ngoài SF, background apply như đúng setting trong WB
+
+",50
+,,,,,,,,,,,,,,,,"Back lại website builder, drag& drop block [Paragraph] -> Click field Background ở sidebar
+
+",,"Open tab Color với data là None
+
+",50
+,,,,,,,,,,,,,,,,"click tab Image
+
+",,"Mở tab [Image] với giao diện  https://prnt.sc/9yPOh\_2rsQqG trong đó:  
+- File Image hiển thị như cũ: https://prnt.sc/oWO-o0o5Ob70  
+- Field Style chọn Cover
+
+",50
+95732,1583,SB_WEB_BUILDER_LB_SLS_26,Verify field Style ở phần MOBILE IMAGE,1,10,"Verify field Style ở phần MOBILE IMAGE
+
+","""1. Acc: shopbase@beeketing.net    
+- Dev: front-improve-wb-ux    
+- Prodtest: front-improve-wb-ux-prodtest    
+- Prod: front-improve-wb-ux-dev
+
+
+2. shop setting theme V3.     
+3. Vào web builder
+
+",1,0,0,0,50,307,,0,"Open Insert panel -> Drag&drop block Slideshow vào webfront 
+
+",,"Ở webfront, hiển thị preview Slideshow bản Desktop đúng với Setting của Desktop
+
+",50
+,,,,,,,,,,,,,,,,"Click button [Settings] ở Slide 2 -> Click Media
+
+",,"Show setting của Mobile và Desktop 
+
+",50
+,,,,,,,,,,,,,,,,"Click field Style của MOBILE IMAGE
+
+",,"Default chọn ảnh Cover  
+Overlay: None  
+Position: Center-Center
+
+",50
+,,,,,,,,,,,,,,,,"Chọn Contain
+
+",,"Default chọn ảnh Cover  
+Overlay: None  
+Position: Center-Center  
+Repeat: Off
+
+",50
+95731,1583,SB_WEB_BUILDER_LB_SLS_25,Verify field Mobile Image ở phần MOBILE IMAGE,1,10,"Verify field Mobile Image ở phần MOBILE IMAGE
+
+","""1. Acc: shopbase@beeketing.net    
+- Dev: front-improve-wb-ux    
+- Prodtest: front-improve-wb-ux-prodtest    
+- Prod: front-improve-wb-ux-dev
+
+
+2. shop setting theme V3.     
+3. Vào web builder
+
+",1,0,0,0,50,307,,0," Open Insert panel -> Drag&drop block Slideshow vào webfront 
+
+",,"Ở webfront, hiển thị preview Slideshow bản Desktop 
+
+",50
+,,,,,,,,,,,,,,,,"Click button [Settings] ở Slide 1 -> Click Media
+
+",,"Show setting của Mobile và Desktop 
+
+",50
+,,,,,,,,,,,,,,,,"Click field Mobile Image ở phần [MOBILE IMAGE]
+
+",,"Show các field:   
+- Upload  
+- Select from Gallery  
+- Remove
+
+",50
+,,,,,,,,,,,,,,,,"Click [Upload]
+
+",,"Mở popup chọn image ở computer
+
+",50
+,,,,,,,,,,,,,,,,"Upload ảnh và Save
+
+",,"Ngoài SF, trên mobile sẽ show ảnh như upload. Slide ở desktop không bị ảnh hưởng
+
+",50
+,,,,,,,,,,,,,,,,"Back lại WB, Click [Gallery]
+
+",,"Show popup Select image: https://prnt.sc/UkBTo4TED5Gw
+
+",50
+,,,,,,,,,,,,,,,,"Select ảnh từ Gallery -> Save
+
+",,"Ngoài SF, trên mobile sẽ show ảnh như upload. Slide ở desktop không bị ảnh hưởng
+
+",50
+,,,,,,,,,,,,,,,,"Click [Remove]
+
+",,"Xóa ảnh của slide, ở webfront không show image của slide + ở box dropdown không hiển thị ảnh: https://prnt.sc/k3vzmxj1A71h
+
+",50
+,,,,,,,,,,,,,,,,"Click Save -> Open SF
+
+",,"Ngoài SF, trên mobile slide sẽ show theo setting của desktop (ảnh/video và phần Style của desktop)
+
+",50
+95730,1583,SB_WEB_BUILDER_LB_SLS_24,Verify hiển thị slideshow với slide loại Video case xóa ảnh Mobile image,1,10,"Verify hiển thị slideshow với slide loại Video case xóa ảnh Mobile image
+
+","""1. Acc: shopbase@beeketing.net    
+- Dev: front-improve-wb-ux    
+- Prodtest: front-improve-wb-ux-prodtest    
+- Prod: front-improve-wb-ux-dev
+
+
+2. shop setting theme V3.     
+3. Vào web builder
+
+
+Data: setting Slideshow cho Mobile và Desktop khác nhau (Desktop slide là video)
+
+",1,0,0,0,50,307,,0,"Open Insert panel -> Drag&drop block Slideshow vào webfront 
+
+",,"Ở webfront, hiển thị preview Slideshow bản Desktop đúng với Setting của Desktop
+
+",50
+,,,,,,,,,,,,,,,,"Switch sang mobile
+
+",,"Ở preview, hiển thị preview Slideshow bản Mobile đúng với setting ở Mobile
+
+",50
+,,,,,,,,,,,,,,,,"Click button [Settings] ở Slide 1 -> Click Media
+
+",,"Show setting của Mobile và Desktop 
+
+",50
+,,,,,,,,,,,,,,,,"Xóa setting Mobile image
+
+",,"Ở preview, hiển thị preview Slideshow bản Mobile giống với Setting của Desktop
+
+",50
+,,,,,,,,,,,,,,,,"Click button [Save] -> Open SF
+
+",,"Slideshow ở mobile và desktop hiển thị giống nhau, hiển thị đúng theo setting của Desktop (slide là video)
+
+",50
+95729,1583,SB_WEB_BUILDER_LB_SLS_23,Verify hiển thị slideshow với slide loại Image case xóa ảnh Mobile image,1,10,"Verify hiển thị slideshow với slide loại Image case xóa ảnh Mobile image
+
+","""1. Acc: shopbase@beeketing.net    
+- Dev: front-improve-wb-ux    
+- Prodtest: front-improve-wb-ux-prodtest    
+- Prod: front-improve-wb-ux-dev
+
+
+2. shop setting theme V3.     
+3. Vào web builder
+
+
+Data: setting Slideshow cho Mobile và Desktop khác nhau
+
+",1,0,0,0,50,307,,0,"Open Insert panel -> Drag&drop block Slideshow vào webfront 
+
+",,"Ở webfront, hiển thị preview Slideshow bản Desktop đúng với Setting của Desktop
+
+",50
+,,,,,,,,,,,,,,,,"Switch sang mobile
+
+",,"Ở preview, hiển thị preview Slideshow bản Mobile đúng với setting ở Mobile
+
+",50
+,,,,,,,,,,,,,,,,"Click button [Settings] ở Slide 1 -> Click Media
+
+",,"Show setting của Mobile và Desktop 
+
+",50
+,,,,,,,,,,,,,,,,"Xóa setting Mobile image
+
+",,"Ở preview, hiển thị preview Slideshow bản Mobile giống với Setting của Desktop
+
+",50
+,,,,,,,,,,,,,,,,"Click button [Save] -> Open SF
+
+",,"Slideshow ở mobile và desktop hiển thị giống nhau, hiển thị đúng theo setting của Desktop (slide là ảnh)
+
+",50
+95728,1583,SB_WEB_BUILDER_LB_SLS_22,Verify giao diện block Slideshow khi được kéo mới ở Insert panel,1,10,"Verify giao diện block Slideshow khi được kéo mới ở Insert panel
+
+","""1. Acc: shopbase@beeketing.net    
+- Dev: front-improve-wb-ux    
+- Prodtest: front-improve-wb-ux-prodtest    
+- Prod: front-improve-wb-ux-dev
+
+
+2. shop setting theme V3.     
+3. Vào web builder
+
+",1,0,0,0,50,307,,0,"Open Insert panel -> Drag&drop block Slideshow vào webfront 
+
+",,"Ở webfront, show block Slideshow với setting default
+
+",50
+,,,,,,,,,,,,,,,,"Switch sang mobile
+
+",,"Webfront hiển thị slideshow bản mobile có setting giống desktop
+
+",50
+,,,,,,,,,,,,,,,,"Click button [Settings] ở slide 3 -> Click Media
+
+",,"Hiển thị giao diện như design: https://prnt.sc/rcZbdCNCIVna (không có data field Mobile Image và Style ở phần MOBILE IMAGE)
+
+",50
+,,,,,,,,,,,,,,,,"Input data phần IMAGE MOBILE 
+
+","Image mobile = upload 1 ảnh mới  
+Style = Contain, Repeat = On
+
+","Ở webfront, preview Slideshow ở mobile hiển thị như setting, không bị đồng bộ với desktop
+
+",50
+,,,,,,,,,,,,,,,,"Click Save -> Open SF
+
+",,"Slideshow hiển thị ở mobile và desktop giống y như setting trong WB
+
+",50
+95727,1583,SB_WEB_BUILDER_LB_SLS_21,Migrate các block Slideshow cũ,1,10,,"Login dashboard -> Open Online Store -> Click Customize   
+Block Slideshow có 3 slide có các settings:  
+- Slide 1:   
+    + Là Image  
+    + Size = Cover  
+    + Position = Top-left  
+    + Overlay = color 3  
+    + Repeat = off  
+    + Action = Action a link  
+    + Target URL = ahihi.com   
+    +Open in new tab = turn on    
+- Slide 2:  
+    + Là Image  
+    + Size = Contain  
+    + Position = Top-right  
+    + Overlay = color 4  
+    + Repeat = on  
+    + Action = Go to page  
+    + Page = Cart  
+    +Open in new tab = turn on    
+- Slide 3:   
+    + Là Video  
+    + Video URL: https://www.youtube.com/watch?v=IJT51et7owQ  
+    + Overlay: color 2  
+    + Action = Go to checkout  
+    +Open in new tab = turn off   
+- shop: https://test-insert-panel-1.myshopbase.net/    
+acc: nule+1@beeketing.net/ qafront@123  
+
+",0,0,0,0,50,307,,0,"Click Slideshow ở webfront
+
+",,"Ở sidebar, open setting của Slideshow
+
+",50
+,,,,,,,,,,,,,,,,"Click icon [Settings] ở Slide 1 -> Click tab [Media]
+
+",,"- Tại tab [Media] show giao diện:  
+- Show field Image: icon là ảnh đã upload  
+- Style: Cover  
+- Block MOBILE IMAGE: https://prnt.sc/yp4X-bHmKMgT  
+-  Action = Action a link  
+- Target URL = ahihi.com   
+- Open in new tab = turn on  
+
+",50
+,,,,,,,,,,,,,,,,"Click field Image
+
+",,"Show popup gồm 3 option:  
+Upload  
+Gallery  
+Remove
+
+",50
+,,,,,,,,,,,,,,,,"Click [Upload]
+
+",,"Mở popup chọn image ở computer
+
+",50
+,,,,,,,,,,,,,,,,"Click [Gallery]
+
+",,"Show popup Select image: https://prnt.sc/UkBTo4TED5Gw
+
+",50
+,,,,,,,,,,,,,,,,"Click [Remove]
+
+",,"Xóa ảnh của slide, ở webfront không show image của slide + ở box dropdown không hiển thị ảnh: https://prnt.sc/k3vzmxj1A71h
+
+",50
+,,,,,,,,,,,,,,,,"Click field Style
+
+",,"Show popup Style với các field:   
+- Đang chọn ảnh đầu tiên  
+- Overlay: color 3  
+- Position: Top-left  
+- Không show field Repeat
+
+",50
+,,,,,,,,,,,,,,,,"Hover vào ảnh đầu tiên
+
+",,"Show tooltip như ảnh:  
+https://prnt.sc/etroOwDC9d98
+
+",50
+,,,,,,,,,,,,,,,,"Open ngoài SF
+
+",,"Ở cả mobile và desktop, Slide 1 hiển thị giống nhau và đúng với setting trong WB
+
+",50
+,,,,,,,,,,,,,,,,"Back lại WB, input data cho MOBILE IMAGE -> Click Save
+
+","Input data for MOBILE IMAGE:   
+- Mobile image: upload 1 ảnh bất kỳ  
+- Style: Cover + Overlay: color 1 + Position: Bottom-right + Không show repeat
+
+","Ở webfront, bản mobile hiển thị Slide 1 đúng như setting, khác với setting ở Desktop
+
+",50
+,,,,,,,,,,,,,,,,"Open ngoài SF
+
+",,"Mobile và Desktop show slide1 theo setting riêng, không giống nhau
+
+",50
+,,,,,,,,,,,,,,,,"Back lại WB, click icon [Settings] ở Slide 2
+
+",,"Ở sidebar, open setting của Slideshow
+
+",50
+,,,,,,,,,,,,,,,,"Click tab [Media]
+
+",,"- Tại tab [Media] show giao diện:  
+- Show field Image: icon là ảnh đã upload  
+    + Style: Contain  
+    + Action = Go to page  
+    + Page = Cart  
+    +Open in new tab = turn on  
+
+",50
+,,,,,,,,,,,,,,,,"Click field Image
+
+",,"Show popup gồm 3 option:  
+Upload  
+Gallery  
+Remove
+
+",50
+,,,,,,,,,,,,,,,,"Click [Upload]
+
+",,"Mở popup chọn image ở computer
+
+",50
+,,,,,,,,,,,,,,,,"Click [Gallery]
+
+",,"Show popup Select image: https://prnt.sc/UkBTo4TED5Gw
+
+",50
+,,,,,,,,,,,,,,,,"Click [Remove]
+
+",,"Xóa ảnh của slide, ở webfront không show image của slide + ở box dropdown không hiển thị ảnh: https://prnt.sc/k3vzmxj1A71h
+
+",50
+,,,,,,,,,,,,,,,,"Click field Style
+
+",,"Show popup Style với các field:   
+- Đang chọn ảnh đầu tiên  
+- Overlay: color 4  
+- Position: Top-right  
+- Show field Repeat
+
+",50
+,,,,,,,,,,,,,,,,"Hover vào ảnh đầu tiên
+
+",,"Show tooltip như ảnh:  
+https://prnt.sc/RjhvsCIVjhox
+
+",50
+,,,,,,,,,,,,,,,,"Open ngoài SF
+
+",,"Ở cả mobile và desktop, Slide 1 hiển thị giống nhau và đúng với setting trong WB
+
+",50
+,,,,,,,,,,,,,,,,"Back lại WB, input data cho MOBILE IMAGE -> Click Save
+
+","Input data for MOBILE IMAGE:   
+- Mobile image: upload 1 ảnh bất kỳ  
+- Style: Cover + Overlay: color 1 + Position: Bottom-right + Không show repeat
+
+","Ở webfront, bản mobile hiển thị Slide 1 đúng như setting, khác với setting ở Desktop
+
+",50
+,,,,,,,,,,,,,,,,"Open ngoài SF
+
+",,"Mobile và Desktop show slide1 theo setting riêng, không giống nhau
+
+",50
+,,,,,,,,,,,,,,,,"Back lại WB, click icon [Settings] ở Slide 3
+
+",,"Ở sidebar, open setting của Slideshow
+
+",50
+,,,,,,,,,,,,,,,,"Click tab [Media]
+
+",,"- Tại tab [Media] show giao diện:  
+- Show field Video  
+    + Style: Contain  
+    + Action = Go to page  
+    + Page = Cart  
+    +Open in new tab = turn on  
+
+",50
+,,,,,,,,,,,,,,,,"Click field Image
+
+",,"Show popup gồm 3 option:  
+Upload  
+Gallery  
+Remove
+
+",50
+,,,,,,,,,,,,,,,,"Click [Upload]
+
+",,"Mở popup chọn image ở computer
+
+",50
+,,,,,,,,,,,,,,,,"Click [Gallery]
+
+",,"Show popup Select image: https://prnt.sc/UkBTo4TED5Gw
+
+",50
+,,,,,,,,,,,,,,,,"Click [Remove]
+
+",,"Xóa ảnh của slide, ở webfront không show image của slide + ở box dropdown không hiển thị ảnh: https://prnt.sc/k3vzmxj1A71h
+
+",50
+,,,,,,,,,,,,,,,,"Click field Style
+
+",,"Show popup Style với các field:   
+- Đang chọn ảnh đầu tiên  
+- Overlay: color 4  
+- Position: Top-right  
+- Show field Repeat
+
+",50
+,,,,,,,,,,,,,,,,"Hover vào ảnh đầu tiên
+
+",,"Show tooltip như ảnh:  
+https://prnt.sc/RjhvsCIVjhox
+
+",50
+,,,,,,,,,,,,,,,,"Open ngoài SF
+
+",,"Ở cả mobile và desktop, Slide 1 hiển thị giống nhau và đúng với setting trong WB
+
+",50
+,,,,,,,,,,,,,,,,"Back lại WB, input data cho MOBILE IMAGE -> Click Save
+
+","Input data for MOBILE IMAGE:   
+- Mobile image: upload 1 ảnh bất kỳ  
+- Style: Cover + Overlay: color 1 + Position: Bottom-right + Không show repeat
+
+","Ở webfront, bản mobile hiển thị Slide 1 đúng như setting, khác với setting ở Desktop
+
+",50
+,,,,,,,,,,,,,,,,"Open ngoài SF
+
+",,"Mobile và Desktop show slide1 theo setting riêng, không giống nhau
+
+",50
+88986,1583,SB_WEB_BUILDER_LB_SLS_17,"Check slideshow image sử dụng thẻ img, đồng thời check preload & lazyload ảnh cho các slide",0,,"Update element sử dụng background chuyển sang thẻ img
+
+","- Template đã add sẵn 1 block slideshow ở 1 trong 3 section 1-3 (Block slideshow A)  
+- Template đã add sẵn 1 block slideshow ở 1 trong các section từ 4 trở đi (Block slideshow B)  
+- 2 block có ít nhất 2 slide và đã có slide image (Có thể để default block)
+
+",0,0,0,0,50,30,,0,"Vào dashboard > Onlinestore >Customize theme v3 bất kỳ
+
+",,"Mở web builder  
+- Hiển thị block slideshow A và B đã setup
+
+",50
+,,,,,,,,,,,,,,,,"Mở inspector đối với ảnh các slide của block
+
+","a. Block A  
+b. Block B
+
+","Cả 2 block đều có thẻ img với attribute src = link ảnh   
+NOTE: Đây là update chính vì trước đây block slideshow dùng ảnh background ăn vào css -> chuyển qua thẻ img.
+
+",50
+,,,,,,,,,,,,,,,,"Mở preview+SF check inspector slide đầu tiên
+
+","a. Block A  
+b. Block B
+
+","a. Có thẻ img tương tự như wb, link ảnh khớp nhau. Có thêm attribute fetchpriority = high (tức là ảnh sẽ đc preload), không có attribute loading=lazy  
+b. Có thẻ img tương tự như wb, link ảnh khớp nhau. Ngược lại với block A có attribute loading=lazy ko có fetchpriority=high
+
+",50
+,,,,,,,,,,,,,,,,"Check các slide tiếp theo ở sau
+
+","a. Block A  
+b. Block B
+
+","Các slide sau của cả 2 block sẽ giống nhau có thẻ img với attribute src = link img và có attribute loading=lazy, ko có fetchpriority=high
+
+",50
+88775,1583,SB_WEB_BUILDER_LB_SLS_16,Verify Bật tắt Loop của các block có layout slide autoplay,0,,"Verify Bật tắt Loop của các block có layout slide autoplay
+
+","""1. Acc: shopbase@beeketing.net  
+- Dev: front-improve-wb-ux  
+- Prodtest: front-improve-wb-ux-prodtest  
+- Prod: front-improve-wb-ux-dev
+
+
+2. shop setting theme V3.   
+3. Vào web builder
+
+",1,0,0,0,50,30,,0,"1. Add block vào các column 
+
+","- all reviews   
+- collection list   
+- slideshow  
+- repeated content  
+- featured collection
+
+","1. Các block hiển thị trên wb
+
+",50
+,,,,,,,,,,,,,,,,"2. edit layout của block sang ""carousel"" hoặc ""slide""
+
+",,"2.    
+- Arrow btn và slide navigation hiển thị ở các block.  
+- Option loop hiển thị.   
+- Loop default On 
+
+",50
+,,,,,,,,,,,,,,,,"3. Check loop Off
+
+",,"3.   
+- slide đầu disable arrow btn bên trái  
+- slide cuối disable arrow btn bên phải
+
+",50
+,,,,,,,,,,,,,,,,"4. Save > Click vào preview + sf
+
+",,"4.   
+- slide đầu disable arrow btn bên trái  
+- slide cuối disable arrow btn bên phải
+
+",50
+,,,,,,,,,,,,,,,,"5. Check loop On
+
+",,"5.   
+- slide đầu enable arrow btn bên trái và click vào thì sẽ chuyển sang slide cuối  
+- slide cuối enable arrow btn bên phải và click vào thì sẽ chuyển sang slide đầu
+
+",50
+,,,,,,,,,,,,,,,,"6. Save > Click vào preview + sf
+
+",,"6.   
+- slide đầu enable arrow btn bên trái và click vào thì sẽ chuyển sang slide cuối  
+- slide cuối enable arrow btn bên phải và click vào thì sẽ chuyển sang slide đầu
+
+",50
+88774,1583,SB_WEB_BUILDER_LB_SLS_15,Verify Bật tắt Loop của các block có layout slide,0,,"Verify Bật tắt Loop của các block có layout slide
+
+","""1. Acc: shopbase@beeketing.net  
+- Dev: front-improve-wb-ux  
+- Prodtest: front-improve-wb-ux-prodtest  
+- Prod: front-improve-wb-ux-dev
+
+
+2. shop setting theme V3.   
+3. Vào web builder
+
+",1,0,0,0,50,30,,0,"1. Add block vào các column 
+
+","- all reviews   
+- collection list   
+- slideshow  
+- repeated content  
+- featured collection
+
+","1. Các block hiển thị trên wb
+
+",50
+,,,,,,,,,,,,,,,,"2. edit layout của block sang ""carousel"" hoặc ""slide""
+
+",,"2.    
+- Arrow btn và slide navigation hiển thị ở các block.  
+- Option loop hiển thị.   
+- Loop default On 
+
+",50
+,,,,,,,,,,,,,,,,"3. Check loop Off
+
+",,"3.   
+- slide đầu disable arrow btn bên trái  
+- slide cuối disable arrow btn bên phải
+
+",50
+,,,,,,,,,,,,,,,,"4. Save > Click vào preview + sf
+
+",,"4.   
+- slide đầu disable arrow btn bên trái  
+- slide cuối disable arrow btn bên phải
+
+",50
+,,,,,,,,,,,,,,,,"5. Check loop On
+
+",,"5.   
+- slide đầu enable arrow btn bên trái và click vào thì sẽ chuyển sang slide cuối  
+- slide cuối enable arrow btn bên phải và click vào thì sẽ chuyển sang slide đầu
+
+",50
+,,,,,,,,,,,,,,,,"6. Save > Click vào preview + sf
+
+",,"6.   
+- slide đầu enable arrow btn bên trái và click vào thì sẽ chuyển sang slide cuối  
+- slide cuối enable arrow btn bên phải và click vào thì sẽ chuyển sang slide đầu
+
+",50
+,,,,,,,,,,,,,,,,,,,50

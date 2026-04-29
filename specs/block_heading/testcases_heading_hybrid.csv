@@ -1,0 +1,35 @@
+"TC ID","Module","Risk Level","Test Scenario","Pre-Condition","Test Steps","Test Data","Expected Result","Priority"
+"WB_HEADING_TC_001","Block Heading","High","Verify default properties và initial dom mapping render (Dựa theo Source Code fallback)","Web Builder được mở","1. Kéo thả Block Heading vào Webfront
+2. Bấm Inspect F12 Element DOM","Không input test data","Block hiển thị nội dung: ""Edit your title here"".
+DOM hiển thị schema class mapping:
+<div id=""..."" class=""w-100 h-100 break-words block-heading white-space-pre-wrap""><h2 class='h2'>Edit your title here</h2></div>","High"
+"WB_HEADING_TC_002","Block Heading","High","Verify Security (XSS Injection) qua innerHTML render content","Block Heading đã được focus, Double click","1. Paste đoạn payload XSS trực tiếp vào nội dung Editor
+2. Save hoặc view ngoài Storefront","Input text: <script>alert('XSS')</script> hoặc <img src=x onerror=alert(1)>","Biến Input được hệ thống tự động escape dấu ngoặc hoặc Sanitize, hiển thị dưới dạng raw text ngoài UI và KHÔNG chạy mã độc Alert.","High"
+"WB_HEADING_TC_003","Block Heading","High","Verify logic Text Wrap & Overflow (Check class break-words và white-space-pre-wrap)","Block Heading setting Fixed Width = 200px","1. Nhập một đoạn text dài có khoảng trắng chuẩn
+2. Nhập một chuỗi ký tự liên tiếp không khoảng trắng","Text 1: This is a very long text example.
+Text 2: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","1. Text xuống dòng chuẩn, Box height giãn tự động.
+2. Từ khóa quá dài tự động bị Break tại mép bounding box, không bị cuộn ngang tràn ra ngoài.","High"
+"WB_HEADING_TC_004","Block Heading","High","Verify Dropdown Variable trigger bằng shortcut {{","Block Heading ở chế độ Edit","1. Nhập ký tự {{ trên bàn phím
+2. Dùng phím mũi tên chọn biến từ list hiện ra và ấn Enter
+3. Lưu và lên Storefront xem","Nhập text: {{shop.name}}","1. Trình Editor xổ xuống dropdown.
+2. Dữ liệu gán vào block dưới dạng pill variable.
+3. Ngoài SF hiển thị chính xác string Tên Shop tương ứng thay vì biến Text.","High"
+"WB_HEADING_TC_005","Block Heading","Medium","Verify thay đổi Font Style (H1->H6, P) thay đổi trực tiếp DOM Tag html","Vào chế độ chỉnh Style > Chọn Font Style","1. Chọn lần lượt Heading 1, Heading 2, Paragraph 1.
+2. Kiểm tra lại Source DOM.","Sử dụng Quick bar picker","Tag nội tại trong cấu hình tự cập nhật sang <h1>, <h2> và <p>. Kích cỡ chữ và Line-height thay đổi mapping theo tỷ lệ % theo chuẩn Global Setting.","Medium"
+"WB_HEADING_TC_006","Block Heading","Medium","Verify Text Align (Trái/Giữa/Phải/Chữ Môn)","Block Heading đã có 2 dòng chữ","1. Bôi đen chỉ dòng thứ 1
+2. Chỉnh Align Left / Right","Chỉnh Align Right","Dòng text bị highlight được align tương ứng, Hoặc áp dụng toàn paragraph tuỳ rule web builder (Theo rule: Chỉnh text-align áp dụng lên toàn paragraph bôi đen).","Medium"
+"WB_HEADING_TC_007","Block Heading","Medium","Verify gán Hyperlink liên kết đến Policy Page (Kế thừa Legacy TC)","Block Heading có text ""Policy Here""","1. Bôi đen và ấn icon Hyperlink
+2. Bấm Go to page > Chọn Category Policy Pages > Chọn Refund Policy
+3. Bấm Apply và Save
+4. Click ra SF","Refund Policy","Nội dung Text Highlight được đổi thành Link Underline, và click vào SF sẽ chuyển hướng 100% đến link Refund policy.","High"
+"WB_HEADING_TC_008","Block Heading","Medium","Verify Interaction States & Effect khi Hover của Text Link (Kế thừa Legacy)","Block thiết lập Hyperlink","1. Rê chuột Hover vào text link ở Storefront.
+2. Đưa chuột ra khỏi Link.","Hover bằng Chuột","1. Link xuất hiện underline animation chạy từ trái sang phải.
+2. Hover ra thì animation underline biến mất trượt dần trả lại bình thường theo design color rule (Opacity 75%).","Medium"
+"WB_HEADING_TC_009","Block Heading","Medium","Verify bộ gõ Text Decorations Multi-select","Double click vào đoạn Text bất kỳ","1. Bôi đen 1 chữ
+2. Ấn liên tiếp 4 format: Bold, Italic, Underline, Strikethrough","Chọn Format Text","Chữ bôi đen áp dụng đồng thời cả 4 styles hiện tại (Chữ in đậm, in nghiêng, gạch chân, gạch ngang). Icon trên thanh Quick bar highlight cả 4 (B, I, U, S).","Medium"
+"WB_HEADING_TC_010","Block Heading","Medium","Verify Auto-listing Bullet Point Number & Dot","Đang Edit nội dung ở hàng 1","1. Kích hoạt Numbering / Dot List.
+2. Nhập tên và ấn Enter.
+3. Ấn phím tab","Văn bản test","Tự động xuống dòng sinh số thứ tự (2, 3...) hoặc Dot tương ứng. Ấn Tab thì thụt lề thụt lùi nhưng không mất giá trị Bullet.","Medium"
+"WB_HEADING_TC_011","Block Heading","Low","Verify Default Block Settings Margin/Padding/Opacity/Radius (Kế thừa Legacy TC)","Block Heading đã click chọn focus","1. Đổi Background màu đỏ đục 50%
+2. Set border 5px Solid đen
+3. Cỉnh Margin top 20px","Style property","Lớp vỏ Wrapper HTML Container của Block Heading nhận thuộc tính, thu hẹp, đổ viền chính xác như config. Div text bên trong tự co dãn vừa vặn h-100 w-100 tương ứng khung thay đổi.","Low"
